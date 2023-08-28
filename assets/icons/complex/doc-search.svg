@@ -1,0 +1,9 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+	<path fill="currentColor" d="M29.9,23.8c-5.4,0-9.9-4.4-9.9-9.9C20,8.5,24.5,4,29.9,4c5.4,0,9.9,4.4,9.9,9.9C39.8,19.3,35.3,23.8,29.9,23.8z M29.9,5.4
+		c-4.7,0-8.5,3.8-8.5,8.5s3.8,8.5,8.5,8.5c4.7,0,8.5-3.8,8.5-8.5S34.6,5.4,29.9,5.4z"/>
+	<rect fill="currentColor" x="8.8" y="30.8" width="14" height="1.3"/>
+	<rect fill="currentColor" x="8.8" y="23.1" width="14" height="1.3"/>
+	<rect fill="currentColor" x="40.8" y="21.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -5.4304 36.5906)" width="1.4" height="6.4"/>
+	<rect fill="currentColor" x="8.8" y="15.4" width="6.3" height="1.3"/>
+	<polygon fill="currentColor" points="33.5,43.8 3.8,43.8 3.8,5.6 20.3,5.6 20.3,7 5.2,7 5.2,42.4 32.1,42.4 32.1,25.9 33.5,25.9 "/>
+</svg>

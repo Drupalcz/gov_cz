@@ -1,0 +1,220 @@
+:root {
+  --gov-color-blue: #2362a2;
+  --gov-color-grey-dark: #3b3b3b;
+  --gov-color-white: #ffffff;
+  --gov-color-blue-dark: #254e80;
+  --gov-color-blue-focus: #007bff;
+  --gov-color-blue-light: #3077b7;
+  --gov-color-blue-inactive-1: #91b0d0;
+  --gov-color-blue-inactive-2: #d3dfec;
+  --gov-color-blue-inactive-3: #edf0f2;
+  --gov-color-blue-hover: #e5ebf0;
+  --gov-color-grey-mid: #686868;
+  --gov-color-grey-light: #a8a8a8;
+  --gov-color-grey-inactive: #dddddd;
+  --gov-color-grey-bg: #f5f5f5;
+  --gov-color-yellow: #ecae1a;
+  --gov-color-yellow-dark: #dd9f0c;
+  --gov-color-error: #c52a3a;
+  --gov-color-success: #6fbd2c;
+  --gov-color-grey-dark-rgb: 59, 59, 59;
+  --gov-color-white-rgb: 255, 255, 255;
+}
+
+.gov-accordion {
+  position: relative;
+  display: block;
+  width: 100%;
+  /*  Accordion with borders
+  ------------------------------------------------------------------ */
+  /*  Sizes
+  ------------------------------------------------------------------ */
+  /*  Content-block accordion
+  ------------------------------------------------------------------ */
+  /*  No offset for content
+  ------------------------------------------------------------------ */
+  /*  RESPONSE
+  ------------------------------------------------------------------ */
+}
+.gov-accordion__header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1875rem 0.5rem;
+  width: 100%;
+  border-radius: 0;
+  text-align: left;
+  text-transform: none;
+}
+.gov-accordion__header:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 1px;
+  background-color: var(--gov-color-grey-inactive);
+}
+.gov-accordion__header h3 + .gov-icon {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gov-accordion__header h3 + .gov-icon:before {
+  font-size: 0.75rem;
+  color: var(--gov-color-blue);
+}
+.gov-accordion__header > * {
+  margin-bottom: 0;
+}
+.gov-accordion__header h3,
+.gov-accordion__header .gov-title--gamma {
+  display: flex;
+  align-items: start;
+}
+.gov-accordion__header .gov-icon,
+.gov-accordion__header .gov-complex-icon {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  color: var(--gov-color-grey-dark);
+  flex-shrink: 1;
+}
+.gov-accordion__header:focus {
+  border-radius: 3px;
+}
+.gov-accordion__header--noborder:before {
+  display: none;
+}
+.gov-accordion__header.is-expanded h3 + .gov-icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+.gov-accordion__content {
+  overflow: hidden;
+  height: 0;
+  visibility: hidden;
+  transition: height 300ms ease-out, min-height 300ms ease-out;
+}
+.gov-accordion__content.is-expanded {
+  height: auto;
+  visibility: visible;
+}
+.gov-accordion__content-inner {
+  padding: 1.25rem 0.5rem;
+}
+.gov-accordion__content-inner > *:last-child {
+  margin-bottom: 0;
+}
+.gov-accordion--bordered:before, .gov-accordion--bordered:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--gov-color-grey-inactive);
+}
+.gov-accordion--bordered:before {
+  top: -1px;
+}
+.gov-accordion--bordered:after {
+  bottom: -1px;
+}
+.gov-accordion--bordered-bottom:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--gov-color-grey-inactive);
+}
+.gov-accordion--bordered-bottom:after {
+  bottom: -1px;
+}
+.gov-accordion--large .gov-accordion__header {
+  padding: 1.6875rem 0.5rem;
+}
+.gov-accordion--large .gov-accordion__header h3,
+.gov-accordion--large .gov-accordion__header .gov-title--gamma {
+  min-height: 2rem;
+  line-height: 2rem;
+}
+.gov-accordion--large .gov-accordion__header .gov-icon,
+.gov-accordion--large .gov-accordion__header .gov-complex-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.gov-accordion--small .gov-accordion__header {
+  padding: 0.9375rem 0.5rem;
+}
+.gov-accordion--small .gov-accordion__header h3,
+.gov-accordion--small .gov-accordion__header .gov-title--gamma {
+  min-height: 1.1875rem;
+  line-height: 1.1875rem;
+  font-size: 1rem;
+}
+.gov-accordion--small .gov-accordion__header .gov-icon,
+.gov-accordion--small .gov-accordion__header .gov-complex-icon {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+.gov-accordion--small .gov-accordion__content-inner {
+  padding: 0.5rem !important;
+}
+.gov-accordion--as-section {
+  margin-bottom: 2.1875rem;
+  background-color: var(--gov-color-white);
+  border-radius: 3px;
+}
+.gov-accordion--as-section > .gov-accordion__header, .gov-accordion--as-section > .gov-accordion__content > .gov-accordion__content-inner {
+  padding-left: 3.125rem;
+  padding-right: 3.125rem;
+}
+.gov-accordion--as-section > .gov-accordion__header {
+  border-radius: 3px;
+}
+.gov-accordion--as-section > .gov-accordion__header:after {
+  transform: translateX(-0.625rem);
+}
+.gov-accordion--as-section > .gov-accordion__content > .gov-accordion__content-inner {
+  position: relative;
+}
+.gov-accordion--as-section > .gov-accordion__content > .gov-accordion__content-inner:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background-color: var(--gov-color-grey-inactive);
+}
+.gov-accordion--no-inner-offset > .gov-accordion__content > .gov-accordion__content-inner {
+  padding: 0;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+.gov-accordion--no-inner-y-offset > .gov-accordion__content > .gov-accordion__content-inner {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+@media (max-width: 57.99em) {
+  .gov-accordion--large > .gov-accordion__header {
+    padding: 1.25rem 0.625rem;
+  }
+}
+@media (max-width: 51.99em) {
+  .gov-accordion--as-section > .gov-accordion__header, .gov-accordion--as-section > .gov-accordion__content > .gov-accordion__content-inner {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+/*# sourceMappingURL=gov-accordion.css.map */

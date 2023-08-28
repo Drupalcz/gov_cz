@@ -1,0 +1,14 @@
+<?php
+
+function gov_cz_preprocess_paragraph(array &$variables): void {
+  $paragraph = $variables['paragraph'];
+
+  $variables['label'] = $paragraph->field_label->value ?? '';
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function gov_cz_library_info_alter(&$libraries, $extension) {
+  $ahoj = 'ahoj';
+}
