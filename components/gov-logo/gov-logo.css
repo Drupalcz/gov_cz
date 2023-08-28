@@ -1,0 +1,35 @@
+.gov-logo {
+  display: flex;
+  align-items: center;
+  color: gov-colors("blue") !important;
+  text-decoration: none;
+}
+.gov-logo__sitename {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: currentColor;
+  font-size: 1.3125rem;
+  font-weight: 700;
+}
+@media not all and (pointer: coarse) {
+  .gov-logo:hover > * {
+    color: currentColor;
+  }
+}
+.gov-logo:visited > * {
+  color: currentColor;
+}
+.gov-logo:focus {
+  box-shadow: 0 0 0 2px gov-colors("white");
+}
+.gov-logo--large .gov-logo__sitename {
+  font-size: 1.625rem;
+}
+.gov-logo--inversed {
+  color: gov-colors("white") !important;
+}
+.gov-logo--dark {
+  color: gov-colors("grey-dark") !important;
+}
+
+/*# sourceMappingURL=gov-logo.css.map */

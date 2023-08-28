@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Logo
+status: stable
+
+props:
+  type: object
+  required:
+    - sitename
+  properties:
+    sitename:
+      type: string
+      title: Site name
+    classes:
+      type: array
+      title: Classes
+
+#slots:
+#  pictogram: {}
+
+

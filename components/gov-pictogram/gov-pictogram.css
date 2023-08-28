@@ -1,0 +1,19 @@
+.gov-pictogram {
+  margin-left: -0.375rem;
+  max-width: 52px;
+  color: gov-colors("blue");
+}
+.gov-pictogram--large {
+  max-width: 78px;
+}
+.gov-pictogram--inversed {
+  color: gov-colors("white");
+}
+.gov-pictogram--dark {
+  color: gov-colors("grey-dark");
+}
+.gov-pictogram svg {
+  width: 100%;
+}
+
+/*# sourceMappingURL=gov-pictogram.css.map */

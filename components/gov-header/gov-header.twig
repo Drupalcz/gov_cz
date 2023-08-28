@@ -1,0 +1,65 @@
+{% embed 'gov_cz:gov-container' with {
+  attributes: attributes.addClass(['gov-container--no-y-offset', 'gov-header']),
+  tag: 'header'
+} only %}
+
+  {% block content %}
+    <div class="gov-header__holder">
+      <div class="gov-header__left">
+        <a href="{{ url('<front>') }}" class="gov-link--inversed gov-header__logo">
+          {{ include ('gov_cz:gov-logo', {
+            sitename: 'gov_cz',
+            classes: ['gov-logo--inversed']
+          }) }}
+        </a>
+      </div>
+      <div class="gov-header__right">
+        <div class="gov-header__item">
+          {# SEARCH #}
+        </div>
+        <div class="gov-header__item gov-header__item--login">
+          <a class="gov-button  gov-button--primary-outlined  gov-button--inversed" href="#"> Přihlásit se do portálu občana </a></div>
+        <div class="gov-header__fixed-items">
+          <div class="gov-header__item gov-header__item--mobile">
+            <button class="gov-header__hamburger">
+              <span></span>
+              <span></span>
+              <div>MENU</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="gov-header__separator">
+    <div class="gov-header__overlay"></div>
+    <nav class="gov-header__nav">
+      <div class="gov-header__nav-logo">
+        {{ include('gov_cz:gov-pictogram') }}
+      </div>
+      <div class="gov-header__nav-holder">
+        <div class="gov-header__link"><a href="#"
+                                         class="gov-link  gov-link--standalone  gov-link--large  gov-link--inversed">Úvod</a>
+        </div>
+        <div class="gov-header__link"><a href="#"
+                                         class="gov-link  gov-link--standalone  gov-link--large  gov-link--inversed">Životní
+            události</a></div>
+        <div class="gov-header__link"><a href="#"
+                                         class="gov-link  gov-link--standalone  gov-link--large  gov-link--inversed">Služby
+            veřejné správy</a></div>
+        <div class="gov-header__link"><a href="#"
+                                         class="gov-link  gov-link--standalone  gov-link--large  gov-link--inversed">O
+            životě v ČR</a></div>
+        <div class="gov-header__link"><a href="#"
+                                         class="gov-link  gov-link--standalone  gov-link--large  gov-link--inversed">Časté
+            dotazy</a></div>
+        <div class="gov-header__link"><a href="#"
+                                         class="gov-link  gov-link--standalone  gov-link--large  gov-link--inversed">Další
+            informace</a></div>
+        <div class="gov-header__link"><a href="#"
+                                         class="gov-link  gov-link--standalone  gov-link--large  gov-link--inversed">Pro
+            úřady</a></div>
+      </div>
+    </nav>
+  {% endblock %}
+
+{% endembed %}
