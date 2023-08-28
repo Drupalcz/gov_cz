@@ -1,0 +1,215 @@
+a, .gov-link {
+    color: gov-colors('blue');
+    cursor: pointer;
+    font-family: $gov-font-family-primary;
+    font-size: inherit;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    text-decoration: underline;
+
+    -webkit-font-smoothing: antialiased;
+
+    transition: color 150ms ease-in-out;
+
+    & > * {
+        color: gov-colors('blue');
+    }
+
+    //  ----------
+    .gov-icon {
+        display: inline-block;
+        margin: 0 rem-calc(2);
+
+        font-size: inherit;
+        text-decoration: none;
+    }
+
+    //  ----------
+    &:visited,
+    &:visited > * {
+        color: gov-colors('grey-dark');
+    }
+
+    &:focus {
+        border-radius: $gov-border-radius;
+        box-shadow: 0 0 0 $gov-outline-width gov-colors('blue-focus');
+        outline: 0;
+    }
+
+    @include hover() {
+        color: gov-colors('grey-dark');
+        text-decoration: none;
+
+        & > * {
+            color: gov-colors('grey-dark');
+        }
+    }
+
+    /* Link Types
+    ------------------------------------------------------------------ */
+    &:not(.gov-link--standalone) {
+        .gov-icon {
+            font-size: 1.5em;
+            vertical-align: middle;
+        }
+    }
+
+    &--external,
+    &[target="_blank"],
+    &--has-arrow {
+        &:after {
+            font-family: $gov-icon-font;
+            font-size: rem-calc(24);
+            text-transform: none;
+        }
+    }
+
+    &--external,
+    &[target="_blank"] {
+        margin-right: rem-calc(-5);
+
+        &:after {
+            @include pseudo(inline-block, relative, '\36');
+
+            vertical-align: middle;
+        }
+    }
+
+    &--has-arrow {
+        position: relative;
+
+        display: inline-block;
+        padding-right: rem-calc(26);
+
+        &:after {
+            @include pseudo(inline-block, absolute, '\46');
+            right: 0; top: 50%;
+
+            transform: translateY(-50%);
+        }
+    }
+
+    &--standalone {
+        font-size: rem-calc(12);
+        font-weight: 500;
+        letter-spacing: normal;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:visited {
+            text-decoration: underline;
+        }
+
+        @include hover() {
+            text-decoration: underline;
+        }
+    }
+
+    &--has-badge {
+        display: inline-block;
+
+        img {
+            max-width: 120px;
+        }
+
+        & + .gov-link--has-badge {
+            margin-top: rem-calc(10);
+        }
+    }
+
+    &--icon-unset {
+        .gov-icon {
+          display: none !important;
+        }
+    }
+
+    &--external-unset:after {
+        display: none !important;
+    }
+
+    /* Link Sizes
+    ------------------------------------------------------------------ */
+    &--small {
+        font-size: rem-calc(12);
+
+        &.gov-link--external,
+        &[target="_blank"] {
+            &:after {
+                font-size: rem-calc(20);
+            }
+        }
+
+        &.gov-link--standalone {
+            font-size: rem-calc(10);
+        }
+    }
+
+    &--large {
+        font-size: rem-calc(16);
+
+        &.gov-link--external,
+        &[target="_blank"] {
+            &:after {
+                font-size: rem-calc(28);
+            }
+        }
+
+        &.gov-link--standalone {
+            font-size: rem-calc(14);
+        }
+
+        &.gov-link--standalone .gov-icon {
+            margin: 0 rem-calc(4);
+            vertical-align: text-top;
+        }
+    }
+
+    /* Inversed
+    ------------------------------------------------------------------ */
+    &--inversed {
+        color: gov-colors('white');
+
+        & > * {
+            color: gov-colors('white');
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 $gov-outline-width gov-colors('white');
+        }
+
+        &:visited,
+        &:visited > *{
+            color: gov-colors('blue-hover');
+        }
+
+        @include hover() {
+            color: gov-colors('blue-hover');
+
+            & > * {
+                color: gov-colors('white');
+            }
+        }
+    }
+
+    /* Disabled
+    ------------------------------------------------------------------ */
+    &--disabled {
+        color: gov-colors('blue-inactive-1') !important;
+        pointer-events: none;
+
+        & > * {
+            color: gov-colors('blue-inactive-1') !important;
+        }
+
+        &:focus {
+            border-radius: 0;
+            box-shadow: none;
+        }
+    }
+
+    /* No underline
+    ------------------------------------------------------------------ */
+    &--no-underline {
+        text-decoration: none;
+    }
+}

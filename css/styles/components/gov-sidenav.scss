@@ -1,0 +1,252 @@
+$class: '.gov-sidenav';
+$classIcon: '.gov-icon';
+$classComplexIcon: '.gov-complex-icon';
+$interactive: 'a, .gov-link, button';
+
+@mixin sidenav-active() {
+    &.is-active {
+        > button {
+            &::after {
+                transform: rotate(180deg);
+
+                padding-right: 0;
+                padding-left: rem-calc(4);
+            }
+        }
+        &:not(.has-toggle) {
+            > a, > button, > .gov-link {
+                background-color: gov-colors('blue');
+
+                color: gov-colors('white') !important;
+
+                cursor: default;
+
+                border-color: gov-colors('blue-dark');
+
+                #{$classIcon}, #{$classComplexIcon} {
+                    color: gov-colors('white') !important;
+                }
+
+                & + button {
+                    #{$classIcon}, #{$classComplexIcon} {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin sidenav-toggle() {
+    &.is-active {
+        > a, > button, > .gov-link {
+            & + button {
+                #{$classIcon} {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+#{$class} {
+    ul {
+        @extend .gov-list--plain;
+
+        margin: 0;
+
+        &.is-visible {
+            display: block !important;
+        }
+
+        li {
+            margin: 0;
+            padding: 0;
+
+            &.is-active {
+                > ul {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    #{$interactive} {
+        @include button-core();
+
+        justify-content: start;
+        gap: rem-calc(12);
+
+        font-size: rem-calc(16);
+        font-weight: normal;
+        text-transform: none;
+        text-align: left;
+        line-height: 1.5;
+
+        background-color: transparent;
+        color: gov-colors('grey-dark');
+
+        padding: rem-calc(12 8);
+
+        border-radius: 0;
+
+        border-bottom: rem-calc(1) solid gov-colors('grey-inactive');
+
+        & #{$classIcon}, & #{$classComplexIcon} {
+            margin: 0;
+
+            font-size: rem-calc(20) !important;
+        }
+
+        & + button {
+            width: rem-calc(48);
+            padding: rem-calc(12);
+
+            & #{$classIcon}, & #{$classComplexIcon} {
+                font-size: rem-calc(24) !important;
+
+                color: gov-colors('blue');
+            }
+
+            &:after {
+                display: none !important;
+            }
+        }
+
+        &:hover {
+            background-color: gov-colors('blue-hover');
+
+            border-color: gov-colors('blue-inactive-2');
+        }
+    }
+
+    &__item {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        > *:first-child {
+            flex: 1;
+        }
+
+        &--unset-icon-space {
+            #{$interactive} {
+                padding-left: rem-calc(8) !important;
+            }
+        }
+
+        &.has-toggle {
+            > button:last-of-type::after {
+                @include baseIcon;
+
+                display: inline-block;
+
+                margin-left: auto;
+                padding-right: rem-calc(4);
+
+                font-size: rem-calc(24);
+                color: gov-colors('blue');
+                content: '\47';
+
+                tab-index: -1;
+                user-select: none;
+            }
+        }
+
+        &:hover {
+            border-color: gov-colors('blue-inactive-2');
+        }
+    }
+
+    &--level-1 {
+        > #{$class}__item {
+            @include sidenav-active;
+            @include sidenav-toggle;
+
+            &:last-child {
+                > #{$interactive} {
+                    border: 0 none;
+                }
+            }
+        }
+    }
+
+    &--level-2 {
+        display: none;
+        flex-basis: 100%;
+
+        border-bottom: rem-calc(1) solid gov-colors('grey-inactive');
+
+        > #{$class}__item {
+            @include sidenav-active;
+            @include sidenav-toggle;
+        }
+
+        #{$interactive} {
+            padding: rem-calc(8);
+
+            font-size: rem-calc(14);
+            font-weight: 500;
+            line-height: 1.715;
+
+            border: 0;
+
+            & + button {
+                padding: rem-calc(8 12);
+            }
+
+        }
+
+        #{$class}__item {
+            border: 0 none;
+
+            &.is-active {
+                background-color: gov-colors('grey-bg');
+            }
+        }
+    }
+
+    &--level-3 {
+        display: none;
+        flex-basis: 100%;
+
+        background-color: gov-colors('grey-bg');
+
+        > #{$class}__item {
+            @include sidenav-active
+        }
+
+        #{$interactive} {
+            padding: rem-calc(8);
+            padding-left: rem-calc(40);
+
+            font-size: rem-calc(14);
+            font-weight: 400;
+            line-height: 1.715;
+        }
+    }
+
+    &--no-border {
+        ul {
+            border: 0 none;
+        }
+
+        #{$interactive} {
+            border: 0 none;
+        }
+    }
+
+    &--inverse-last-level {
+        #{$class}--level-2 {
+            #{$class}__item {
+                &.is-active {
+                    background-color: gov-colors('white');
+                }
+            }
+        }
+        #{$class}--level-3 {
+            background-color: gov-colors('white');
+        }
+    }
+}
+

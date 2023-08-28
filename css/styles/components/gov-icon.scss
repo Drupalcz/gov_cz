@@ -1,0 +1,256 @@
+@mixin baseIcon() {
+    font-family: 'gov-basic-icons';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.gov-icon {
+    color: currentColor;
+    font-size: rem-calc(24);
+    line-height: 0.5;
+
+    &:before {
+        @include baseIcon
+    }
+
+    /*  Sizes
+    ------------------------------------------------------------------ */
+    &--16x16 {
+        font-size: rem-calc(16);
+    }
+
+    &--20x20 {
+        font-size: rem-calc(20);
+    }
+
+    &--32x32 {
+        font-size: rem-calc(32);
+    }
+
+    &--48x48 {
+        font-size: rem-calc(48);
+    }
+
+    &--64x64 {
+        font-size: rem-calc(64);
+    }
+
+    /*  Icons
+    ------------------------------------------------------------------ */
+    &--reply-all:before {
+        content: "\63";
+    }
+    &--send:before {
+        content: "\65";
+    }
+    &--night:before {
+        content: "\67";
+    }
+    &--file:before {
+        content: "\69";
+    }
+    &--filter:before {
+        content: "\6a";
+    }
+    &--archive-fill:before {
+        content: "\6c";
+    }
+    &--coin:before {
+        content: "\6e";
+    }
+    &--cross-small:before {
+        content: "\70";
+    }
+    &--forward:before {
+        content: "\71";
+    }
+    &--full-screen:before {
+        content: "\72";
+    }
+    &--arrow-small-left:before {
+        content: "\74";
+    }
+    &--arrow-on:before {
+        content: "\75";
+    }
+    &--home:before {
+        content: "\77";
+    }
+    &--office:before {
+        content: "\79";
+    }
+    &--send-fill:before {
+        content: "\7a";
+    }
+    &--picture:before {
+        content: "\43";
+    }
+    &--data-box:before {
+        content: "\45";
+    }
+    &--arrow-small-right:before {
+        content: "\46";
+    }
+    &--arrow-small-down:before {
+        content: "\47";
+    }
+    &--arrow-small-up:before {
+        content: "\48";
+    }
+    &--delete-fill:before {
+        content: "\4a";
+    }
+    &--info-outline:before {
+        content: "\4b";
+    }
+    &--job:before {
+        content: "\4c";
+    }
+    &--picture-outline:before {
+        content: "\4e";
+    }
+    &--time-thin:before {
+        content: "\51";
+    }
+    &--plus-thin:before {
+        content: "\52";
+    }
+    &--e-envelope:before {
+        content: "\54";
+    }
+    &--burger-menu:before {
+        content: "\56";
+    }
+    &--exclamation-mark:before {
+        content: "\57";
+    }
+    &--plus-small:before {
+        content: "\59";
+    }
+    &--twitter:before {
+        content: "\5a";
+    }
+    &--upload:before {
+        content: "\30";
+    }
+    &--mail-open-outline:before {
+        content: "\32";
+    }
+    &--business-man:before {
+        content: "\34";
+    }
+    &--external:before {
+        content: "\36";
+    }
+    &--mail-outline:before {
+        content: "\37";
+    }
+    &--reply:before {
+        content: "\22";
+    }
+    &--facebook:before {
+        content: "\24";
+    }
+    &--check:before {
+        content: "\25";
+    }
+    &--compass:before {
+        content: "\6b";
+    }
+    &--arrow-down:before {
+        content: "\27";
+    }
+    &--arrow-left:before {
+        content: "\28";
+    }
+    &--arrow-right:before {
+        content: "\29";
+    }
+    &--plus:before {
+        content: "\6f";
+    }
+    &--cross:before {
+        content: "\73";
+    }
+    &--dashboard:before {
+        content: "\76";
+    }
+    &--user:before {
+        content: "\39";
+    }
+    &--exit:before {
+        content: "\33";
+    }
+    &--attachment:before {
+        content: "\55";
+    }
+    &--youtube:before {
+        content: "\61";
+    }
+    &--warning:before {
+        content: "\62";
+    }
+    &--search:before {
+        content: "\64";
+    }
+    &--notifications:before {
+        content: "\66";
+    }
+    &--more:before {
+        content: "\68";
+    }
+    &--add:before {
+        content: "\6d";
+    }
+    &--phone:before {
+        content: "\78";
+    }
+    &--info:before {
+        content: "\44";
+    }
+    &--settings:before {
+        content: "\41";
+    }
+    &--download:before {
+        content: "\49";
+    }
+    &--place:before {
+        content: "\4d";
+    }
+    &--sigma:before {
+        content: "\42";
+    }
+    &--view:before {
+        content: "\21";
+    }
+    &--message:before {
+        content: "\23";
+    }
+    &--remove:before {
+        content: "\38";
+    }
+    &--mail:before {
+        content: "\58";
+    }
+    &--calendar:before {
+        content: "\35";
+    }
+    &--point-right:before {
+        content: "\31";
+    }
+    &--lightbulb:before {
+        content: "\53";
+    }
+    &--star:before {
+        content: "\4f";
+    }
+    &--question:before {
+        content: "\50";
+    }
+}

@@ -1,0 +1,48 @@
+.gov-lang-switch {
+    position: relative;
+
+    border-radius: $gov-border-radius;
+    line-height: initial;
+
+    -webkit-font-smoothing: initial;
+
+    &:after {
+        @include pseudo(block, absolute, '\47');
+        right: 0; top: rem-calc(6);
+
+        color: gov-colors('white');
+        font-family: $gov-icon-font;
+        font-size: rem-calc(24);
+
+        pointer-events: none;
+    }
+
+    &__select {
+        padding: 0 rem-calc(5);
+        width: rem-calc(50);
+		height: rem-calc(40);
+
+        background: transparent;
+		border: none;
+        border-radius: $gov-border-radius;
+		color: gov-colors('white');
+        cursor: pointer;
+		font-size: rem-calc(12);
+        appereance: none;
+	    -webkit-appearance: none;
+
+        &:focus {
+            border-color: gov-colors('white');
+            box-shadow: 0 0 0 $gov-outline-width gov-colors('white');
+            outline: none;
+        }
+
+        option {
+            color: gov-colors('grey-dark');
+        }
+    }
+
+    @include hover() {
+        background-color: gov-colors('blue-light');
+    }
+}

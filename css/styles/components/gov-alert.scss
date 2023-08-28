@@ -1,0 +1,137 @@
+$class: '.gov-alert';
+$classIcon: '.gov-icon';
+
+#{$class} {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: rem-calc(16);
+    padding-right: rem-calc(40);
+    width: 100%;
+
+    background-color: gov-colors('white');
+
+    &:before {
+        @include pseudo(inline-block, relative, '\62');
+
+        padding-top: rem-calc(2);
+
+        color: gov-colors('error');
+        font-family: $gov-icon-font;
+        font-size: rem-calc(20);
+    }
+
+    &__content {
+        display: inline-block;
+        margin-left: rem-calc(16);
+        max-width: 1040px;
+        width: 100%;
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: rem-calc(16); top: rem-calc(20);
+
+        color: gov-colors('grey-mid');
+
+        & #{$classIcon} {
+            font-size: rem-calc(12);
+        }
+    }
+
+    /*  Types
+    ------------------------------------------------------------------ */
+    &--inversed {
+        background-color: gov-colors('grey-dark');
+
+        p, .gov-paragraph,
+        &:before {
+            color: gov-colors('white');
+        }
+
+        a, .gov-link {
+            @extend .gov-link--inversed;
+        }
+
+        #{$class}__close {
+            &:not(:hover) {
+                color: gov-colors('white');
+            }
+        }
+    }
+
+    &--warning {
+        background-color: gov-colors('yellow');
+
+        p, .gov-paragraph,
+        &:before {
+            color: gov-colors('grey-dark');
+        }
+
+        a, .gov-link {
+            color: gov-colors('grey-dark');
+        }
+    }
+
+    &--error {
+        background-color: gov-colors('error');
+
+        p, .gov-paragraph,
+        &:before {
+            color: gov-colors('white');
+        }
+
+        a, .gov-link {
+            @extend .gov-link--inversed;
+        }
+
+        #{$class}__close {
+            &:not(:hover) {
+                color: gov-colors('white');
+            }
+        }
+    }
+
+    &--content {
+        justify-content: flex-start;
+        padding: rem-calc(8 16);
+
+        background-color: gov-colors('blue-hover');
+
+        .gov-alert__close {
+            display: none;
+        }
+
+        &:after {
+            @include pseudo();
+            left: 0; top: 0; bottom: 0;
+
+            width: 4px;
+
+            background-color: gov-colors('error');
+        }
+    }
+
+    /*  Icons
+    ------------------------------------------------------------------ */
+    @include mq($until: tablet) {
+        &__close {
+            right: 0;
+        }
+    }
+
+    @include mq($until: mobile) {
+        padding-left: rem-calc(15);
+        padding-right: rem-calc(35);
+
+        &__content {
+            margin-left: rem-calc(10);
+        }
+    }
+}

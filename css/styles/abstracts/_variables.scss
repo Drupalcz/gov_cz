@@ -1,0 +1,21 @@
+@import '../mixins/unit';
+
+$gov-border-radius: 3px;
+$gov-outline-width: 2px;
+
+//  fonts
+$gov-font-family-primary: 'Roboto', sans-serif;
+$gov-icon-font: 'gov-basic-icons';
+
+//  layout
+$gov-container-width: rem-calc(1120);
+
+//  general breakpoints
+$mq-breakpoints: (
+	palm: 26em,
+    mobile: 32em,
+    mobile-landscape: 42em,
+    tablet: 52em,
+    tablet-landscape: 58em,
+    portable: 64em,
+);

@@ -1,0 +1,21 @@
+.gov-header {
+    background-color: gov-colors('white');
+    border-bottom: 1px solid gov-colors('grey-inactive');
+
+    &__logo {
+        .gov-pictogram {
+            color: gov-colors('blue') !important;
+        }
+    }
+
+    &__site-name {
+        color: gov-colors('blue');
+    }
+
+    &__right,
+    &__overlay,
+    &__nav,
+    &__separator {
+        display: none;
+    }
+}

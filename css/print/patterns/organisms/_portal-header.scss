@@ -1,0 +1,10 @@
+.gov-portal-header {
+    background-color: gov-colors('white');
+    border-bottom: 1px solid gov-colors('grey-inactive');
+
+    &__column {
+        &:last-of-type {
+            display: none;
+        }
+    }
+}

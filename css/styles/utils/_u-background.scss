@@ -1,0 +1,34 @@
+//  colors
+.u-bg-color--blue {
+    background-color: gov-colors('blue');
+}
+
+.u-bg-color--blue-hover {
+    background-color: gov-colors('blue-hover');
+}
+
+.u-bg-color--blue-light {
+    background-color: gov-colors('blue-light');
+}
+
+.u-bg-color--grey {
+    background-color: gov-colors('grey-bg');
+}
+
+.u-bg-color--grey-dark {
+    background-color: gov-colors('grey-dark');
+}
+
+.u-bg-color--white {
+    background-color: gov-colors('white');
+}
+
+.u-bg-color--white-overlay {
+    background-color: rgba(gov-colors('white-rgb'), 0.4);
+}
+
+//  gradients
+.u-bg-gradient--blue {
+    background-color: gov-colors('blue');
+    background: linear-gradient(90deg, gov-colors('blue') 0%, gov-colors('blue-dark') 100%);
+}

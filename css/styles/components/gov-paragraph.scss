@@ -1,0 +1,22 @@
+$classTooltip: '.gov-tooltip--icon';
+
+p, .gov-paragraph {
+    margin-bottom: rem-calc(25);
+
+    color: gov-colors('grey-mid');
+    font-family: $gov-font-family-primary;
+    font-size: rem-calc(15);
+    font-weight: 400;
+    letter-spacing: em-calc(0.2);
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+
+    a, .gov-link {
+        font-size: rem-calc(15);
+    }
+
+    & #{$classTooltip} {
+        vertical-align: text-top;
+    }
+}

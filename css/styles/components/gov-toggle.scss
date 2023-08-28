@@ -1,0 +1,112 @@
+$class: '.gov-form-control';
+
+#{$class} {
+    &--custom {
+        #{$class}__toggle {
+            position: absolute;
+			z-index: -1;
+
+            opacity: 0;
+
+            & ~ #{$class}__label {
+                padding-left: rem-calc(55);
+
+                @include hover() {
+                    & + #{$class}__indicator {
+                        border-color: gov-colors('grey-light');
+                    }
+                }
+            }
+
+            & ~ #{$class}__indicator {
+                top: rem-calc(-3);
+
+                height: rem-calc(24);
+                width: rem-calc(40);
+
+                background-color: gov-colors('grey-bg');
+                border: 1px solid gov-colors('grey-inactive');
+                border-radius: rem-calc(24);
+
+                &:after {
+                    @include pseudo();
+                    left: 0; top: 0;
+
+                    width: rem-calc(22);
+                    height: rem-calc(22);
+
+                    background-color: gov-colors('white');
+                    border-radius: 100%;
+                    box-shadow: 0 $gov-outline-width $gov-outline-width * 2 0 rgba(0, 0, 0, 0.35);
+                }
+            }
+
+            &:checked ~ #{$class}__indicator {
+                background-color: gov-colors('blue');
+                border-color: gov-colors('blue') !important;
+
+				&:after {
+					transform: translate3d(rem-calc(16), 0, 0);
+				}
+            }
+
+            &:focus ~ #{$class}__indicator {
+				box-shadow: 0 0 0 $gov-outline-width gov-colors('blue-focus');
+                outline: 0;
+            }
+
+            & ~ #{$class}__message {
+                margin-left: rem-calc(55);
+            }
+
+            //  --------------------
+            &[aria-disabled="true"],
+            &:disabled,
+            &[readonly] {
+                ~ #{$class}__label {
+                    color: gov-colors('grey-light');
+                    cursor: not-allowed;
+                }
+
+                ~ #{$class}__indicator {
+                    border-color: gov-colors('grey-inactive') !important;
+
+                    &:after {
+                        background-color: gov-colors('grey-bg');
+                        box-shadow: 0 $gov-outline-width $gov-outline-width * 2 0 rgba(0, 0, 0, 0.2);
+                    }
+                }
+
+                &:checked ~ #{$class}__indicator {
+                    background-color: gov-colors('blue-inactive-1');
+                    border-color: gov-colors('blue-inactive-1') !important;
+
+                    &:after {
+                        background-color: gov-colors('grey-bg');
+                    }
+                }
+            }
+        }
+
+        /*  Message
+        ------------------------------------------------------------------ */
+        #{$class}__message {
+            margin-left: rem-calc(35);
+        }
+
+        /*  Error
+        ------------------------------------------------------------------ */
+        &#{$class}--error {
+            #{$class}__toggle {
+                &:checked ~ #{$class}__indicator {
+                    background-color: gov-colors('error');
+                    border-color: gov-colors('error');
+                }
+
+                &:focus ~ #{$class}__indicator {
+                    box-shadow: 0 0 0 $gov-outline-width gov-colors('error');
+                }
+            }
+        }
+    }
+}

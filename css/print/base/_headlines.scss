@@ -1,0 +1,30 @@
+h1,
+h2,
+h3,
+h4,
+.gov-title {
+    break-inside: avoid;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+}
+
+h1, .gov-title--alpha {
+    margin-bottom: rem-calc(10);
+
+    font-size: 30pt;
+}
+
+h2, .gov-title--beta {
+    margin-bottom: rem-calc(10);
+
+    font-size: 21pt;
+}
+
+h3, .gov-title--gamma {
+    font-size: 15pt;
+    line-height: 1.4;
+}
+
+h4, .gov-title--delta {
+    font-size: 9pt;
+}

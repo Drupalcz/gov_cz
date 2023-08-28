@@ -1,0 +1,13 @@
+$z-index: (
+	"modal"    : 100,
+	"bar"      : 50,
+	"base"     : 1
+);
+
+@function z-index($key) {
+	@return map-get($z-index, $key);
+}
+
+@mixin z-index($key, $val: 0) {
+	z-index: z-index($key) + $val;
+}

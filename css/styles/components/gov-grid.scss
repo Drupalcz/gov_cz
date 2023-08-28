@@ -1,0 +1,287 @@
+.gov-grid {
+    display: grid;
+    grid-gap: 0;
+
+    &--plain {
+        grid-gap: rem-calc(25 20);
+        margin-bottom: rem-calc(25);
+
+        .gov-grid-tile {
+            padding: 0 !important;
+
+            &:before,
+            &:after {
+                display: none !important;
+            }
+        }
+    }
+
+    // 4-COLUMN GRID DEFAULT
+    @include mq($from: tablet-landscape) {
+        &--x4,
+        &--x4-2 {
+            grid-template-columns: repeat(4, 1fr);
+
+            //  first row
+            /* .gov-grid-tile:nth-child(-n+4) {
+                padding-top: 0;
+            } */
+
+            //  last row
+            .gov-grid-tile:nth-child(4n+1):nth-last-child(-n+4),
+            .gov-grid-tile:nth-child(4n+1):nth-last-child(-n+4) ~ .gov-grid-tile {
+                &:before {
+                    display: none;
+                }
+            }
+
+            //  first column
+            .gov-grid-tile:first-of-type,
+            .gov-grid-tile:nth-child(4n+1) {
+                padding-left: rem-calc(20);
+            }
+
+            //  last column
+            .gov-grid-tile:nth-child(4n) {
+                padding-right: rem-calc(20);
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            //  last item
+            .gov-grid-tile:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    //  4-COLUMN GRID CHANGE
+    @include mq($from: mobile-landscape, $until: tablet-landscape) {
+        //  4-COLUMN GRID AS 3-COLUMN GRID
+        &--x4 {
+            grid-template-columns: repeat(3, 1fr);
+
+            //  first row
+            /* .gov-grid-tile:nth-child(-n+3) {
+                padding-top: 0;
+            } */
+
+            //  last row
+            .gov-grid-tile:nth-child(3n+1):nth-last-child(-n+3),
+            .gov-grid-tile:nth-child(3n+1):nth-last-child(-n+3) ~ .gov-grid-tile {
+                &:before {
+                    display: none;
+                }
+            }
+
+            //  first column
+            .gov-grid-tile:first-of-type,
+            .gov-grid-tile:nth-last-child(3n) {
+                padding-left: rem-calc(20);
+            }
+
+            //  last column
+            .gov-grid-tile:nth-child(3n) {
+                padding-right: rem-calc(20);
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        //  4-COLUMN GRID AS 2-COLUMN GRID
+        &--x4-2 {
+            grid-template-columns: repeat(2, 1fr);
+
+            //  first row
+            /* .gov-grid-tile:nth-child(-n+2) {
+                padding-top: 0;
+            } */
+
+            //  last row
+            .gov-grid-tile:nth-child(2n+1):nth-last-child(-n+2),
+            .gov-grid-tile:nth-child(2n+1):nth-last-child(-n+2) ~ .gov-grid-tile {
+                &:before {
+                    display: none;
+                }
+            }
+
+            //  first column
+            .gov-grid-tile:nth-last-child(2n) {
+                padding-left: rem-calc(20);
+            }
+
+            //  last column
+            .gov-grid-tile:nth-child(2n) {
+                padding-right: rem-calc(20);
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            //  last item
+            .gov-grid-tile:last-child {
+                &:not(:nth-child(3n)) {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // 3-COLUMN GRID DEFAULT
+    @include mq($from: mobile-landscape) {
+        //  3 column grid
+        &--x3 {
+            grid-template-columns: repeat(3, 1fr);
+
+            //  first row
+            /* .gov-grid-tile:nth-child(-n+3) {
+                padding-top: 0;
+            } */
+
+            //  last row
+            .gov-grid-tile:nth-child(3n+1):nth-last-child(-n+3),
+            .gov-grid-tile:nth-child(3n+1):nth-last-child(-n+3) ~ .gov-grid-tile {
+                &:before {
+                    display: none;
+                }
+            }
+
+            //  first column
+            .gov-grid-tile:first-of-type,
+            .gov-grid-tile:nth-child(3n+1) {
+                padding-left: rem-calc(20);
+            }
+
+            //  last column
+            .gov-grid-tile:nth-child(3n) {
+                padding-right: rem-calc(20);
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    //  ALL GRIDS AS 2-COLUMN
+    @include mq($from: palm, $until: mobile-landscape) {
+        &--x4-2,
+        &--x4,
+        &--x3 {
+            grid-template-columns: repeat(2, 1fr);
+
+            //  first row
+            /* .gov-grid-tile:nth-child(-n+2) {
+                padding-top: 0;
+            } */
+
+            //  last row
+            .gov-grid-tile:nth-child(2n+1):nth-last-child(-n+2),
+            .gov-grid-tile:nth-child(2n+1):nth-last-child(-n+2) ~ .gov-grid-tile {
+                &:before {
+                    display: none;
+                }
+            }
+
+            //  first column
+            .gov-grid-tile:nth-last-child(2n) {
+                padding-left: rem-calc(20);
+            }
+
+            //  last column
+            .gov-grid-tile:nth-child(2n) {
+                padding-right: rem-calc(20);
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            //  last item
+            .gov-grid-tile:last-child {
+                &:not(:nth-child(3n)) {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // 2-COLUMN GRID DEFAULT
+    @include mq($from: palm) {
+        &--x2 {
+            grid-template-columns: repeat(2, 1fr);
+
+            //  first row
+            /* .gov-grid-tile:nth-child(-n+2) {
+                padding-top: 0;
+            } */
+
+            //  last row
+            .gov-grid-tile:nth-child(2n+1):nth-last-child(-n+2),
+            .gov-grid-tile:nth-child(2n+1):nth-last-child(-n+2) ~ .gov-grid-tile {
+                &:before {
+                    display: none;
+                }
+            }
+
+            //  first column
+            .gov-grid-tile:nth-last-child(2n) {
+                padding-left: rem-calc(20);
+            }
+
+            //  last column
+            .gov-grid-tile:nth-child(2n) {
+                padding-right: rem-calc(20);
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // GRID-TILE AS LINK
+    @include mq($from: portable) {
+        &--x4,
+        &--x4-2 {
+            a.gov-grid-tile:nth-child(4n) {
+                .gov-preview-tile {
+                    &__headline {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &--x3 {
+            a.gov-grid-tile:nth-child(3n) {
+                .gov-preview-tile {
+                    &__headline {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &--x2 {
+            a.gov-grid-tile:nth-child(2n) {
+                .gov-preview-tile {
+                    &__headline {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

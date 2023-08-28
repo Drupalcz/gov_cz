@@ -1,0 +1,123 @@
+.gov-portal-header {
+    overflow: initial;
+
+    background-color: gov-colors('blue');
+
+    &__upper,
+    &__column,
+    &__extras {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__upper {
+        padding: rem-calc(20 0);
+
+        .gov-search {
+            margin-bottom: 0;
+            padding: 0;
+
+            .gov-form-control__input {
+                padding: rem-calc(10 50 10 15);
+
+                font-size: rem-calc(16);
+            }
+        }
+    }
+
+    &__extras {
+        padding-left: rem-calc(20);
+
+        button, .gov-button {
+            margin-right: rem-calc(20);
+
+            white-space: nowrap;
+        }
+    }
+
+    /*  RESPONSE
+    ------------------------------------------------------------------ */
+    @include mq($from: tablet) {
+        &__upper {
+            .gov-search {
+                .gov-form-control {
+                    min-width: 300px;
+                }
+            }
+        }
+    }
+
+    @include mq($until: mobile-landscape) {
+        &__upper {
+            flex-wrap: wrap;
+            padding-bottom: rem-calc(15);
+        }
+
+        &__column {
+            width: 100%;
+
+            &:first-of-type {
+                position: relative;
+
+                padding-bottom: rem-calc(15);
+
+                &:after {
+                    @include pseudo();
+                    left: rem-calc(-20); right: rem-calc(-20); bottom: -1px;
+
+                    height: 1px;
+
+                    background-color: gov-colors('blue-light');
+                }
+            }
+
+            &:last-of-type {
+                padding-top: rem-calc(15);
+            }
+        }
+
+        &__extras {
+            position: relative;
+
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: rem-calc(10);
+            padding: rem-calc(20);
+            padding-bottom: rem-calc(10);
+            padding-top: rem-calc(30);
+
+            &:after {
+                @include pseudo();
+                left: rem-calc(20); right: rem-calc(20); top: 0;
+
+                height: 1px;
+
+                background-color: gov-colors('blue-light');
+            }
+
+            .gov-lang-switch {
+                margin-top: rem-calc(15);
+            }
+        }
+
+        .gov-portal-nav {
+            display: none;
+        }
+
+        /*  FIXED while navbar open
+        ------------------------------------------------------------------ */
+        &.is-fixed {
+            position: fixed;
+            left: 0; right: 0; top: 0;
+            @include z-index('modal', 50);
+
+            overflow-y: scroll;
+            height: 100vh;
+
+            .gov-portal-nav {
+                display: block;
+            }
+        }
+    }
+}

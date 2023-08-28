@@ -1,0 +1,54 @@
+$class: '.gov-badge';
+
+#{$class} {
+    display: inline-block;
+    padding: rem-calc(4 10);
+
+    background-color: gov-colors('white');
+    border-radius: rem-calc(10);
+    color: gov-colors('grey-mid');
+    font-family: $gov-font-family-primary;
+    font-size: rem-calc(12);
+    font-weight: 400;
+    letter-spacing: initial;
+
+    -webkit-font-smoothing: antialiased;
+
+    a, .gov-link {
+        font-size: inherit;
+        letter-spacing: initial;
+    }
+
+    /*  Types
+    ------------------------------------------------------------------ */
+    &--inversed {
+        background-color: gov-colors('grey-dark');
+        color: gov-colors('white');
+
+        a, .gov-link {
+            @extend .gov-link--inversed;
+        }
+    }
+
+    &--warning {
+        background-color: gov-colors('yellow');
+        color: gov-colors('grey-dark');
+
+        a, .gov-link {
+            color: gov-colors('grey-dark');
+        }
+    }
+
+    &--error {
+        background-color: gov-colors('error');
+        color: gov-colors('white');
+
+        a, .gov-link {
+            @extend .gov-link--inversed;
+        }
+    }
+}
+
+#{$class} + #{$class} {
+    margin-left: rem-calc(4);
+}

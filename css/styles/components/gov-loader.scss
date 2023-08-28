@@ -1,0 +1,116 @@
+@use "sass:math";
+
+$bullet-size: rem-calc(10);
+$bullet-count: 8;
+$radius: rem-calc(25);
+
+@function delay($interval, $count, $index) {
+    @return ($index * $interval) - ($interval * $count);
+}
+
+.gov-loader {
+    display: block;
+
+    & > span {
+        display: inline-block;
+        margin: $bullet-size * 0.5;
+        width: $bullet-size;
+        height: $bullet-size;
+
+        background-color: gov-colors('blue-focus');
+        border-radius: 100%;
+
+        animation-fill-mode: both;
+    }
+
+    &:not(.gov-loader--block) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > span {
+            animation: inline-loader-animation 700ms infinite linear;
+
+            &:nth-child(2n-1) {
+                animation-delay: -350ms;
+            }
+        }
+    }
+
+    &--block {
+        position: relative;
+        left: 50%; top: 50%;
+
+        margin-left: $bullet-size * -1;
+        margin-top: $bullet-size * -1;
+        height: $bullet-size * 2;
+        width: $bullet-size * 2;
+
+        @for $i from 1 through $bullet-count {
+            & > span:nth-child(#{$i}) {
+                $iter: math-div(360, $bullet-count);
+                $quarter: ($radius * 0.5) + math.div($radius, 5.5);
+
+                @if $i == 1 {
+                    top: $radius;
+                    left: 0;
+                } @else if $i == 2 {
+                    top: $quarter;
+                    left: $quarter;
+                } @else if $i == 3 {
+                    top: 0;
+                    left: $radius;
+                } @else if $i == 4 {
+                    top: -$quarter;
+                    left: $quarter;
+                } @else if $i == 5 {
+                    top: -$radius;
+                    left: 0;
+                } @else if $i == 6 {
+                    top: -$quarter;
+                    left: -$quarter;
+                } @else if $i == 7 {
+                    top: 0;
+                    left: -$radius;
+                } @else if $i == 8 {
+                    top: $quarter;
+                    left: -$quarter;
+                }
+
+                animation: loader-animation 1000ms delay(120ms, $bullet-count, $i - 1) infinite linear;
+            }
+        }
+
+        & > span {
+            position: absolute;
+        }
+    }
+
+    &--inversed {
+        & > span {
+            background-color: gov-colors('white');
+        }
+    }
+}
+
+@keyframes inline-loader-animation {
+    50% {
+        opacity: 0.2;
+        transform: scale(0.75);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes loader-animation {
+    50% {
+      opacity: 0.3;
+      transform: scale(0.4);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }

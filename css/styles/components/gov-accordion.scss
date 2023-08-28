@@ -1,0 +1,271 @@
+$class: '.gov-accordion';
+$classGovIcon: '.gov-icon';
+
+#{$class} {
+    position: relative;
+
+    display: block;
+    width: 100%;
+
+    //  --------------------
+    &__header {
+        position: relative;
+        z-index: 2;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: rem-calc(19 8);
+        width: 100%;
+
+        border-radius: 0;
+        text-align: left;
+        text-transform: none;
+
+        &:before {
+            @include pseudo();
+            left: 0;
+            right: 0;
+            top: -1px;
+
+            height: 1px;
+            background-color: gov-colors('grey-inactive');
+        }
+
+        & h3 + #{$classGovIcon} {
+            position: absolute;
+            right: rem-calc(8);
+            top: 50%;
+            transform: translateY(-50%);
+
+            &:before {
+                font-size: rem-calc(12);
+                color: gov-colors('blue');
+            }
+        }
+
+        & > * {
+            margin-bottom: 0;
+        }
+
+        h3,
+        .gov-title--gamma {
+            display: flex;
+            align-items: start;
+        }
+
+        .gov-icon,
+        .gov-complex-icon {
+            position: relative;
+
+            display: inline-block;
+            margin-right: rem-calc(8);
+
+            font-size: rem-calc(24);
+            vertical-align: middle;
+
+            color: gov-colors('grey-dark');
+
+            flex-shrink: 1;
+        }
+
+        &:focus {
+            border-radius: $gov-border-radius;
+        }
+
+        //  ----------
+        &--noborder {
+            &:before {
+                display: none;
+            }
+        }
+
+        //  ----------
+        &.is-expanded {
+            & h3 + #{$classGovIcon} {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+
+    //  --------------------
+    &__content {
+        overflow: hidden;
+        height: 0;
+
+        visibility: hidden;
+
+        transition: height 300ms ease-out, min-height 300ms ease-out;
+
+        &.is-expanded {
+            height: auto;
+
+            visibility: visible;
+        }
+    }
+
+    //  --------------------
+    &__content-inner {
+        padding: rem-calc(20 8);
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    /*  Accordion with borders
+    ------------------------------------------------------------------ */
+    &--bordered {
+        &:before,
+        &:after {
+            @include pseudo();
+            left: 0;
+            right: 0;
+
+            height: 1px;
+            background-color: gov-colors('grey-inactive');
+        }
+
+        &:before {
+            top: -1px;
+        }
+
+        &:after {
+            bottom: -1px;
+        }
+    }
+
+    &--bordered-bottom {
+        &:after {
+            @include pseudo();
+            left: 0;
+            right: 0;
+
+            height: 1px;
+            background-color: gov-colors('grey-inactive');
+        }
+
+        &:after {
+            bottom: -1px;
+        }
+    }
+
+    /*  Sizes
+    ------------------------------------------------------------------ */
+    &--large {
+        #{$class}__header {
+            padding: rem-calc(27 8);
+
+            h3,
+            .gov-title--gamma {
+                min-height: rem-calc(32);
+                line-height: rem-calc(32);
+            }
+
+            .gov-icon,
+            .gov-complex-icon {
+                font-size: rem-calc(32);
+
+                margin-right: rem-calc(16);
+            }
+        }
+    }
+
+    &--small {
+        #{$class}__header {
+            padding: rem-calc(15 8);
+
+            h3,
+            .gov-title--gamma {
+                min-height: rem-calc(19);
+                line-height: rem-calc(19);
+                font-size: rem-calc(16);
+            }
+
+            .gov-icon,
+            .gov-complex-icon {
+                font-size: rem-calc(16);
+
+                margin-right: rem-calc(8);
+            }
+        }
+
+        #{$class}__content-inner {
+            padding: rem-calc(8) !important;
+        }
+    }
+
+    /*  Content-block accordion
+    ------------------------------------------------------------------ */
+    &--as-section {
+        margin-bottom: rem-calc(35);
+
+        background-color: gov-colors('white');
+        border-radius: $gov-border-radius;
+
+        & > .gov-accordion__header,
+        & > .gov-accordion__content > .gov-accordion__content-inner {
+            padding-left: rem-calc(50);
+            padding-right: rem-calc(50);
+        }
+
+        & > .gov-accordion__header {
+            border-radius: $gov-border-radius;
+
+            &:after {
+                transform: translateX(rem-calc(-10));
+            }
+        }
+
+        & > .gov-accordion__content > .gov-accordion__content-inner {
+            position: relative;
+
+            &:before {
+                @include pseudo();
+                left: 0;
+                right: 0;
+                top: 0;
+
+                height: 1px;
+                background-color: gov-colors('grey-inactive');
+            }
+        }
+    }
+
+    /*  No offset for content
+    ------------------------------------------------------------------ */
+    &--no-inner-offset {
+        & > .gov-accordion__content > .gov-accordion__content-inner {
+            padding: 0;
+            padding-top: rem-calc(2);
+            padding-bottom: rem-calc(2);
+        }
+    }
+
+    &--no-inner-y-offset {
+        & > .gov-accordion__content > .gov-accordion__content-inner {
+            padding-top: rem-calc(2);
+            padding-bottom: rem-calc(2);
+        }
+    }
+
+    /*  RESPONSE
+    ------------------------------------------------------------------ */
+    @include mq($until: tablet-landscape) {
+        &--large {
+            & > .gov-accordion__header {
+                padding: rem-calc(20 10);
+            }
+        }
+    }
+
+    @include mq($until: tablet) {
+        &--as-section {
+            & > .gov-accordion__header,
+            & > .gov-accordion__content > .gov-accordion__content-inner {
+                padding-left: rem-calc(30);
+                padding-right: rem-calc(30);
+            }
+        }
+    }
+}

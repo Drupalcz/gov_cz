@@ -1,0 +1,195 @@
+$class: '.gov-table';
+
+//  --------------------
+#{$class}-cover {
+    display: block;
+    max-width: 100%;
+
+    overflow-x: scroll;
+}
+
+//  --------------------
+table, #{$class} {
+    margin-bottom: rem-calc(25);
+    table-layout: auto;
+    width: 100%;
+
+    border: none;
+
+    //  ----------
+    tbody {
+        tr {
+            border-bottom: 1px solid gov-colors('grey-inactive');
+        }
+
+        td {
+            @extend .gov-paragraph;
+
+            margin-bottom: 0;
+            min-width: 135px;
+
+            border: none;
+
+            &#{$class}__cell--wide {
+                min-width: 180px;
+            }
+
+            &#{$class}__cell--narrow {
+                min-width: 100px;
+            }
+        }
+    }
+
+    //  ----------
+    th, td {
+        padding: rem-calc(8) 0;
+        padding-right: rem-calc(10);
+
+        text-align: left;
+    }
+
+    //  ----------
+    th {
+        @extend .gov-title;
+        @extend .gov-title--delta;
+    }
+
+    /*  RESPONSE
+    ------------------------------------------------------------------ */
+    &#{$class}--tablet-block {
+        @include mq($until: tablet) {
+            thead {
+                display: none;
+
+                th {
+                    padding-bottom: 0;
+                }
+            }
+
+            tbody {
+                td {
+                    &:before {
+                        @include pseudo(block, static, attr(data-title));
+
+                        color: gov-colors('grey-dark');
+                        font-size: rem-calc(12);
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            td {
+                display: block;
+                padding: rem-calc(5) 0;
+
+                &.u-align--right {
+                    text-align: left !important;
+                }
+            }
+
+            tr {
+                display: block;
+                padding: rem-calc(10) 0;
+            }
+        }
+    }
+
+    &#{$class}--mobile-block {
+        @include mq($until: mobile) {
+            thead {
+                display: none;
+
+                th {
+                    padding-bottom: 0;
+                }
+            }
+
+            tbody {
+                td {
+                    &:before {
+                        @include pseudo(block, static, attr(data-title));
+
+                        color: gov-colors('grey-dark');
+                        font-size: rem-calc(12);
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            td {
+                display: block;
+                padding: rem-calc(5) 0;
+
+                &.u-align--right {
+                    text-align: left !important;
+                }
+            }
+
+            tr {
+                display: block;
+                padding: rem-calc(10) 0;
+            }
+        }
+    }
+}
+
+//  --------------------
+.gov-sortable-table {
+    &__trigger {
+        @extend .gov-link;
+        @extend .gov-link--standalone;
+
+        position: relative;
+
+        padding-right: rem-calc(30);
+
+        &:after {
+            @include pseudo(inline-block, absolute, '\47');
+            right: 0; top: rem-calc(-5);
+
+            color: gov-colors('blue');
+            font-family: $gov-icon-font;
+            font-size: rem-calc(24);
+            text-transform: none;
+        }
+
+        &--asc {
+            &:after {
+                transform: rotate(-180deg);
+            }
+        }
+
+        &--dsc {
+            &:after {
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
+
+//  --------------------
+.gov-scrollable {
+    @include mq($from: tablet) {
+        position: relative;
+
+        &:after {
+            @include pseudo();
+            right: 0; top: 0; bottom: 0;
+
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+
+            width: 150px;
+
+            transition: opacity 200ms ease-out;
+            will-change: opacity;
+        }
+
+        &.scrolled {
+            &:after {
+                opacity: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+$class: '.gov-multiselect';
+$classFormControl: '.gov-form-control';
+
+#{$class} {
+    position: relative;
+
+    &:after {
+        @include pseudo(inline-block, absolute, '\70');
+        right: rem-calc(15);
+        top: 50%;
+
+        margin-top: rem-calc(-12);
+
+        color: gov-colors('blue');
+        font-family: $gov-icon-font;
+        font-size: rem-calc(24);
+        line-height: 1;
+        pointer-events: none;
+    }
+
+    &__options {
+        @extend .gov-autocomplete__results;
+    }
+
+    &__option {
+        @extend .gov-autocomplete__result;
+    }
+
+    &__empty {
+        @extend .gov-autocomplete__empty;
+    }
+
+    &__tags {
+        @extend .gov-list--inline;
+        @extend .gov-list--plain;
+    }
+
+    &__tag {
+        display: inline-flex !important;
+        align-items: flex-start;
+        margin-bottom: 0 !important;
+        margin-top: rem-calc(10);
+        padding: rem-calc(6 0 0 10);
+
+        background-color: gov-colors('blue-hover');
+        border-radius: $gov-border-radius;
+        color: gov-colors('blue');
+        font-family: $gov-font-family-primary;
+        font-size: rem-calc(12);
+        font-weight: 400;
+        letter-spacing: initial;
+        line-height: 1.5 !important;
+        white-space: nowrap;
+
+        span {
+            margin-bottom: rem-calc(6);
+
+            white-space: initial;
+        }
+
+        button {
+            margin-top: rem-calc(-6);
+            margin-left: rem-calc(8);
+            padding: 0;
+
+            color: gov-colors('blue');
+
+            &:after {
+                @include pseudo(block, relative, '\70');
+
+                color: currentColor;
+                font-family: $gov-icon-font;
+                font-size: rem-calc(30);
+                line-height: 1;
+                pointer-events: none;
+                text-transform: none;
+                vertical-align: middle;
+            }
+
+            @include hover() {
+                background-color: gov-colors('blue-inactive-2');
+            }
+        }
+    }
+}
+
+#{$classFormControl} {
+
+    /*  Classic
+    ------------------------------------------------------------------ */
+    &--classic {
+        #{$class} {
+            display: flex;
+            flex-direction: column;
+
+            #{$classFormControl}__input {
+                order: 2;
+            }
+
+            &::after {
+                top: rem-calc(42);
+            }
+        }
+    }
+
+    /*  Sizes
+    ------------------------------------------------------------------ */
+
+    &--large {
+        #{$class} {
+            &::after {
+                top: rem-calc(46);
+            }
+        }
+    }
+
+    &--x-large {
+        #{$class} {
+            &::after {
+                top: rem-calc(54);
+            }
+        }
+    }
+}

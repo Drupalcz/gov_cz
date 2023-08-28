@@ -1,0 +1,172 @@
+ul, ol, .gov-list, .gov-ordered-list {
+    margin-left: rem-calc(15);
+    margin-bottom: rem-calc(25);
+
+    list-style: none;
+
+    //  ----
+    &--plain {
+        margin-left: 0;
+
+        & > li, & > .gov-list__item {
+            margin-bottom: rem-calc(5);
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    &--inline {
+        & > li, & > .gov-list__item {
+            display: inline-block;
+            margin-right: rem-calc(10);
+        }
+    }
+}
+
+ol, .gov-ordered-list {
+    counter-reset: gov-counter;
+}
+
+ul > li, .gov-list > li, .gov-list__item,
+ol > li, .gov-ordered-list > li, .gov-ordered-list__item  {
+    position: relative;
+
+    color: gov-colors('grey-mid');
+    font-family: $gov-font-family-primary;
+    font-size: rem-calc(15);
+    font-weight: 400;
+    letter-spacing: em-calc(0.2);
+    line-height: 1.86666667;
+
+    -webkit-font-smoothing: antialiased;
+
+    &:before {
+        position: absolute;
+        top: rem-calc(12);
+        left: rem-calc(15) * -1;
+
+        display: inline-block;
+    }
+}
+
+ul > li, .gov-list > li, .gov-list__item {
+    &:before {
+        content: '';
+
+        height: 5px;
+        width: 5px;
+
+        border-radius: 100%;
+        background-color: gov-colors('blue');
+    }
+}
+
+ol > li, .gov-ordered-list > li, .gov-ordered-list__item {
+    counter-increment: gov-counter;
+
+    &:before {
+        content: counter(gov-counter) '.';
+        top: rem-calc(3);
+
+        color: gov-colors('blue');
+        font-size: rem-calc(13);
+        font-weight: 500;
+    }
+}
+
+/*  Definition list
+------------------------------------------------------------------ */
+$class: '.gov-definition-list';
+
+#{$class} {
+    &--inline {
+        @include mq($from: mobile-landscape) {
+            display: flex;
+            flex-wrap: wrap;
+
+            & > dt,
+            & > dd,
+            & > #{$class}__term,
+            #{$class}__def {
+                min-width: calc(25% - 25px);
+
+                &:nth-of-type(n + 3) {
+                    margin-top: rem-calc(10);
+                }
+            }
+
+            & > dt,
+            & > #{$class}__term {
+                padding-top: rem-calc(5);
+
+                &:nth-of-type(2n) {
+                    margin-left: rem-calc(50);
+                }
+            }
+
+            & > * + dt,
+            & > * + #{$class}__term  {
+                margin-top: 0;
+            }
+
+            & > dd,
+            #{$class}__def {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+dl > dd,
+#{$class} > dd,
+#{$class}__def {
+    color: gov-colors('grey-mid');
+    font-family: $gov-font-family-primary;
+    font-size: rem-calc(15);
+    font-weight: 400;
+    letter-spacing: em-calc(0.2);
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+dl > dt,
+#{$class} > dt,
+#{$class}__term {
+    display: inline-block;
+    margin: 0;
+    margin-right: rem-calc(15);
+    min-width: rem-calc(80);
+
+    color: gov-colors('grey-dark');
+    font-family: $gov-font-family-primary;
+    font-size: rem-calc(12);
+    font-weight: 500;
+    letter-spacing: em-calc(0.5);
+    line-height: 1.333;
+    text-transform: uppercase;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+dl > * + dt,
+#{$class} > * + dt,
+* + #{$class}__term {
+    margin-top: rem-calc(15);
+}
+
+dl > dd,
+#{$class} > dd,
+#{$class}__def {
+    display: inline;
+    margin: 0;
+
+    &:after {
+        content: '\a';
+        white-space: pre;
+    }
+}

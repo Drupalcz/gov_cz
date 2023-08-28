@@ -1,0 +1,14 @@
+.gov-link {
+    &--inversed {
+        color: gov-colors('grey-dark');
+
+        & > * {
+            color: gov-colors('grey-dark');
+        }
+
+        &:visited,
+        &:visited > *{
+            color: gov-colors('grey-dark');
+        }
+    }
+}

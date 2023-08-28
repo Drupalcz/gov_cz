@@ -1,0 +1,63 @@
+h1,
+h2,
+h3,
+h4,
+.gov-title {
+    margin-bottom: rem-calc(10);
+
+    color: gov-colors('grey-dark');
+    font-family: $gov-font-family-primary;
+    font-weight: 400;
+    letter-spacing: em-calc(0.2);
+    line-height: 1.2;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, .gov-title--alpha {
+    margin-bottom: rem-calc(40);
+
+    font-size: rem-calc(40);
+    font-weight: 300;
+}
+
+h2, .gov-title--beta {
+    margin-bottom: rem-calc(25);
+
+    font-size: rem-calc(28);
+    line-height: 1.4;
+}
+
+h3, .gov-title--gamma {
+    font-size: rem-calc(20);
+}
+
+h4, .gov-title--delta {
+    font-size: rem-calc(12);
+    font-weight: 500;
+    letter-spacing: em-calc(0.5);
+    line-height: 1.3333334;
+    text-transform: uppercase;
+}
+
+@include mq($until: tablet) {
+    h1, .gov-title--alpha {
+        margin-bottom: rem-calc(30);
+    }
+
+    h2, .gov-title--beta {
+        margin-bottom: rem-calc(20);
+    }
+}
+
+@include mq($until: mobile-landscape) {
+    h1, .gov-title--alpha {
+        font-size: rem-calc(32);
+        line-height: 1.25;
+    }
+
+    h2, .gov-title--beta {
+        font-size: rem-calc(26);
+        line-height: 1.2;
+    }
+}

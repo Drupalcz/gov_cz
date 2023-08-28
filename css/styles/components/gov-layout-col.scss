@@ -1,0 +1,35 @@
+.gov-layout__col {
+    flex: 1;
+    min-width: 280px;
+
+    //  position
+    &--pos-left {
+        padding-right: rem-calc(10);
+    }
+
+    &--pos-right {
+        padding-left: rem-calc(15);
+    }
+
+    //  spread
+    &--spread-2 {
+        flex: 2;
+    }
+
+    &--spread-3 {
+        flex: 3;
+    }
+
+
+    // RESPONSE
+    @include mq($until: tablet) {
+        //  position
+        &--pos-left {
+            padding-right: 0;
+        }
+
+        &--pos-right {
+            padding-left: 0;
+        }
+    }
+}

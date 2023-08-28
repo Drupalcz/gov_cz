@@ -1,0 +1,19 @@
+.gov-grid-tile,
+a.gov-grid-tile {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    page-break-inside: avoid;
+
+    &:before {
+        display: none;
+    }
+}
+
+a.gov-grid-tile {
+    .gov-preview-tile {
+        &__headline:after {
+            display: none;
+        }
+    }
+}

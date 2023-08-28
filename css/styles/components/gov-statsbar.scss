@@ -1,0 +1,66 @@
+$class: '.gov-statsbar';
+$classContainerContent: '.gov-container__content';
+$classIcon: '.gov-icon';
+$classComplexIcon: '.gov-complex-icon';
+
+#{$class} {
+    background-color: gov-colors('blue-hover');
+
+    &--icon-left {
+        #{$class}__item {
+            padding-left: rem-calc(64);
+
+            position: relative;
+
+            #{$classIcon}, #{$classComplexIcon} {
+                position: absolute;
+                left: 0;
+                top: rem-calc(40);
+
+                & + #{$class}__num {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    @include mq($from: palm) {
+        &__container {
+            text-align: center;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            #{$classContainerContent} {
+                display: inline-flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+
+        &__item {
+            flex: 1;
+        }
+    }
+
+    @include mq($until: tablet-landscape) {
+        &__container {
+            #{$classContainerContent} {
+                flex-wrap: wrap;
+            }
+        }
+
+        &__item {
+            flex: 1 0 50%;
+        }
+
+        &--icon-left {
+            #{$class}__item {
+                padding-left: rem-calc(80);
+
+                #{$classIcon}, #{$classComplexIcon} {
+                    left: rem-calc(24); top: rem-calc(24);
+                }
+            }
+        }
+    }
+}

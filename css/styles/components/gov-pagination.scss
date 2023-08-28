@@ -1,0 +1,88 @@
+.gov-pagination {
+	&__holder {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		@include button-core();
+
+		display: block;
+
+		padding: rem-calc(15 15 15);
+		margin-left: rem-calc(5);
+		margin-right: rem-calc(5);
+
+		color: gov-colors('blue');
+		font-size: rem-calc(12);
+		font-weight: 500;
+
+		&--arrow-left,
+		&--arrow-right {
+			padding: rem-calc(13 6.5);
+
+			&:before {
+				font-family: $gov-icon-font;
+				font-size: rem-calc(24);
+				text-transform: none;
+			}
+		}
+
+		&--arrow-left {
+			&:before {
+				@include pseudo(inline-block, relative, '\74');
+			}
+		}
+
+		&--arrow-right {
+			&:before {
+				@include pseudo(inline-block, relative, '\46');
+			}
+		}
+
+		&--dots,
+		&--active {
+			color: black;
+			pointer-events: none;
+		}
+
+		&--active {
+			position: relative;
+
+			&:after {
+				@include pseudo();
+				top: 0;
+				left: 0;
+				right: 0;
+
+				height: 2px;
+
+				background-color: gov-colors('grey-dark');
+			}
+        }
+
+        @include hover() {
+            position: relative;
+
+			&:after {
+				@include pseudo();
+				top: 0;
+				left: 0;
+				right: 0;
+
+				height: 2px;
+
+				background-color: gov-colors('grey-dark');
+			}
+        }
+
+		&:focus {
+			box-shadow: 0 0 0 $gov-outline-width gov-colors('blue-focus');
+		}
+
+        &--disabled {
+            color: gov-colors('blue-inactive-1');
+            pointer-events: none;
+        }
+    }
+}

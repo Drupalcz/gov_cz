@@ -1,0 +1,11 @@
+.gov-footer {
+    page-break-inside: avoid;
+
+    hr {
+        border-color: gov-colors('grey-inactive');
+    }
+
+    &__scroll-up {
+        display: none;
+    }
+}

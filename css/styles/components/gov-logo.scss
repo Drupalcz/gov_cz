@@ -1,0 +1,48 @@
+$class: '.gov-logo';
+
+#{$class} {
+    display: flex;
+    align-items: center;
+
+    color: gov-colors('blue') !important;
+    text-decoration: none;
+
+    &__sitename {
+        display: inline-block;
+        margin-left: rem-calc(10);
+
+        color: currentColor;
+		font-size: rem-calc(21);
+		font-weight: 700;
+    }
+
+    @include hover() {
+        & > * {
+            color: currentColor;
+        }
+    }
+
+    &:visited {
+        & > * {
+            color: currentColor;
+        }
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 $gov-outline-width gov-colors('white');
+    }
+
+    &--large {
+        #{$class}__sitename {
+            font-size: rem-calc(26);
+        }
+    }
+
+    &--inversed {
+        color: gov-colors('white') !important;
+    }
+
+    &--dark {
+        color: gov-colors('grey-dark') !important;
+    }
+}

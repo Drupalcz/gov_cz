@@ -1,0 +1,137 @@
+.gov-modal {
+    position: fixed;
+    left: 0; right: 0; top: 0; bottom: 0;
+    @include z-index('modal', 1);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: rem-calc(20);
+
+    &__header {
+        padding: rem-calc(32 64 0 48);
+
+        border-bottom: 1px solid gov-colors('grey-inactive');
+
+        > * {
+            margin-bottom: rem-calc(32);
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+
+        max-width: $gov-container-width * 0.75;
+        width: 90vw;
+
+        background-color: gov-colors('white');
+        border-radius: $gov-border-radius;
+
+        opacity: 0;
+        transform: translateY(rem-calc(20));
+        transition: opacity 256ms 0ms ease-out, transform 256ms 0ms ease-out;
+        will-change: opacity, transform;
+
+        img {
+            margin-bottom: rem-calc(25);
+        }
+    }
+
+    &__content-inner {
+        overflow-y: scroll;
+        padding: rem-calc(24 48 32 48);
+        max-height: 80vh;
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // @TODO - Prepracovat až bude existovat button-icon
+    &__close {
+        position: absolute;
+        right: rem-calc(32); top: rem-calc(32);
+
+        width: rem-calc(40);
+        height: rem-calc(40);
+
+        padding: 0;
+
+        &:before {
+            @include pseudo(inline-block, relative, '\73');
+
+            font-family: $gov-icon-font;
+            font-size: rem-calc(20);
+            text-transform: none;
+
+            color: gov-colors('grey-dark');
+        }
+    }
+
+    &__backdrop {
+        position: absolute;
+        left: 0; right: 0; top: 0; bottom: 0;
+
+        background-color: gov-colors('grey-dark');
+
+        opacity: 0;
+        transition: opacity 128ms 0ms ease-out;
+        will-change: opacity;
+    }
+
+    &.is-active {
+        display: flex;
+    }
+
+    &.is-visible {
+        .gov-modal__backdrop {
+            opacity: 0.45;
+            transition: opacity 128ms 128ms ease-out;
+        }
+
+        .gov-modal__content {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 512ms 128ms ease-out, transform 256ms 128ms ease-out;
+        }
+    }
+
+    @include mq($until: tablet) {
+        &__header {
+            padding: rem-calc(20 50 0 32);
+
+            > * {
+                margin-bottom: rem-calc(24);
+            }
+        }
+
+        &__content-inner {
+            padding: rem-calc(32);
+        }
+
+        &__close {
+            top: rem-calc(20);
+        }
+    }
+
+    @include mq($until: mobile) {
+        padding: rem-calc(10);
+
+        &__header {
+            padding: rem-calc(24 40 0 16);
+        }
+
+        &__content {
+            width: 100vw;
+        }
+
+        &__content-inner {
+            padding: rem-calc(24 16);
+        }
+
+        &__close {
+            right: rem-calc(8);
+        }
+    }
+}

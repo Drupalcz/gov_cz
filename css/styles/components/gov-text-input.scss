@@ -1,0 +1,156 @@
+$class: '.gov-form-control';
+
+#{$class} {
+    #{$class}__input {
+        @include input-placeholder {
+            color: gov-colors('white');
+        }
+
+        &[aria-disabled="true"],
+        &:disabled,
+        &[readonly],
+        &:read-only {
+            ~ #{$class}__label {
+                background-color: gov-colors('grey-bg');
+                cursor: not-allowed;
+            }
+
+            @include input-placeholder {
+                color: gov-colors('grey-bg');
+            }
+        }
+
+        &:focus {
+            border-color: gov-colors('blue');
+            outline: 0;
+
+            ~ #{$class}__label {
+                padding-top: rem-calc(7);
+                padding-bottom: rem-calc(5);
+
+                border-radius: $gov-border-radius $gov-border-radius 0 0;
+                font-size: rem-calc(12);
+
+                opacity: 1;
+            }
+
+            @include input-placeholder {
+                color: gov-colors('grey-light');
+            }
+        }
+
+        //  --------------------
+        &--standalone {
+            padding: rem-calc(15 20);
+            padding-bottom: rem-calc(13);
+
+            @include input-placeholder {
+                color: gov-colors('grey-light');
+            }
+        }
+    }
+
+    /*  Error & Success
+    ------------------------------------------------------------------ */
+    &--error {
+        #{$class}__input {
+            color: gov-colors('error');
+            border-color: gov-colors('error');
+
+            &:active,
+            &:focus {
+                border-color: gov-colors('error');
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 $gov-outline-width gov-colors('error');
+            }
+
+            @include hover() {
+                border-color: gov-colors('error');
+            }
+        }
+    }
+
+    /*  Inversed
+    ------------------------------------------------------------------ */
+    &--inversed {
+        #{$class}__input {
+            border-color: gov-colors('white');
+
+            &:focus {
+                box-shadow: 0 0 0 $gov-outline-width gov-colors('white');
+            }
+        }
+    }
+
+    /*  Classic
+    ------------------------------------------------------------------ */
+
+    &--classic {
+        #{$class}__input {
+            @include input-placeholder {
+                color: gov-colors('grey-light');
+            }
+
+            padding: rem-calc(8 12);
+
+            line-height: 1.375;
+
+            &[aria-disabled="true"],
+            &:disabled,
+            &[readonly],
+            &:read-only {
+                ~ #{$class}__label {
+                    background: transparent;
+                }
+
+                color: gov-colors('grey-light');
+
+                @include input-placeholder {
+                    color: gov-colors('grey-light');
+                }
+            }
+
+            &:focus {
+                border-color: gov-colors('blue');
+                outline: 0;
+
+                ~ #{$class}__label {
+                    padding-top: inherit;
+                    padding-bottom: inherit;
+
+                    font-size: rem-calc(14);
+                }
+            }
+        }
+
+        &#{$class}--error {
+            #{$class}__label {
+                color: gov-colors('error');
+            }
+        }
+    }
+
+    /*  Sizes
+    ------------------------------------------------------------------ */
+
+    &--large {
+        #{$class}__input {
+            padding: rem-calc(13 12 11 12);
+        }
+    }
+
+    &--x-large {
+        #{$class}__input {
+            padding: rem-calc(16 16 16 16);
+
+            &:focus {
+                ~ #{$class}__label {
+                    font-size: rem-calc(16) !important;
+                }
+            }
+        }
+    }
+
+}

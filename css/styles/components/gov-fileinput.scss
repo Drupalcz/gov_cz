@@ -1,0 +1,172 @@
+$baseclass: '.gov-form-control';
+$class: '.gov-fileinput';
+$classValidationMark: '.gov-form-control__validation-mark';
+
+#{$class} {
+    &__label {
+        margin-left: rem-calc(10);
+        margin-bottom: rem-calc(15);
+    }
+
+    &__upload {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: rem-calc(35);
+        padding-bottom: rem-calc(30);
+
+        border: 1px dashed gov-colors('grey-inactive');
+
+        &-content {
+            text-align: center;
+
+            &:before {
+                @include pseudo();
+                left: 0; right: 0; top: 0; bottom: 0;
+
+                background-color: transparent;
+                pointer-events: none;
+
+                transition: background-color 150ms ease-in-out;
+                will-change: background-color;
+            }
+        }
+
+        &-input {
+            position: absolute;
+            left: 0; right: 0; top: 0; bottom: 0;
+            z-index: 10;
+
+            width: 100%;
+
+            cursor: pointer;
+
+            opacity: 0;
+
+            @include hover() {
+                & ~ #{$class}__upload-content > #{$class}__upload-btn {
+                    background-color: gov-colors('blue-hover');
+                    border-color: gov-colors('blue-dark');
+                    color: gov-colors('blue-dark');
+                }
+            }
+
+            &:focus ~ #{$class}__upload-content > #{$class}__upload-btn {
+                border-color: gov-colors('blue-focus');
+                box-shadow: 0 0 0 $gov-outline-width gov-colors('blue-focus');
+                outline: none;
+            }
+
+            //  --------------------
+            &[aria-disabled="true"],
+            &:disabled,
+            &[readonly] {
+                & ~ #{$class}__upload-content > #{$class}__upload-btn {
+                    background-color: transparent !important;
+                    border-color: gov-colors('blue-inactive-2') !important;
+                    color: gov-colors('blue-inactive-1') !important;
+                }
+
+                & ~ #{$class}__upload-content > #{$class}__upload-copy,
+                & ~ #{$class}__upload-content > #{$class}__upload-note {
+                    color: gov-colors('grey-light');
+                }
+            }
+        }
+
+        &-copy,
+        &-btn,
+        &-note {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        &-copy {
+            margin-bottom: 0;
+
+            color: gov-colors('grey-dark');
+        }
+
+        &-btn {
+            margin: rem-calc(8) 0;
+        }
+
+        &-note {
+            @extend .gov-footnote;
+
+            color: gov-colors('grey-mid');
+        }
+
+        @include hover() {
+            #{$class}__upload-input {
+                & ~ #{$class}__upload-content {
+                    &:before {
+                        background-color: gov-colors('blue-hover');
+                    }
+                }
+            }
+
+            #{$class}__upload-input {
+                &[aria-disabled="true"],
+                &:disabled,
+                &[readonly] {
+                    & ~ #{$class}__upload-content {
+                        &:before {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__attachments {
+        @extend .gov-list--plain;
+
+        display: none;
+        margin-left: rem-calc(10);
+        margin-top: rem-calc(30);
+
+        & > li {
+            line-height: 1;
+        }
+
+        & > li > span {
+            @extend .gov-link;
+
+            position: relative;
+
+            &:after {
+                @include pseudo(inline-block, relative, '\6a');
+                right: 0; top: rem-calc(7);
+
+                font-family: $gov-icon-font;
+                font-size: rem-calc(24);
+                text-transform: none;
+            }
+        }
+
+        &.is-active {
+            display: block;
+        }
+    }
+
+    /*  Error
+    ------------------------------------------------------------------ */
+    &#{$baseclass}--error {
+        #{$class}__label {
+            color:  gov-colors('error');
+        }
+
+        #{$class}__upload {
+            border-color: gov-colors('error');
+        }
+
+        #{$classValidationMark} {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.gov-layout {
+    display: flex;
+
+    //  RESPONSE
+    @include mq($from: tablet-landscape) {
+        //  two column layout with ratio 3:1
+        &--ratio-3-1 {
+            .gov-layout__col--pos-right {
+                order: 2;
+            }
+        }
+    }
+
+    @include mq($until: tablet-landscape) {
+        //  two column layout with ratio 3:1
+        &--ratio-3-1 {
+            flex-direction: column;
+        }
+    }
+
+    @include mq($until: tablet) {
+        //  two column layout with ratio 1:2
+        &--ratio-1-2 {
+            display: block;
+
+            .gov-layout__col--spread-2 {
+                padding-top: rem-calc(30);
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+$class: '.gov-statsbar';
+$classIcon: '.gov-icon';
+$classComplexIcon: '.gov-complex-icon';
+
+#{$class} {
+
+    &__item {
+        position: relative;
+        padding: rem-calc(40 40);
+
+        text-align: left;
+
+        p, .gov-bodycopy {
+            margin-top: rem-calc(16);
+            margin-bottom: 0;
+
+            line-height: 1.2;
+            font-size: rem-calc(20);
+            color: gov-colors('blue');
+            font-weight: 400;
+        }
+
+        #{$classIcon}, #{$classComplexIcon} {
+            font-size: rem-calc(48);
+            color: gov-colors('blue');
+
+            display: inline-block;
+
+            & + #{$class}__num {
+                margin-top: rem-calc(16);
+            }
+        }
+    }
+
+    &__num {
+        display: block;
+
+        color: gov-colors('blue');
+        font-size: rem-calc(50);
+        line-height: 110%;
+        font-weight: 100    ;
+    }
+
+    @include mq($from: palm) {
+        &__item {
+            flex: 1;
+        }
+    }
+
+    @include mq($until: tablet-landscape) {
+        &__item {
+            flex: 1 0 50%;
+            padding: rem-calc(24);
+
+            p, .gov-bodycopy {
+                font-size: rem-calc(16);
+            }
+
+            #{$classIcon}, #{$classComplexIcon} {
+                font-size: rem-calc(40);
+            }
+        }
+
+        &__num {
+            font-size: rem-calc(40);
+        }
+    }
+}

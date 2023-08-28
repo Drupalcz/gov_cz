@@ -1,0 +1,22 @@
+.gov-pictogram {
+    margin-left: rem-calc(-6);
+    max-width: 52px;
+
+    color: gov-colors('blue');
+
+    &--large {
+        max-width: 78px;
+    }
+
+    &--inversed {
+        color: gov-colors('white');
+    }
+
+    &--dark {
+        color: gov-colors('grey-dark');
+    }
+
+    svg {
+        width: 100%;
+    }
+}

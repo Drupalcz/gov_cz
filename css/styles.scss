@@ -1,0 +1,57 @@
+//  global variables
+$path: '/themes/gov_cz/';
+$version: 'v3.4.0';
+
+//  vendor
+@import 'styles/mixins/_mq';
+
+
+//  abstract
+@import "styles/abstracts/theme";
+@import "styles/abstracts/variables";
+
+
+//  fonts
+@import "styles/fonts/gov-basic-icons";
+@import "styles/fonts/gov-complex-icons";
+@import "styles/fonts/roboto";
+
+
+//  mixins
+@import "styles/mixins/basic";
+@import "styles/mixins/buttons";
+@import "styles/mixins/placeholder";
+@import "styles/mixins/pseudo";
+@import "styles/mixins/unit";
+@import "styles/mixins/z-index";
+
+//  base
+@import "styles/base/reset";
+@import "styles/base/forms";
+@import "styles/base/footnote";
+@import "styles/base/images";
+
+// atoms
+@import "styles/components/gov-icon";
+@import "styles/components/gov-link";
+@import "styles/components/gov-logo";
+@import "styles/components/gov-lists";
+@import "styles/components/gov-pictogram";
+@import "styles/components/gov-button";
+
+// molecules
+@import "styles/components/gov-lang-switch";
+@import "styles/components/gov-container";
+@import "styles/components/gov-search";
+
+//  organisms
+@import "styles/components/gov-header";
+@import "styles/components/gov-footer";
+
+//  utils
+@import "styles/utils/u-align";
+@import "styles/utils/u-general";
+@import "styles/utils/u-background";
+@import "styles/utils/u-color";
+@import "styles/utils/u-offset";
+@import "styles/utils/u-overflow";

@@ -1,0 +1,24 @@
+.gov-tabs {
+    &__links-holder {
+        display: none;
+    }
+
+    &__content {
+        position: relative;
+
+        display: block;
+        padding-top: rem-calc(20);
+
+        visibility: visible;
+
+        &:not(:first-of-type) {
+            &:before {
+                @include pseudo();
+                left: 0; right: 0; top: -1px;
+
+                height: 1px;
+                background-color: gov-colors('grey-inactive');
+            }
+        }
+    }
+}

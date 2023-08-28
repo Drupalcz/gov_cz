@@ -1,0 +1,45 @@
+@page  {
+    size: auto;
+    margin: 20mm 15mm 20mm 15mm;
+}
+
+html, body, div, p, section, span, a {
+    overflow: visible !important;
+}
+
+.gov-portal-nav,
+.gov-portal-subnav,
+.gov-hamburger {
+    display: none;
+}
+
+.gov-breadcrumbs,
+.gov-pagination {
+    display: none;
+}
+
+.gov-search,
+.gov-polar-question,
+.gov-fileinput {
+    display: none;
+}
+
+button, .gov-button,
+img {
+    display: none;
+}
+
+.gov-slider-bar,
+.gov-feedback-bar,
+.gov-partners-bar {
+    display: none;
+}
+
+.gov-container__content,
+.gov-content-block,
+.gov-accordion,
+.gov-tabs__content,
+.gov-form-control,
+.gov-alert {
+    position: initial;
+}
