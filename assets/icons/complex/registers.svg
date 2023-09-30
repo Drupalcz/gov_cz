@@ -1,7 +1,0 @@
-<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-  <path fill="currentColor" fill-rule="evenodd" d="M7,0V48H40.95V0H7ZM15.78,46.24v-.14c.15-4.34,3.72-7.82,8.1-7.82s8.02,3.55,8.1,7.96H15.78Zm23.41,0h-5.47v-.16c-.16-5.31-4.51-9.56-9.85-9.56s-9.78,4.34-9.85,9.72h-5.27V1.76h30.44V46.24Z"/>
-  <rect fill="currentColor" x="16.45" y="6.54" width="7.04" height="1.76"/>
-  <rect fill="currentColor" x="16.45" y="10.64" width="15.63" height="1.76"/>
-  <rect fill="currentColor" x="16.45" y="14.73" width="15.63" height="1.76"/>
-  <path fill="currentColor" fill-rule="evenodd" d="M23.8,23.42c-3.46,0-6.26,2.8-6.26,6.26s2.8,6.26,6.26,6.26,6.26-2.8,6.26-6.26-2.8-6.26-6.26-6.26Zm0,10.77c-2.49,0-4.51-2.02-4.51-4.51s2.02-4.51,4.51-4.51,4.51,2.02,4.51,4.51-2.02,4.51-4.51,4.51Z"/>
-</svg>
