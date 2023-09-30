@@ -1,7 +1,7 @@
 name: 'Design system gov.cz'
 type: theme
 base theme: false
-description: 'Design system gov.cz.'
+description: 'Base theme implementing Design system gov.cz in Single Directory Components.'
 core_version_requirement: ^10
 
 regions:
