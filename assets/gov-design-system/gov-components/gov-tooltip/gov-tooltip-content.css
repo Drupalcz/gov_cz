@@ -1,0 +1,330 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* [Core] - Buttons
+------------------------------------------------------------------ */
+/*
+ * Gets color from theme-colors or from palette-colors
+ */
+/*
+ * Converts hex value to rgb colors value
+ */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+ * Generates list of utility classes for margin, padding
+ *
+ * Make sure $list of definitions is sorted so that last item is defined last
+ * So largest views are mentioned last.
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Layout
+ */
+/**
+* Utilities - Offset
+*/
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/**
+* Generates CSS3 var with default value
+*/
+/*
+ -  Variables - General
+ */
+/*
+ -  Variables - Typography
+ */
+/*
+ -  Variables - Variants
+ */
+/*
+ -  Variables - Container
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Accordion
+ */
+/*
+ -  Variables - Attachments
+ */
+/*
+ -  Variables - Alert
+ */
+/*
+ -  Variables - Backdrop
+ */
+/*
+ -  Variables - Buttons (&& Badges)
+ */
+/*
+ -  Variables - Breadcrumbs
+ */
+/*
+ -  Variables - Classes
+ */
+/*
+ -  Variables - Colors
+ */
+/*
+ -	Variables - Control Group
+ */
+/*
+ -  Variables - Cookiebar
+ */
+/*
+ -  Variables - Dropdown
+ */
+/*
+ -  Variables - Card
+ */
+/*
+ -  Variables - Message
+ */
+/*
+ -  Variables - Empty
+ */
+/*
+ -  Variables - Error code
+ */
+/*
+ -  Variables - Grid
+ */
+/*
+ -  Variables - Tiles
+ */
+/*
+ -  Variables - Modal & Prompt
+ */
+/**
+* Utilities - Offset
+*/
+/*
+ -  Variables - shadows
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Statsbar
+ */
+/*
+ -  Variables - Tabs
+ */
+/*
+ -  Variables - Tooltip
+ */
+/*
+ -  Variables - Loading
+ */
+/*
+ -	Variables - Forms
+ */
+/*
+ -  Variables - Form Autocomplete
+ */
+/*
+ -  Variables - Form Message
+ */
+/*
+ -	Variables - Form label
+ */
+/*
+ -	Variables - Form switch
+ */
+/*
+ -	Variables - Form select
+ */
+/*
+ -	Variables - Form input
+ */
+/*
+ -	Variables - Form multiselect
+ */
+/*
+ -	Variables - Form password power
+ */
+/*
+ -	Variables - Form checkbox & radio
+ */
+/*
+ -  Variables - Form group
+ */
+/*
+ -	Variables - Form file
+ */
+/*
+ -  Variables - Toast Message
+ */
+/*
+ -  Variables - Wizard
+ */
+/*
+ -  Variables - Stepper
+ */
+/*
+ -  Variables - Side nav
+ */
+/*
+ -  Variables - Grid & Tile
+ */
+/*
+ -  Variables - Pagination
+ */
+/*
+ -  Variables - Nav
+ */
+/*
+ -  Variables - Layout
+ */
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+*   Tooltip - Content
+*/
+.gov-tooltip-content {
+  z-index: 51;
+  font-weight: var(--gov-text-m-font-weight);
+  font-size: var(--gov-text-m-font-size);
+  line-height: var(--gov-text-m-line-height);
+  letter-spacing: var(--gov-text-m-letter-spacing);
+  position: absolute;
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: var(--gov-tooltip-content-max-width, 21rem);
+  padding: 1rem;
+  border-radius: 0.1875rem;
+  background-color: var(--gov-tooltip-content-bg-color, var(--gov-color-primary-300));
+  color: var(--gov-tooltip-content-text-color, var(--gov-color-secondary));
+  letter-spacing: 0.0125rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+.gov-tooltip-content::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.625rem solid transparent;
+}
+.gov-tooltip-content[is-visible=""], .gov-tooltip-content[is-visible=true i], .gov-tooltip-content[is-visible="1"] {
+  opacity: 1;
+}
+.gov-tooltip[size=s] .gov-tooltip-content {
+  --gov-tooltip-content-padding: var(--gov-tooltip-s-padding, 0.5rem);
+  --gov-tooltip-content-arrow-size: var(--gov-tooltip-s-arrow-size, 0.4375rem);
+  --gov-tooltip-content-letter-spacing: var(--gov-tooltip-s-letter-spacing, 0.0125rem);
+  font-weight: var(--gov-text-s-font-weight);
+  font-size: var(--gov-text-s-font-size);
+  line-height: var(--gov-text-s-line-height);
+  letter-spacing: var(--gov-text-s-letter-spacing);
+}
+.gov-tooltip[size=l] .gov-tooltip-content {
+  --gov-tooltip-content-padding: var(--gov-tooltip-l-padding, 1rem);
+  --gov-tooltip-content-arrow-size: var(--gov-tooltip-l-arrow-size, 0.875rem);
+  --gov-tooltip-content-letter-spacing: var(--gov-tooltip-l-letter-spacing, 0.002rem);
+  font-weight: var(--gov-text-xl-font-weight);
+  font-size: var(--gov-text-xl-font-size);
+  line-height: var(--gov-text-xl-line-height);
+  letter-spacing: var(--gov-text-xl-letter-spacing);
+}
+.gov-tooltip[position=top] .gov-tooltip-content {
+  bottom: 100%;
+  margin-bottom: 0.625rem;
+}
+.gov-tooltip[position=top] .gov-tooltip-content, .gov-tooltip[position=top] .gov-tooltip-content::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.gov-tooltip[position=top] .gov-tooltip-content::before {
+  top: 100%;
+  border-bottom-width: 0;
+  border-top-color: var(--gov-tooltip-content-bg-color, var(--gov-color-primary-300));
+}
+.gov-tooltip[position=bottom] .gov-tooltip-content {
+  top: 100%;
+  margin-top: 0.625rem;
+}
+.gov-tooltip[position=bottom] .gov-tooltip-content, .gov-tooltip[position=bottom] .gov-tooltip-content::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.gov-tooltip[position=bottom] .gov-tooltip-content::before {
+  bottom: 100%;
+  border-top-width: 0;
+  border-bottom-color: var(--gov-tooltip-content-bg-color, var(--gov-color-primary-300));
+}
+.gov-tooltip[position=left] .gov-tooltip-content {
+  right: 100%;
+  margin-right: 0.625rem;
+}
+.gov-tooltip[position=left] .gov-tooltip-content, .gov-tooltip[position=left] .gov-tooltip-content::before {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gov-tooltip[position=left] .gov-tooltip-content::before {
+  left: 100%;
+  border-right-width: 0;
+  border-left-color: var(--gov-tooltip-content-bg-color, var(--gov-color-primary-300));
+}
+.gov-tooltip[position=right] .gov-tooltip-content {
+  left: 100%;
+  margin-left: 0.625rem;
+}
+.gov-tooltip[position=right] .gov-tooltip-content, .gov-tooltip[position=right] .gov-tooltip-content::before {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gov-tooltip[position=right] .gov-tooltip-content::before {
+  right: 100%;
+  border-left-width: 0;
+  border-right-color: var(--gov-tooltip-content-bg-color, var(--gov-color-primary-300));
+}

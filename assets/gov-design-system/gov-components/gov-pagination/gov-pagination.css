@@ -1,0 +1,391 @@
+.gov-pagination__list {
+  margin: 0;
+  padding: 0;
+}
+
+.gov-pagination__list .gov-pagination__item {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+.gov-pagination__list .gov-pagination__item::before {
+  display: none;
+}
+
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* [Core] - Buttons
+------------------------------------------------------------------ */
+/*
+ * Gets color from theme-colors or from palette-colors
+ */
+/*
+ * Converts hex value to rgb colors value
+ */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+ * Generates list of utility classes for margin, padding
+ *
+ * Make sure $list of definitions is sorted so that last item is defined last
+ * So largest views are mentioned last.
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Layout
+ */
+/**
+* Utilities - Offset
+*/
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/**
+* Generates CSS3 var with default value
+*/
+/*
+ -  Variables - General
+ */
+/*
+ -  Variables - Typography
+ */
+/*
+ -  Variables - Variants
+ */
+/*
+ -  Variables - Container
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Accordion
+ */
+/*
+ -  Variables - Attachments
+ */
+/*
+ -  Variables - Alert
+ */
+/*
+ -  Variables - Backdrop
+ */
+/*
+ -  Variables - Buttons (&& Badges)
+ */
+/*
+ -  Variables - Breadcrumbs
+ */
+/*
+ -  Variables - Classes
+ */
+/*
+ -  Variables - Colors
+ */
+/*
+ -	Variables - Control Group
+ */
+/*
+ -  Variables - Cookiebar
+ */
+/*
+ -  Variables - Dropdown
+ */
+/*
+ -  Variables - Card
+ */
+/*
+ -  Variables - Message
+ */
+/*
+ -  Variables - Empty
+ */
+/*
+ -  Variables - Error code
+ */
+/*
+ -  Variables - Grid
+ */
+/*
+ -  Variables - Tiles
+ */
+/*
+ -  Variables - Modal & Prompt
+ */
+/**
+* Utilities - Offset
+*/
+/*
+ -  Variables - shadows
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Statsbar
+ */
+/*
+ -  Variables - Tabs
+ */
+/*
+ -  Variables - Tooltip
+ */
+/*
+ -  Variables - Loading
+ */
+/*
+ -	Variables - Forms
+ */
+/*
+ -  Variables - Form Autocomplete
+ */
+/*
+ -  Variables - Form Message
+ */
+/*
+ -	Variables - Form label
+ */
+/*
+ -	Variables - Form switch
+ */
+/*
+ -	Variables - Form select
+ */
+/*
+ -	Variables - Form input
+ */
+/*
+ -	Variables - Form multiselect
+ */
+/*
+ -	Variables - Form password power
+ */
+/*
+ -	Variables - Form checkbox & radio
+ */
+/*
+ -  Variables - Form group
+ */
+/*
+ -	Variables - Form file
+ */
+/*
+ -  Variables - Toast Message
+ */
+/*
+ -  Variables - Wizard
+ */
+/*
+ -  Variables - Stepper
+ */
+/*
+ -  Variables - Side nav
+ */
+/*
+ -  Variables - Grid & Tile
+ */
+/*
+ -  Variables - Pagination
+ */
+/*
+ -  Variables - Nav
+ */
+/*
+ -  Variables - Layout
+ */
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+*   Pagination
+*/
+.gov-pagination {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.gov-pagination__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: bold;
+  text-align: center;
+}
+.gov-pagination__list .gov-pagination__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.125rem;
+  border-radius: var(--gov-border-radius, 0.1875rem);
+  overflow: hidden;
+}
+.gov-pagination__list .gov-pagination__item--arrow {
+  display: flex;
+}
+.gov-pagination__list .gov-pagination__item--select {
+  z-index: 1;
+  display: flex;
+  overflow: visible;
+  padding: 0rem 1rem;
+}
+.gov-pagination__arrow {
+  margin: 0;
+}
+.gov-pagination__item--more .gov-form-select select {
+  border: none;
+  padding-right: 0.75rem !important;
+}
+.gov-pagination__item--more .gov-form-select .gov-icon {
+  display: none;
+}
+.gov-pagination__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  text-decoration: none;
+}
+.gov-pagination__inner[wcag-current=true][type=solid][variant=primary] .element {
+  background-color: var(--gov-button-primary-solid-hover-bg, var(--gov-color-primary-700));
+  color: var(--gov-button-primary-solid-hover-color, var(--gov-color-neutral-white));
+}
+.gov-pagination__inner[wcag-current=true][type=outlined][variant=primary] .element {
+  background-color: var(--gov-button-primary-outlined-hover-bg, var(--gov-color-primary-100));
+  color: var(--gov-button-primary-outlined-hover-color, var(--gov-color-primary));
+}
+.gov-pagination__inner[wcag-current=true][type=base][variant=primary] .element {
+  background-color: var(--gov-button-primary-base-hover-bg, var(--gov-color-primary-100));
+  color: var(--gov-button-primary-base-hover-color, var(--gov-color-primary));
+}
+.gov-pagination__inner[wcag-current=true][type=link][variant=primary] .element {
+  background-color: var(--gov-button-primary-link-hover-bg, transparent);
+  color: var(--gov-button-primary-link-hover-color, var(--gov-color-primary));
+}
+.gov-pagination__inner[wcag-current=true][type=solid][variant=secondary] .element {
+  background-color: var(--gov-button-secondary-solid-hover-bg, var(--gov-color-secondary-900));
+  color: var(--gov-button-secondary-solid-hover-color, var(--gov-color-neutral-white));
+}
+.gov-pagination__inner[wcag-current=true][type=outlined][variant=secondary] .element {
+  background-color: var(--gov-button-secondary-outlined-hover-bg, var(--gov-color-secondary-300));
+  color: var(--gov-button-secondary-outlined-hover-color, var(--gov-color-secondary));
+}
+.gov-pagination__inner[wcag-current=true][type=base][variant=secondary] .element {
+  background-color: var(--gov-button-secondary-base-hover-bg, var(--gov-color-secondary-300));
+  color: var(--gov-button-secondary-base-hover-color, var(--gov-color-secondary));
+}
+.gov-pagination__inner[wcag-current=true][type=link][variant=secondary] .element {
+  background-color: var(--gov-button-secondary-link-hover-bg, transparent);
+  color: var(--gov-button-secondary-link-hover-color, var(--gov-color-secondary));
+}
+.gov-pagination__inner[wcag-current=true][type=solid][variant=error] .element {
+  background-color: var(--gov-button-error-solid-hover-bg, var(--gov-color-error-500));
+  color: var(--gov-button-error-solid-hover-color, var(--gov-color-neutral-white));
+}
+.gov-pagination__inner[wcag-current=true][type=outlined][variant=error] .element {
+  background-color: var(--gov-button-error-outlined-hover-bg, var(--gov-color-error-100));
+  color: var(--gov-button-error-outlined-hover-color, var(--gov-color-error));
+}
+.gov-pagination__inner[wcag-current=true][type=base][variant=error] .element {
+  background-color: var(--gov-button-error-base-hover-bg, var(--gov-color-error-100));
+  color: var(--gov-button-error-base-hover-color, var(--gov-color-error));
+}
+.gov-pagination__inner[wcag-current=true][type=link][variant=error] .element {
+  background-color: var(--gov-button-error-link-hover-bg, transparent);
+  color: var(--gov-button-error-link-hover-color, var(--gov-color-error));
+}
+.gov-pagination__inner[wcag-current=true][type=solid][variant=success] .element {
+  background-color: var(--gov-button-success-solid-hover-bg, var(--gov-color-success-600));
+  color: var(--gov-button-success-solid-hover-color, var(--gov-color-neutral-white));
+}
+.gov-pagination__inner[wcag-current=true][type=outlined][variant=success] .element {
+  background-color: var(--gov-button-success-outlined-hover-bg, var(--gov-color-success-100));
+  color: var(--gov-button-success-outlined-hover-color, var(--gov-color-success-500));
+}
+.gov-pagination__inner[wcag-current=true][type=base][variant=success] .element {
+  background-color: var(--gov-button-success-base-hover-bg, var(--gov-color-success-100));
+  color: var(--gov-button-success-base-hover-color, var(--gov-color-success-500));
+}
+.gov-pagination__inner[wcag-current=true][type=link][variant=success] .element {
+  background-color: var(--gov-button-success-link-hover-bg, transparent);
+  color: var(--gov-button-success-link-hover-color, var(--gov-color-success-500));
+}
+.gov-pagination__inner[wcag-current=true][type=solid][variant=warning] .element {
+  background-color: var(--gov-button-warning-solid-hover-bg, var(--gov-color-warning-600));
+  color: var(--gov-button-warning-solid-hover-color, var(--gov-color-neutral-white));
+}
+.gov-pagination__inner[wcag-current=true][type=outlined][variant=warning] .element {
+  background-color: var(--gov-button-warning-outlined-hover-bg, var(--gov-color-warning-200));
+  color: var(--gov-button-warning-outlined-hover-color, var(--gov-color-warning-500));
+}
+.gov-pagination__inner[wcag-current=true][type=base][variant=warning] .element {
+  background-color: var(--gov-button-warning-base-hover-bg, var(--gov-color-warning-200));
+  color: var(--gov-button-warning-base-hover-color, var(--gov-color-warning-500));
+}
+.gov-pagination__inner[wcag-current=true][type=link][variant=warning] .element {
+  background-color: var(--gov-button-warning-link-hover-bg, transparent);
+  color: var(--gov-button-warning-link-hover-color, var(--gov-color-warning-500));
+}
+.gov-pagination[size=s] .gov-pagination__inner {
+  font-weight: var(--gov-text-s-font-weight);
+  font-size: var(--gov-text-s-font-size);
+  line-height: var(--gov-text-s-line-height);
+  letter-spacing: var(--gov-text-s-letter-spacing);
+  font-weight: inherit;
+}
+.gov-pagination[size=s] .gov-pagination__inner .element {
+  min-width: var(--gov-pagination-s-button-size, 2rem);
+}
+.gov-pagination[size=m] .gov-pagination__inner {
+  font-weight: var(--gov-text-m-font-weight);
+  font-size: var(--gov-text-m-font-size);
+  line-height: var(--gov-text-m-line-height);
+  letter-spacing: var(--gov-text-m-letter-spacing);
+  font-weight: inherit;
+}
+.gov-pagination[size=m] .gov-pagination__inner .element {
+  min-width: var(--gov-pagination-m-button-size, 2.5rem);
+}

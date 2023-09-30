@@ -1,0 +1,398 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* [Core] - Buttons
+------------------------------------------------------------------ */
+/*
+ * Gets color from theme-colors or from palette-colors
+ */
+/*
+ * Converts hex value to rgb colors value
+ */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+ * Generates list of utility classes for margin, padding
+ *
+ * Make sure $list of definitions is sorted so that last item is defined last
+ * So largest views are mentioned last.
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Layout
+ */
+/**
+* Utilities - Offset
+*/
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/**
+* Generates CSS3 var with default value
+*/
+/*
+ -  Variables - General
+ */
+/*
+ -  Variables - Typography
+ */
+/*
+ -  Variables - Variants
+ */
+/*
+ -  Variables - Container
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Accordion
+ */
+/*
+ -  Variables - Attachments
+ */
+/*
+ -  Variables - Alert
+ */
+/*
+ -  Variables - Backdrop
+ */
+/*
+ -  Variables - Buttons (&& Badges)
+ */
+/*
+ -  Variables - Breadcrumbs
+ */
+/*
+ -  Variables - Classes
+ */
+/*
+ -  Variables - Colors
+ */
+/*
+ -	Variables - Control Group
+ */
+/*
+ -  Variables - Cookiebar
+ */
+/*
+ -  Variables - Dropdown
+ */
+/*
+ -  Variables - Card
+ */
+/*
+ -  Variables - Message
+ */
+/*
+ -  Variables - Empty
+ */
+/*
+ -  Variables - Error code
+ */
+/*
+ -  Variables - Grid
+ */
+/*
+ -  Variables - Tiles
+ */
+/*
+ -  Variables - Modal & Prompt
+ */
+/**
+* Utilities - Offset
+*/
+/*
+ -  Variables - shadows
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Statsbar
+ */
+/*
+ -  Variables - Tabs
+ */
+/*
+ -  Variables - Tooltip
+ */
+/*
+ -  Variables - Loading
+ */
+/*
+ -	Variables - Forms
+ */
+/*
+ -  Variables - Form Autocomplete
+ */
+/*
+ -  Variables - Form Message
+ */
+/*
+ -	Variables - Form label
+ */
+/*
+ -	Variables - Form switch
+ */
+/*
+ -	Variables - Form select
+ */
+/*
+ -	Variables - Form input
+ */
+/*
+ -	Variables - Form multiselect
+ */
+/*
+ -	Variables - Form password power
+ */
+/*
+ -	Variables - Form checkbox & radio
+ */
+/*
+ -  Variables - Form group
+ */
+/*
+ -	Variables - Form file
+ */
+/*
+ -  Variables - Toast Message
+ */
+/*
+ -  Variables - Wizard
+ */
+/*
+ -  Variables - Stepper
+ */
+/*
+ -  Variables - Side nav
+ */
+/*
+ -  Variables - Grid & Tile
+ */
+/*
+ -  Variables - Pagination
+ */
+/*
+ -  Variables - Nav
+ */
+/*
+ -  Variables - Layout
+ */
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+*   Alert
+*/
+.gov-alert {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.gov-alert__section {
+  display: block;
+  width: 100%;
+  max-width: calc(var(--gov-container-width, 73.75rem) + 2 * var(--gov-container-padding, 2.5rem));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--gov-container-padding-mobile, 1.25rem);
+  padding-left: var(--gov-container-padding-mobile, 1.25rem);
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 48em) {
+  .gov-alert__section {
+    padding-right: var(--gov-container-padding, 2.5rem);
+    padding-left: var(--gov-container-padding, 2.5rem);
+  }
+}
+.gov-alert__icon {
+  flex: 0 0 auto;
+}
+.gov-alert__icon > * {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.gov-alert__headline {
+  display: flex;
+  gap: 1rem;
+}
+.gov-alert__headline + div {
+  margin-top: 0.5rem;
+}
+.gov-alert__headline p {
+  margin-bottom: 0;
+}
+.gov-alert__headline gov-button {
+  margin-top: -0.25rem;
+}
+.gov-alert__content {
+  padding-right: 3.25rem;
+}
+.gov-alert__content > *:last-child {
+  margin-bottom: 0;
+}
+.gov-alert__content p {
+  font-weight: var(--gov-text-m-font-weight);
+  font-size: var(--gov-text-m-font-size);
+  line-height: var(--gov-text-m-line-height);
+  letter-spacing: var(--gov-text-m-letter-spacing);
+}
+.gov-alert__content a {
+  color: inherit;
+}
+@media not all and (pointer: coarse) {
+  .gov-alert__content a:hover {
+    color: inherit;
+  }
+}
+.gov-alert__close {
+  position: absolute;
+  top: 0.625rem;
+  right: 1rem;
+}
+.gov-alert[variant=warning] {
+  background-color: var(--gov-alert-warning-bg-color, var(--gov-color-warning));
+}
+.gov-alert[variant=warning] .gov-alert__icon {
+  color: var(--gov-alert-warning-icon-color, var(--gov-color-secondary));
+}
+.gov-alert[variant=warning] .gov-alert__content {
+  color: var(--gov-alert-warning-text-color, var(--gov-color-secondary));
+}
+.gov-alert[variant=warning][inverse=""], .gov-alert[variant=warning][inverse=true i], .gov-alert[variant=warning][inverse="1"] {
+  border-bottom: var(--gov-alert-border, 0.0625rem solid var(--gov-color-secondary-400));
+  background-color: var(--gov-alert-inverse-bg, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=warning][inverse=""] .gov-alert__icon, .gov-alert[variant=warning][inverse=true i] .gov-alert__icon, .gov-alert[variant=warning][inverse="1"] .gov-alert__icon {
+  color: var(--gov-alert-warning-bg-color, var(--gov-color-warning));
+}
+.gov-alert[variant=warning][inverse=""] .gov-alert__content, .gov-alert[variant=warning][inverse=true i] .gov-alert__content, .gov-alert[variant=warning][inverse="1"] .gov-alert__content {
+  color: var(--gov-alert-inverse-color, var(--gov-color-secondary-800));
+}
+.gov-alert[variant=error] {
+  background-color: var(--gov-alert-error-bg-color, var(--gov-color-error));
+}
+.gov-alert[variant=error] .gov-alert__icon {
+  color: var(--gov-alert-error-icon-color, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=error] .gov-alert__content {
+  color: var(--gov-alert-error-text-color, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=error][inverse=""], .gov-alert[variant=error][inverse=true i], .gov-alert[variant=error][inverse="1"] {
+  border-bottom: var(--gov-alert-border, 0.0625rem solid var(--gov-color-secondary-400));
+  background-color: var(--gov-alert-inverse-bg, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=error][inverse=""] .gov-alert__icon, .gov-alert[variant=error][inverse=true i] .gov-alert__icon, .gov-alert[variant=error][inverse="1"] .gov-alert__icon {
+  color: var(--gov-alert-error-bg-color, var(--gov-color-error));
+}
+.gov-alert[variant=error][inverse=""] .gov-alert__content, .gov-alert[variant=error][inverse=true i] .gov-alert__content, .gov-alert[variant=error][inverse="1"] .gov-alert__content {
+  color: var(--gov-alert-inverse-color, var(--gov-color-secondary-800));
+}
+.gov-alert[variant=secondary] {
+  background-color: var(--gov-alert-secondary-bg-color, var(--gov-color-secondary));
+}
+.gov-alert[variant=secondary] .gov-alert__icon {
+  color: var(--gov-alert-secondary-icon-color, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=secondary] .gov-alert__content {
+  color: var(--gov-alert-secondary-text-color, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=secondary][inverse=""], .gov-alert[variant=secondary][inverse=true i], .gov-alert[variant=secondary][inverse="1"] {
+  border-bottom: var(--gov-alert-border, 0.0625rem solid var(--gov-color-secondary-400));
+  background-color: var(--gov-alert-inverse-bg, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=secondary][inverse=""] .gov-alert__icon, .gov-alert[variant=secondary][inverse=true i] .gov-alert__icon, .gov-alert[variant=secondary][inverse="1"] .gov-alert__icon {
+  color: var(--gov-alert-secondary-bg-color, var(--gov-color-secondary));
+}
+.gov-alert[variant=secondary][inverse=""] .gov-alert__content, .gov-alert[variant=secondary][inverse=true i] .gov-alert__content, .gov-alert[variant=secondary][inverse="1"] .gov-alert__content {
+  color: var(--gov-alert-inverse-color, var(--gov-color-secondary-800));
+}
+.gov-alert[variant=success] {
+  background-color: var(--gov-alert-success-bg-color, var(--gov-color-success-500));
+}
+.gov-alert[variant=success] .gov-alert__icon {
+  color: var(--gov-alert-success-icon-color, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=success] .gov-alert__content {
+  color: var(--gov-alert-success-text-color, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=success][inverse=""], .gov-alert[variant=success][inverse=true i], .gov-alert[variant=success][inverse="1"] {
+  border-bottom: var(--gov-alert-border, 0.0625rem solid var(--gov-color-secondary-400));
+  background-color: var(--gov-alert-inverse-bg, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=success][inverse=""] .gov-alert__icon, .gov-alert[variant=success][inverse=true i] .gov-alert__icon, .gov-alert[variant=success][inverse="1"] .gov-alert__icon {
+  color: var(--gov-alert-success-bg-color, var(--gov-color-success-500));
+}
+.gov-alert[variant=success][inverse=""] .gov-alert__content, .gov-alert[variant=success][inverse=true i] .gov-alert__content, .gov-alert[variant=success][inverse="1"] .gov-alert__content {
+  color: var(--gov-alert-inverse-color, var(--gov-color-secondary-800));
+}
+.gov-alert[variant=primary] {
+  background-color: var(--gov-alert-primary-bg-color, var(--gov-color-primary));
+}
+.gov-alert[variant=primary] .gov-alert__icon {
+  color: var(--gov-alert-primary-icon-color, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=primary] .gov-alert__content {
+  color: var(--gov-alert-primary-text-color, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=primary][inverse=""], .gov-alert[variant=primary][inverse=true i], .gov-alert[variant=primary][inverse="1"] {
+  border-bottom: var(--gov-alert-border, 0.0625rem solid var(--gov-color-secondary-400));
+  background-color: var(--gov-alert-inverse-bg, var(--gov-color-neutral-white));
+}
+.gov-alert[variant=primary][inverse=""] .gov-alert__icon, .gov-alert[variant=primary][inverse=true i] .gov-alert__icon, .gov-alert[variant=primary][inverse="1"] .gov-alert__icon {
+  color: var(--gov-alert-primary-bg-color, var(--gov-color-primary));
+}
+.gov-alert[variant=primary][inverse=""] .gov-alert__content, .gov-alert[variant=primary][inverse=true i] .gov-alert__content, .gov-alert[variant=primary][inverse="1"] .gov-alert__content {
+  color: var(--gov-alert-inverse-color, var(--gov-color-secondary-800));
+}
+@media (min-width: 75em) {
+  .gov-alert__content {
+    padding-right: 2rem;
+  }
+}

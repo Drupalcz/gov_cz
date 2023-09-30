@@ -1,0 +1,434 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* [Core] - Buttons
+------------------------------------------------------------------ */
+/*
+ * Gets color from theme-colors or from palette-colors
+ */
+/*
+ * Converts hex value to rgb colors value
+ */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+ * Generates list of utility classes for margin, padding
+ *
+ * Make sure $list of definitions is sorted so that last item is defined last
+ * So largest views are mentioned last.
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Layout
+ */
+/**
+* Utilities - Offset
+*/
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/**
+* Generates CSS3 var with default value
+*/
+/*
+ -  Variables - General
+ */
+/*
+ -  Variables - Typography
+ */
+/*
+ -  Variables - Variants
+ */
+/*
+ -  Variables - Container
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Accordion
+ */
+/*
+ -  Variables - Attachments
+ */
+/*
+ -  Variables - Alert
+ */
+/*
+ -  Variables - Backdrop
+ */
+/*
+ -  Variables - Buttons (&& Badges)
+ */
+/*
+ -  Variables - Breadcrumbs
+ */
+/*
+ -  Variables - Classes
+ */
+/*
+ -  Variables - Colors
+ */
+/*
+ -	Variables - Control Group
+ */
+/*
+ -  Variables - Cookiebar
+ */
+/*
+ -  Variables - Dropdown
+ */
+/*
+ -  Variables - Card
+ */
+/*
+ -  Variables - Message
+ */
+/*
+ -  Variables - Empty
+ */
+/*
+ -  Variables - Error code
+ */
+/*
+ -  Variables - Grid
+ */
+/*
+ -  Variables - Tiles
+ */
+/*
+ -  Variables - Modal & Prompt
+ */
+/**
+* Utilities - Offset
+*/
+/*
+ -  Variables - shadows
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Statsbar
+ */
+/*
+ -  Variables - Tabs
+ */
+/*
+ -  Variables - Tooltip
+ */
+/*
+ -  Variables - Loading
+ */
+/*
+ -	Variables - Forms
+ */
+/*
+ -  Variables - Form Autocomplete
+ */
+/*
+ -  Variables - Form Message
+ */
+/*
+ -	Variables - Form label
+ */
+/*
+ -	Variables - Form switch
+ */
+/*
+ -	Variables - Form select
+ */
+/*
+ -	Variables - Form input
+ */
+/*
+ -	Variables - Form multiselect
+ */
+/*
+ -	Variables - Form password power
+ */
+/*
+ -	Variables - Form checkbox & radio
+ */
+/*
+ -  Variables - Form group
+ */
+/*
+ -	Variables - Form file
+ */
+/*
+ -  Variables - Toast Message
+ */
+/*
+ -  Variables - Wizard
+ */
+/*
+ -  Variables - Stepper
+ */
+/*
+ -  Variables - Side nav
+ */
+/*
+ -  Variables - Grid & Tile
+ */
+/*
+ -  Variables - Pagination
+ */
+/*
+ -  Variables - Nav
+ */
+/*
+ -  Variables - Layout
+ */
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+*   Grid Cell
+*/
+.gov-grid-item {
+  border: 0 solid transparent;
+  -o-border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");
+     border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");
+}
+.gov-grid-item[size="1/12"] {
+  width: 8.3333333333%;
+}
+
+.gov-grid-item[size="2/12"] {
+  width: 16.6666666667%;
+}
+
+.gov-grid-item[size="3/12"] {
+  width: 25%;
+}
+
+.gov-grid-item[size="4/12"] {
+  width: 33.3333333333%;
+}
+
+.gov-grid-item[size="5/12"] {
+  width: 41.6666666667%;
+}
+
+.gov-grid-item[size="6/12"] {
+  width: 50%;
+}
+
+.gov-grid-item[size="7/12"] {
+  width: 58.3333333333%;
+}
+
+.gov-grid-item[size="8/12"] {
+  width: 66.6666666667%;
+}
+
+.gov-grid-item[size="9/12"] {
+  width: 75%;
+}
+
+.gov-grid-item[size="10/12"] {
+  width: 83.3333333333%;
+}
+
+.gov-grid-item[size="11/12"] {
+  width: 91.6666666667%;
+}
+
+.gov-grid-item[size="12/12"] {
+  width: 100%;
+}
+
+@media (min-width: 30em) {
+  .gov-grid-item[size-sm="1/12"] {
+    width: 8.3333333333%;
+  }
+  .gov-grid-item[size-sm="2/12"] {
+    width: 16.6666666667%;
+  }
+  .gov-grid-item[size-sm="3/12"] {
+    width: 25%;
+  }
+  .gov-grid-item[size-sm="4/12"] {
+    width: 33.3333333333%;
+  }
+  .gov-grid-item[size-sm="5/12"] {
+    width: 41.6666666667%;
+  }
+  .gov-grid-item[size-sm="6/12"] {
+    width: 50%;
+  }
+  .gov-grid-item[size-sm="7/12"] {
+    width: 58.3333333333%;
+  }
+  .gov-grid-item[size-sm="8/12"] {
+    width: 66.6666666667%;
+  }
+  .gov-grid-item[size-sm="9/12"] {
+    width: 75%;
+  }
+  .gov-grid-item[size-sm="10/12"] {
+    width: 83.3333333333%;
+  }
+  .gov-grid-item[size-sm="11/12"] {
+    width: 91.6666666667%;
+  }
+  .gov-grid-item[size-sm="12/12"] {
+    width: 100%;
+  }
+}
+@media (min-width: 48em) {
+  .gov-grid-item[size-md="1/12"] {
+    width: 8.3333333333%;
+  }
+  .gov-grid-item[size-md="2/12"] {
+    width: 16.6666666667%;
+  }
+  .gov-grid-item[size-md="3/12"] {
+    width: 25%;
+  }
+  .gov-grid-item[size-md="4/12"] {
+    width: 33.3333333333%;
+  }
+  .gov-grid-item[size-md="5/12"] {
+    width: 41.6666666667%;
+  }
+  .gov-grid-item[size-md="6/12"] {
+    width: 50%;
+  }
+  .gov-grid-item[size-md="7/12"] {
+    width: 58.3333333333%;
+  }
+  .gov-grid-item[size-md="8/12"] {
+    width: 66.6666666667%;
+  }
+  .gov-grid-item[size-md="9/12"] {
+    width: 75%;
+  }
+  .gov-grid-item[size-md="10/12"] {
+    width: 83.3333333333%;
+  }
+  .gov-grid-item[size-md="11/12"] {
+    width: 91.6666666667%;
+  }
+  .gov-grid-item[size-md="12/12"] {
+    width: 100%;
+  }
+}
+@media (min-width: 64em) {
+  .gov-grid-item[size-lg="1/12"] {
+    width: 8.3333333333%;
+  }
+  .gov-grid-item[size-lg="2/12"] {
+    width: 16.6666666667%;
+  }
+  .gov-grid-item[size-lg="3/12"] {
+    width: 25%;
+  }
+  .gov-grid-item[size-lg="4/12"] {
+    width: 33.3333333333%;
+  }
+  .gov-grid-item[size-lg="5/12"] {
+    width: 41.6666666667%;
+  }
+  .gov-grid-item[size-lg="6/12"] {
+    width: 50%;
+  }
+  .gov-grid-item[size-lg="7/12"] {
+    width: 58.3333333333%;
+  }
+  .gov-grid-item[size-lg="8/12"] {
+    width: 66.6666666667%;
+  }
+  .gov-grid-item[size-lg="9/12"] {
+    width: 75%;
+  }
+  .gov-grid-item[size-lg="10/12"] {
+    width: 83.3333333333%;
+  }
+  .gov-grid-item[size-lg="11/12"] {
+    width: 91.6666666667%;
+  }
+  .gov-grid-item[size-lg="12/12"] {
+    width: 100%;
+  }
+}
+@media (min-width: 75em) {
+  .gov-grid-item[size-xl="1/12"] {
+    width: 8.3333333333%;
+  }
+  .gov-grid-item[size-xl="2/12"] {
+    width: 16.6666666667%;
+  }
+  .gov-grid-item[size-xl="3/12"] {
+    width: 25%;
+  }
+  .gov-grid-item[size-xl="4/12"] {
+    width: 33.3333333333%;
+  }
+  .gov-grid-item[size-xl="5/12"] {
+    width: 41.6666666667%;
+  }
+  .gov-grid-item[size-xl="6/12"] {
+    width: 50%;
+  }
+  .gov-grid-item[size-xl="7/12"] {
+    width: 58.3333333333%;
+  }
+  .gov-grid-item[size-xl="8/12"] {
+    width: 66.6666666667%;
+  }
+  .gov-grid-item[size-xl="9/12"] {
+    width: 75%;
+  }
+  .gov-grid-item[size-xl="10/12"] {
+    width: 83.3333333333%;
+  }
+  .gov-grid-item[size-xl="11/12"] {
+    width: 91.6666666667%;
+  }
+  .gov-grid-item[size-xl="12/12"] {
+    width: 100%;
+  }
+}

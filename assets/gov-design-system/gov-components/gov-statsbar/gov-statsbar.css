@@ -1,0 +1,278 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* [Core] - Buttons
+------------------------------------------------------------------ */
+/*
+ * Gets color from theme-colors or from palette-colors
+ */
+/*
+ * Converts hex value to rgb colors value
+ */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+ * Generates list of utility classes for margin, padding
+ *
+ * Make sure $list of definitions is sorted so that last item is defined last
+ * So largest views are mentioned last.
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Layout
+ */
+/**
+* Utilities - Offset
+*/
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/**
+* Generates CSS3 var with default value
+*/
+/*
+ -  Variables - General
+ */
+/*
+ -  Variables - Typography
+ */
+/*
+ -  Variables - Variants
+ */
+/*
+ -  Variables - Container
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Accordion
+ */
+/*
+ -  Variables - Attachments
+ */
+/*
+ -  Variables - Alert
+ */
+/*
+ -  Variables - Backdrop
+ */
+/*
+ -  Variables - Buttons (&& Badges)
+ */
+/*
+ -  Variables - Breadcrumbs
+ */
+/*
+ -  Variables - Classes
+ */
+/*
+ -  Variables - Colors
+ */
+/*
+ -	Variables - Control Group
+ */
+/*
+ -  Variables - Cookiebar
+ */
+/*
+ -  Variables - Dropdown
+ */
+/*
+ -  Variables - Card
+ */
+/*
+ -  Variables - Message
+ */
+/*
+ -  Variables - Empty
+ */
+/*
+ -  Variables - Error code
+ */
+/*
+ -  Variables - Grid
+ */
+/*
+ -  Variables - Tiles
+ */
+/*
+ -  Variables - Modal & Prompt
+ */
+/**
+* Utilities - Offset
+*/
+/*
+ -  Variables - shadows
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Statsbar
+ */
+/*
+ -  Variables - Tabs
+ */
+/*
+ -  Variables - Tooltip
+ */
+/*
+ -  Variables - Loading
+ */
+/*
+ -	Variables - Forms
+ */
+/*
+ -  Variables - Form Autocomplete
+ */
+/*
+ -  Variables - Form Message
+ */
+/*
+ -	Variables - Form label
+ */
+/*
+ -	Variables - Form switch
+ */
+/*
+ -	Variables - Form select
+ */
+/*
+ -	Variables - Form input
+ */
+/*
+ -	Variables - Form multiselect
+ */
+/*
+ -	Variables - Form password power
+ */
+/*
+ -	Variables - Form checkbox & radio
+ */
+/*
+ -  Variables - Form group
+ */
+/*
+ -	Variables - Form file
+ */
+/*
+ -  Variables - Toast Message
+ */
+/*
+ -  Variables - Wizard
+ */
+/*
+ -  Variables - Stepper
+ */
+/*
+ -  Variables - Side nav
+ */
+/*
+ -  Variables - Grid & Tile
+ */
+/*
+ -  Variables - Pagination
+ */
+/*
+ -  Variables - Nav
+ */
+/*
+ -  Variables - Layout
+ */
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+*   Statsbar
+*/
+.gov-statsbar {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 1.25rem 0;
+}
+.gov-statsbar__section {
+  display: block;
+  width: 100%;
+  max-width: calc(var(--gov-container-width, 73.75rem) + 2 * var(--gov-container-padding, 2.5rem));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--gov-container-padding-mobile, 1.25rem);
+  padding-left: var(--gov-container-padding-mobile, 1.25rem);
+}
+@media (min-width: 48em) {
+  .gov-statsbar__section {
+    padding-right: var(--gov-container-padding, 2.5rem);
+    padding-left: var(--gov-container-padding, 2.5rem);
+  }
+}
+.gov-statsbar[variant=primary] {
+  background-color: var(--gov-statsbar-primary-bg-color, var(--gov-color-primary-200));
+  color: var(--gov-statsbar-primary-text-color, var(--gov-color-primary));
+}
+.gov-statsbar[variant=primary][inverse=""], .gov-statsbar[variant=primary][inverse=true i], .gov-statsbar[variant=primary][inverse="1"] {
+  background: var(--gov-color-neutral-white);
+  color: var(--gov-statsbar-primary-text-color-inverse, var(--gov-color-primary));
+}
+.gov-statsbar[variant=secondary] {
+  background-color: var(--gov-statsbar-secondary-bg-color, var(--gov-color-secondary));
+  color: var(--gov-statsbar-secondary-text-color, var(--gov-color-neutral-white));
+}
+.gov-statsbar[variant=secondary][inverse=""], .gov-statsbar[variant=secondary][inverse=true i], .gov-statsbar[variant=secondary][inverse="1"] {
+  background: var(--gov-color-neutral-white);
+  color: var(--gov-statsbar-secondary-text-color-inverse, var(--gov-color-secondary));
+}
+@media (min-width: 30em) {
+  .gov-statsbar__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 48em) {
+  .gov-statsbar {
+    padding: 0;
+  }
+}

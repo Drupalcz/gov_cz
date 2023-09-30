@@ -1,0 +1,346 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* [Core] - Buttons
+------------------------------------------------------------------ */
+/*
+ * Gets color from theme-colors or from palette-colors
+ */
+/*
+ * Converts hex value to rgb colors value
+ */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+ * Generates list of utility classes for margin, padding
+ *
+ * Make sure $list of definitions is sorted so that last item is defined last
+ * So largest views are mentioned last.
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Layout
+ */
+/**
+* Utilities - Offset
+*/
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/**
+* Generates CSS3 var with default value
+*/
+/*
+ -  Variables - General
+ */
+/*
+ -  Variables - Typography
+ */
+/*
+ -  Variables - Variants
+ */
+/*
+ -  Variables - Container
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Accordion
+ */
+/*
+ -  Variables - Attachments
+ */
+/*
+ -  Variables - Alert
+ */
+/*
+ -  Variables - Backdrop
+ */
+/*
+ -  Variables - Buttons (&& Badges)
+ */
+/*
+ -  Variables - Breadcrumbs
+ */
+/*
+ -  Variables - Classes
+ */
+/*
+ -  Variables - Colors
+ */
+/*
+ -	Variables - Control Group
+ */
+/*
+ -  Variables - Cookiebar
+ */
+/*
+ -  Variables - Dropdown
+ */
+/*
+ -  Variables - Card
+ */
+/*
+ -  Variables - Message
+ */
+/*
+ -  Variables - Empty
+ */
+/*
+ -  Variables - Error code
+ */
+/*
+ -  Variables - Grid
+ */
+/*
+ -  Variables - Tiles
+ */
+/*
+ -  Variables - Modal & Prompt
+ */
+/**
+* Utilities - Offset
+*/
+/*
+ -  Variables - shadows
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Statsbar
+ */
+/*
+ -  Variables - Tabs
+ */
+/*
+ -  Variables - Tooltip
+ */
+/*
+ -  Variables - Loading
+ */
+/*
+ -	Variables - Forms
+ */
+/*
+ -  Variables - Form Autocomplete
+ */
+/*
+ -  Variables - Form Message
+ */
+/*
+ -	Variables - Form label
+ */
+/*
+ -	Variables - Form switch
+ */
+/*
+ -	Variables - Form select
+ */
+/*
+ -	Variables - Form input
+ */
+/*
+ -	Variables - Form multiselect
+ */
+/*
+ -	Variables - Form password power
+ */
+/*
+ -	Variables - Form checkbox & radio
+ */
+/*
+ -  Variables - Form group
+ */
+/*
+ -	Variables - Form file
+ */
+/*
+ -  Variables - Toast Message
+ */
+/*
+ -  Variables - Wizard
+ */
+/*
+ -  Variables - Stepper
+ */
+/*
+ -  Variables - Side nav
+ */
+/*
+ -  Variables - Grid & Tile
+ */
+/*
+ -  Variables - Pagination
+ */
+/*
+ -  Variables - Nav
+ */
+/*
+ -  Variables - Layout
+ */
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+*   Modal
+*/
+.gov-modal {
+  display: none;
+}
+.gov-modal__dialog {
+  z-index: 101;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: var(--gov-modal-max-width, 52.5rem);
+  height: 100%;
+  padding: 0.5rem;
+  border: none;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.gov-modal__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100%;
+  border-radius: var(--gov-border-radius, 0.1875rem);
+  background: var(--gov-modal-bg, var(--gov-color-neutral-white));
+  overflow: hidden;
+  pointer-events: auto;
+  box-shadow: 0 0 1.5rem rgba(var(--gov-color-secondary-800-rgb), 0.24);
+}
+.gov-modal__header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.5rem 1rem;
+  border-bottom: var(--gov-modal-border-color, 0.0625rem solid var(--gov-color-secondary-500));
+}
+.gov-modal__icon {
+  flex: 0 0 auto;
+  padding-top: calc((var(--gov-text-3xl-font-size) * 1.5 - 1.5rem) / 2);
+}
+.gov-modal__icon > * {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.gov-modal__title {
+  font-weight: var(--gov-text-3xl-font-weight);
+  font-size: var(--gov-text-3xl-font-size);
+  line-height: var(--gov-text-3xl-line-height);
+  letter-spacing: var(--gov-text-3xl-letter-spacing);
+  margin: 0;
+}
+.gov-modal__close {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding-top: calc((var(--gov-text-3xl-font-size) * 1.5 - 2rem) / 2);
+}
+.gov-modal__content {
+  height: 100%;
+  padding: 1.5rem 1rem;
+  color: var(--gov-modal-text-color, var(--gov-color-secondary-700));
+  overflow: auto;
+}
+.gov-modal__content > *:last-child {
+  margin-bottom: 0;
+}
+.gov-modal__footer, .gov-modal__actions {
+  padding: 1.5rem 1rem;
+  border-top: var(--gov-modal-border-color, 0.0625rem solid var(--gov-color-secondary-500));
+}
+.gov-modal__actions {
+  display: flex;
+  gap: 0.5rem 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.gov-modal__dialog:focus .gov-modal__inner {
+  outline: var(--gov-outline-width, 0.125rem) solid var(--gov-color-focus-base);
+}
+.gov-modal[open=""], .gov-modal[open=true i], .gov-modal[open="1"] {
+  display: block;
+}
+@media (min-width: 30em) {
+  .gov-modal__dialog {
+    max-width: calc(var(--gov-modal-max-width, 52.5rem) + 3rem);
+    padding: 1.5rem;
+  }
+  .gov-modal__dialog:focus {
+    outline-offset: -1.5rem;
+  }
+  .gov-modal__inner {
+    box-shadow: 0 0 2rem rgba(var(--gov-color-secondary-800-rgb), 0.32);
+  }
+  .gov-modal--prompt .gov-modal__dialog {
+    max-width: calc(var(--gov-modal-prompt-max-width, 33.125rem) + 3rem);
+  }
+}
+@media (min-width: 48em) {
+  .gov-modal__header {
+    gap: 1.25rem;
+    padding: 2rem 2.5rem 2rem 3rem;
+  }
+  .gov-modal__close {
+    padding-top: calc((var(--gov-text-3xl-font-size) * 1.5 - 2.5rem) / 2);
+  }
+  .gov-modal__content {
+    padding: 2rem 3rem;
+  }
+  .gov-modal__footer {
+    padding: 1rem 3rem;
+  }
+  .gov-modal--prompt .gov-modal__header, .gov-modal--prompt .gov-modal__content, .gov-modal--prompt .gov-modal__footer, .gov-modal--prompt .gov-modal__actions {
+    padding: 1.5rem;
+  }
+}

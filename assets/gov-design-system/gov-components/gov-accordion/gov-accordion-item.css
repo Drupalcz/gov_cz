@@ -1,0 +1,519 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* [Core] - Buttons
+------------------------------------------------------------------ */
+/*
+ * Gets color from theme-colors or from palette-colors
+ */
+/*
+ * Converts hex value to rgb colors value
+ */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+ * Generates list of utility classes for margin, padding
+ *
+ * Make sure $list of definitions is sorted so that last item is defined last
+ * So largest views are mentioned last.
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Layout
+ */
+/**
+* Utilities - Offset
+*/
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/**
+* Generates CSS3 var with default value
+*/
+/*
+ -  Variables - General
+ */
+/*
+ -  Variables - Typography
+ */
+/*
+ -  Variables - Variants
+ */
+/*
+ -  Variables - Container
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Accordion
+ */
+/*
+ -  Variables - Attachments
+ */
+/*
+ -  Variables - Alert
+ */
+/*
+ -  Variables - Backdrop
+ */
+/*
+ -  Variables - Buttons (&& Badges)
+ */
+/*
+ -  Variables - Breadcrumbs
+ */
+/*
+ -  Variables - Classes
+ */
+/*
+ -  Variables - Colors
+ */
+/*
+ -	Variables - Control Group
+ */
+/*
+ -  Variables - Cookiebar
+ */
+/*
+ -  Variables - Dropdown
+ */
+/*
+ -  Variables - Card
+ */
+/*
+ -  Variables - Message
+ */
+/*
+ -  Variables - Empty
+ */
+/*
+ -  Variables - Error code
+ */
+/*
+ -  Variables - Grid
+ */
+/*
+ -  Variables - Tiles
+ */
+/*
+ -  Variables - Modal & Prompt
+ */
+/**
+* Utilities - Offset
+*/
+/*
+ -  Variables - shadows
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Statsbar
+ */
+/*
+ -  Variables - Tabs
+ */
+/*
+ -  Variables - Tooltip
+ */
+/*
+ -  Variables - Loading
+ */
+/*
+ -	Variables - Forms
+ */
+/*
+ -  Variables - Form Autocomplete
+ */
+/*
+ -  Variables - Form Message
+ */
+/*
+ -	Variables - Form label
+ */
+/*
+ -	Variables - Form switch
+ */
+/*
+ -	Variables - Form select
+ */
+/*
+ -	Variables - Form input
+ */
+/*
+ -	Variables - Form multiselect
+ */
+/*
+ -	Variables - Form password power
+ */
+/*
+ -	Variables - Form checkbox & radio
+ */
+/*
+ -  Variables - Form group
+ */
+/*
+ -	Variables - Form file
+ */
+/*
+ -  Variables - Toast Message
+ */
+/*
+ -  Variables - Wizard
+ */
+/*
+ -  Variables - Stepper
+ */
+/*
+ -  Variables - Side nav
+ */
+/*
+ -  Variables - Grid & Tile
+ */
+/*
+ -  Variables - Pagination
+ */
+/*
+ -  Variables - Nav
+ */
+/*
+ -  Variables - Layout
+ */
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+*   Accordion - Item
+*/
+.gov-accordion-item {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.gov-accordion-item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background-color: var(--gov-color-secondary-500);
+}
+.gov-accordion-item__header {
+  display: inline-flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--gov-font-family, "Roboto", sans-serif);
+  font-weight: 400;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  border-radius: 0;
+  text-align: left;
+  text-transform: none;
+  transition: background-color 150ms ease-in-out;
+}
+.gov-accordion-item__header:focus {
+  outline: none;
+}
+.gov-accordion-item__header:focus {
+  outline: none;
+}
+.gov-accordion-item__header:focus-visible {
+  border-radius: var(--gov-border-radius, 0.1875rem);
+  outline: var(--gov-outline-width, 0.125rem) solid var(--gov-color-focus-base);
+  outline-offset: 0;
+}
+.gov-accordion-item__header:focus-visible::before {
+  display: none;
+}
+.gov-accordion-item__header[aria-expanded=""] .gov-accordion-item__arrow .gov-icon:not([slot=toggle-icon]), .gov-accordion-item__header[aria-expanded=true i] .gov-accordion-item__arrow .gov-icon:not([slot=toggle-icon]), .gov-accordion-item__header[aria-expanded="1"] .gov-accordion-item__arrow .gov-icon:not([slot=toggle-icon]) {
+  transform: scale(-1);
+}
+.gov-accordion-item__icon {
+  display: inline-flex;
+  vertical-align: middle;
+  flex: 0 0 auto;
+}
+.gov-accordion-item__title {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+.gov-accordion-item__label * {
+  margin-bottom: 0;
+  transform: translateY(1px);
+}
+.gov-accordion-item__annotation * {
+  color: var(--gov-color-secondary);
+  margin-bottom: 0;
+}
+.gov-accordion-item__right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.gov-accordion-item__suffix {
+  display: inline-flex;
+  vertical-align: middle;
+  flex: 0 0 auto;
+  align-self: start;
+  line-height: initial;
+}
+.gov-accordion-item__arrow {
+  flex: 0 0 auto;
+}
+.gov-accordion-item__content > *:last-child {
+  margin-bottom: 0;
+}
+.gov-accordion-item[size=xs] .gov-accordion-item__header, .gov-accordion-item .gov-accordion-item[size=xs] .gov-accordion-item__header {
+  gap: var(--gov-accordion-xs-headline-gap, 0.5rem);
+  min-height: var(--gov-accordion-xs-min-height, 3rem);
+  padding: var(--gov-accordion-xs-padding-y, 0.75rem) var(--gov-accordion-xs-padding-x, 0.5rem);
+}
+.gov-accordion-item[size=xs] .gov-accordion-item__icon, .gov-accordion-item .gov-accordion-item[size=xs] .gov-accordion-item__icon {
+  width: calc(var(--gov-text-m-font-size) * 1.2);
+  height: calc(var(--gov-text-m-font-size) * 1.2);
+  transform: translateY(var(--gov-accordion-xs-icon-position, 0.1875rem));
+}
+.gov-accordion-item[size=xs] .gov-accordion-item__label *, .gov-accordion-item .gov-accordion-item[size=xs] .gov-accordion-item__label * {
+  font-weight: var(--gov-text-m-font-weight);
+  font-size: var(--gov-text-m-font-size);
+  line-height: var(--gov-text-m-line-height);
+  letter-spacing: var(--gov-text-m-letter-spacing);
+}
+.gov-accordion-item[size=xs] .gov-accordion-item__annotation, .gov-accordion-item .gov-accordion-item[size=xs] .gov-accordion-item__annotation {
+  font-weight: var(--gov-text-s-font-weight);
+  font-size: var(--gov-text-s-font-size);
+  line-height: var(--gov-text-s-line-height);
+  letter-spacing: var(--gov-text-s-letter-spacing);
+}
+.gov-accordion-item[size=xs] .gov-accordion-item__right, .gov-accordion-item .gov-accordion-item[size=xs] .gov-accordion-item__right {
+  gap: var(--gov-accordion-xs-headline-gap, 0.5rem);
+  transform: translateY(var(--gov-accordion-xs-arrow-position, 0.1875rem));
+}
+.gov-accordion-item[size=xs] .gov-accordion-item__right:has(.gov-accordion-item__suffix), .gov-accordion-item .gov-accordion-item[size=xs] .gov-accordion-item__right:has(.gov-accordion-item__suffix) {
+  transform: translateY(var(--gov-accordion-xs-icon-position, 0.1875rem));
+}
+.gov-accordion-item[size=xs] .gov-accordion-item__arrow, .gov-accordion-item .gov-accordion-item[size=xs] .gov-accordion-item__arrow {
+  width: var(--gov-accordion-xs-icon-size, 1rem);
+  height: var(--gov-accordion-xs-icon-size, 1rem);
+}
+.gov-accordion-item[size=xs] .gov-accordion-item__content, .gov-accordion-item .gov-accordion-item[size=xs] .gov-accordion-item__content {
+  padding: var(--gov-accordion-xs-padding-inner, 1rem 0.5rem);
+}
+.gov-accordion-item[size=s] .gov-accordion-item__header, .gov-accordion-item .gov-accordion-item[size=s] .gov-accordion-item__header {
+  gap: var(--gov-accordion-s-headline-gap, 0.5rem);
+  min-height: var(--gov-accordion-s-min-height, 3rem);
+  padding: var(--gov-accordion-s-padding-y, 1.125rem) var(--gov-accordion-s-padding-x, 0.5rem);
+}
+.gov-accordion-item[size=s] .gov-accordion-item__icon, .gov-accordion-item .gov-accordion-item[size=s] .gov-accordion-item__icon {
+  width: calc(var(--gov-text-xl-font-size) * 1.2);
+  height: calc(var(--gov-text-xl-font-size) * 1.2);
+  transform: translateY(var(--gov-accordion-s-icon-position, 0.1875rem));
+}
+.gov-accordion-item[size=s] .gov-accordion-item__label *, .gov-accordion-item .gov-accordion-item[size=s] .gov-accordion-item__label * {
+  font-weight: var(--gov-text-xl-font-weight);
+  font-size: var(--gov-text-xl-font-size);
+  line-height: var(--gov-text-xl-line-height);
+  letter-spacing: var(--gov-text-xl-letter-spacing);
+}
+.gov-accordion-item[size=s] .gov-accordion-item__annotation, .gov-accordion-item .gov-accordion-item[size=s] .gov-accordion-item__annotation {
+  font-weight: var(--gov-text-m-font-weight);
+  font-size: var(--gov-text-m-font-size);
+  line-height: var(--gov-text-m-line-height);
+  letter-spacing: var(--gov-text-m-letter-spacing);
+}
+.gov-accordion-item[size=s] .gov-accordion-item__right, .gov-accordion-item .gov-accordion-item[size=s] .gov-accordion-item__right {
+  gap: var(--gov-accordion-s-headline-gap, 0.5rem);
+  transform: translateY(var(--gov-accordion-s-arrow-position, 0.4375rem));
+}
+.gov-accordion-item[size=s] .gov-accordion-item__right:has(.gov-accordion-item__suffix), .gov-accordion-item .gov-accordion-item[size=s] .gov-accordion-item__right:has(.gov-accordion-item__suffix) {
+  transform: translateY(var(--gov-accordion-s-icon-position, 0.1875rem));
+}
+.gov-accordion-item[size=s] .gov-accordion-item__arrow, .gov-accordion-item .gov-accordion-item[size=s] .gov-accordion-item__arrow {
+  width: var(--gov-accordion-s-icon-size, 1rem);
+  height: var(--gov-accordion-s-icon-size, 1rem);
+}
+.gov-accordion-item[size=s] .gov-accordion-item__content, .gov-accordion-item .gov-accordion-item[size=s] .gov-accordion-item__content {
+  padding: var(--gov-accordion-s-padding-inner, 1rem 0.5rem);
+}
+.gov-accordion-item[size=m] .gov-accordion-item__header, .gov-accordion-item .gov-accordion-item[size=m] .gov-accordion-item__header {
+  gap: var(--gov-accordion-m-headline-gap, 1rem);
+  min-height: var(--gov-accordion-m-min-height, 4.5rem);
+  padding: var(--gov-accordion-m-padding-y, 1.25rem) var(--gov-accordion-m-padding-x, 0.5rem);
+}
+.gov-accordion-item[size=m] .gov-accordion-item__icon, .gov-accordion-item .gov-accordion-item[size=m] .gov-accordion-item__icon {
+  width: calc(var(--gov-text-2xl-font-size) * 1.2);
+  height: calc(var(--gov-text-2xl-font-size) * 1.2);
+  transform: translateY(var(--gov-accordion-m-icon-position, 0.25rem));
+}
+.gov-accordion-item[size=m] .gov-accordion-item__label *, .gov-accordion-item .gov-accordion-item[size=m] .gov-accordion-item__label * {
+  font-weight: var(--gov-text-2xl-font-weight);
+  font-size: var(--gov-text-2xl-font-size);
+  line-height: var(--gov-text-2xl-line-height);
+  letter-spacing: var(--gov-text-2xl-letter-spacing);
+}
+.gov-accordion-item[size=m] .gov-accordion-item__annotation, .gov-accordion-item .gov-accordion-item[size=m] .gov-accordion-item__annotation {
+  font-weight: var(--gov-text-m-font-weight);
+  font-size: var(--gov-text-m-font-size);
+  line-height: var(--gov-text-m-line-height);
+  letter-spacing: var(--gov-text-m-letter-spacing);
+}
+.gov-accordion-item[size=m] .gov-accordion-item__right, .gov-accordion-item .gov-accordion-item[size=m] .gov-accordion-item__right {
+  gap: var(--gov-accordion-m-headline-gap, 1rem);
+  transform: translateY(var(--gov-accordion-m-arrow-position, 0.25rem));
+}
+.gov-accordion-item[size=m] .gov-accordion-item__right:has(.gov-accordion-item__suffix), .gov-accordion-item .gov-accordion-item[size=m] .gov-accordion-item__right:has(.gov-accordion-item__suffix) {
+  transform: translateY(var(--gov-accordion-m-icon-position, 0.25rem));
+}
+.gov-accordion-item[size=m] .gov-accordion-item__arrow, .gov-accordion-item .gov-accordion-item[size=m] .gov-accordion-item__arrow {
+  width: var(--gov-accordion-m-icon-size, 1.5rem);
+  height: var(--gov-accordion-m-icon-size, 1.5rem);
+}
+.gov-accordion-item[size=m] .gov-accordion-item__content, .gov-accordion-item .gov-accordion-item[size=m] .gov-accordion-item__content {
+  padding: var(--gov-accordion-m-padding-inner, 1.25rem 0.5rem);
+}
+.gov-accordion-item[size=l] .gov-accordion-item__header, .gov-accordion-item .gov-accordion-item[size=l] .gov-accordion-item__header {
+  gap: var(--gov-accordion-l-headline-gap, 1rem);
+  min-height: var(--gov-accordion-l-min-height, 5.5rem);
+  padding: var(--gov-accordion-l-padding-y, 1.375rem) var(--gov-accordion-l-padding-x, 0.5rem);
+}
+.gov-accordion-item[size=l] .gov-accordion-item__icon, .gov-accordion-item .gov-accordion-item[size=l] .gov-accordion-item__icon {
+  width: calc(var(--gov-text-3xl-font-size) * 1.2);
+  height: calc(var(--gov-text-3xl-font-size) * 1.2);
+  transform: translateY(var(--gov-accordion-l-icon-position, 0.3125rem));
+}
+.gov-accordion-item[size=l] .gov-accordion-item__label *, .gov-accordion-item .gov-accordion-item[size=l] .gov-accordion-item__label * {
+  font-weight: var(--gov-text-3xl-font-weight);
+  font-size: var(--gov-text-3xl-font-size);
+  line-height: var(--gov-text-3xl-line-height);
+  letter-spacing: var(--gov-text-3xl-letter-spacing);
+}
+.gov-accordion-item[size=l] .gov-accordion-item__annotation, .gov-accordion-item .gov-accordion-item[size=l] .gov-accordion-item__annotation {
+  font-weight: var(--gov-text-m-font-weight);
+  font-size: var(--gov-text-m-font-size);
+  line-height: var(--gov-text-m-line-height);
+  letter-spacing: var(--gov-text-m-letter-spacing);
+}
+.gov-accordion-item[size=l] .gov-accordion-item__right, .gov-accordion-item .gov-accordion-item[size=l] .gov-accordion-item__right {
+  gap: var(--gov-accordion-l-headline-gap, 1rem);
+  transform: translateY(var(--gov-accordion-l-arrow-position, 0.625rem));
+}
+.gov-accordion-item[size=l] .gov-accordion-item__right:has(.gov-accordion-item__suffix), .gov-accordion-item .gov-accordion-item[size=l] .gov-accordion-item__right:has(.gov-accordion-item__suffix) {
+  transform: translateY(var(--gov-accordion-l-icon-position, 0.3125rem));
+}
+.gov-accordion-item[size=l] .gov-accordion-item__arrow, .gov-accordion-item .gov-accordion-item[size=l] .gov-accordion-item__arrow {
+  width: var(--gov-accordion-l-icon-size, 1.5rem);
+  height: var(--gov-accordion-l-icon-size, 1.5rem);
+}
+.gov-accordion-item[size=l] .gov-accordion-item__content, .gov-accordion-item .gov-accordion-item[size=l] .gov-accordion-item__content {
+  padding: var(--gov-accordion-l-padding-inner, 1.25rem 0.5rem);
+}
+.gov-accordion-item[variant=primary] .gov-accordion-item::before {
+  background-color: var(--gov-accordion-primary-separator, var(--gov-color-secondary-500));
+}
+.gov-accordion-item[variant=primary] .gov-accordion-item__header {
+  background-color: var(--gov-accordion-primary-background, transparent);
+  color: var(--gov-accordion-primary-color, var(--gov-color-primary));
+}
+@media not all and (pointer: coarse) {
+  .gov-accordion-item[variant=primary] .gov-accordion-item__header:hover {
+    background-color: var(--gov-accordion-primary-background-hover, var(--gov-color-primary-200));
+  }
+}
+.gov-accordion-item[variant=primary][disabled=""] .gov-accordion-item__header, .gov-accordion-item[variant=primary][disabled=true i] .gov-accordion-item__header, .gov-accordion-item[variant=primary][disabled="1"] .gov-accordion-item__header {
+  color: var(--gov-accordion-primary-disabled-color, var(--gov-color-primary-400));
+}
+@media not all and (pointer: coarse) {
+  .gov-accordion-item[variant=primary][disabled=""] .gov-accordion-item__header:hover, .gov-accordion-item[variant=primary][disabled=true i] .gov-accordion-item__header:hover, .gov-accordion-item[variant=primary][disabled="1"] .gov-accordion-item__header:hover {
+    background: transparent;
+    cursor: not-allowed;
+  }
+}
+.gov-accordion-item[variant=secondary] .gov-accordion-item::before {
+  background-color: var(--gov-accordion-secondary-separator, var(--gov-color-secondary-500));
+}
+.gov-accordion-item[variant=secondary] .gov-accordion-item__header {
+  background-color: var(--gov-accordion-secondary-background, transparent);
+  color: var(--gov-accordion-secondary-color, var(--gov-color-secondary));
+}
+@media not all and (pointer: coarse) {
+  .gov-accordion-item[variant=secondary] .gov-accordion-item__header:hover {
+    background-color: var(--gov-accordion-secondary-background-hover, var(--gov-color-secondary-200));
+  }
+}
+.gov-accordion-item[variant=secondary][disabled=""] .gov-accordion-item__header, .gov-accordion-item[variant=secondary][disabled=true i] .gov-accordion-item__header, .gov-accordion-item[variant=secondary][disabled="1"] .gov-accordion-item__header {
+  color: var(--gov-accordion-secondary-disabled-color, var(--gov-color-secondary-600));
+}
+@media not all and (pointer: coarse) {
+  .gov-accordion-item[variant=secondary][disabled=""] .gov-accordion-item__header:hover, .gov-accordion-item[variant=secondary][disabled=true i] .gov-accordion-item__header:hover, .gov-accordion-item[variant=secondary][disabled="1"] .gov-accordion-item__header:hover {
+    background: transparent;
+    cursor: not-allowed;
+  }
+}
+@media (max-width: 47.99em) {
+  .gov-accordion-item__title {
+    flex-wrap: wrap;
+  }
+  .gov-accordion-item__label {
+    flex: 0 0 auto;
+  }
+}

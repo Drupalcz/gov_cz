@@ -1,0 +1,293 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* [Core] - Buttons
+------------------------------------------------------------------ */
+/*
+ * Gets color from theme-colors or from palette-colors
+ */
+/*
+ * Converts hex value to rgb colors value
+ */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+ * Generates list of utility classes for margin, padding
+ *
+ * Make sure $list of definitions is sorted so that last item is defined last
+ * So largest views are mentioned last.
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Layout
+ */
+/**
+* Utilities - Offset
+*/
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/**
+* Generates CSS3 var with default value
+*/
+/*
+ -  Variables - General
+ */
+/*
+ -  Variables - Typography
+ */
+/*
+ -  Variables - Variants
+ */
+/*
+ -  Variables - Container
+ */
+/*
+ -  Variables - Sizes
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Accordion
+ */
+/*
+ -  Variables - Attachments
+ */
+/*
+ -  Variables - Alert
+ */
+/*
+ -  Variables - Backdrop
+ */
+/*
+ -  Variables - Buttons (&& Badges)
+ */
+/*
+ -  Variables - Breadcrumbs
+ */
+/*
+ -  Variables - Classes
+ */
+/*
+ -  Variables - Colors
+ */
+/*
+ -	Variables - Control Group
+ */
+/*
+ -  Variables - Cookiebar
+ */
+/*
+ -  Variables - Dropdown
+ */
+/*
+ -  Variables - Card
+ */
+/*
+ -  Variables - Message
+ */
+/*
+ -  Variables - Empty
+ */
+/*
+ -  Variables - Error code
+ */
+/*
+ -  Variables - Grid
+ */
+/*
+ -  Variables - Tiles
+ */
+/*
+ -  Variables - Modal & Prompt
+ */
+/**
+* Utilities - Offset
+*/
+/*
+ -  Variables - shadows
+ */
+/* "Constants" for general usage */
+/*
+ -  Variables - Statsbar
+ */
+/*
+ -  Variables - Tabs
+ */
+/*
+ -  Variables - Tooltip
+ */
+/*
+ -  Variables - Loading
+ */
+/*
+ -	Variables - Forms
+ */
+/*
+ -  Variables - Form Autocomplete
+ */
+/*
+ -  Variables - Form Message
+ */
+/*
+ -	Variables - Form label
+ */
+/*
+ -	Variables - Form switch
+ */
+/*
+ -	Variables - Form select
+ */
+/*
+ -	Variables - Form input
+ */
+/*
+ -	Variables - Form multiselect
+ */
+/*
+ -	Variables - Form password power
+ */
+/*
+ -	Variables - Form checkbox & radio
+ */
+/*
+ -  Variables - Form group
+ */
+/*
+ -	Variables - Form file
+ */
+/*
+ -  Variables - Toast Message
+ */
+/*
+ -  Variables - Wizard
+ */
+/*
+ -  Variables - Stepper
+ */
+/*
+ -  Variables - Side nav
+ */
+/*
+ -  Variables - Grid & Tile
+ */
+/*
+ -  Variables - Pagination
+ */
+/*
+ -  Variables - Nav
+ */
+/*
+ -  Variables - Layout
+ */
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+*   Statsbar - Item
+*/
+.gov-statsbar-item {
+  position: relative;
+  display: block;
+  padding: 1.25rem;
+}
+.gov-statsbar-item__icon, .gov-statsbar-item__number {
+  margin-bottom: 1rem;
+}
+.gov-statsbar-item__icon {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+.gov-statsbar-item__number {
+  font-weight: var(--gov-text-5xl-font-weight);
+  font-size: var(--gov-text-5xl-font-size);
+  line-height: var(--gov-text-5xl-line-height);
+  letter-spacing: var(--gov-text-5xl-letter-spacing);
+}
+.gov-statsbar-item__text {
+  font-weight: var(--gov-text-xl-font-weight);
+  font-size: var(--gov-text-xl-font-size);
+  line-height: var(--gov-text-xl-line-height);
+  letter-spacing: var(--gov-text-xl-letter-spacing);
+  letter-spacing: 0.0125em;
+}
+.gov-statsbar-item__text > *:last-child {
+  margin-bottom: 0;
+}
+.gov-statsbar-item[icon-position=left] {
+  padding-left: 3rem;
+}
+.gov-statsbar-item[icon-position=left] .gov-statsbar-item__icon {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+}
+@media (min-width: 30em) {
+  .gov-statsbar-item {
+    flex: 1 0 50%;
+    max-width: 50%;
+  }
+}
+@media (min-width: 48em) {
+  .gov-statsbar-item {
+    padding: 2.5rem;
+  }
+  .gov-statsbar-item__icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  .gov-statsbar-item[icon-position=left] {
+    padding-left: 4rem;
+  }
+  .gov-statsbar-item[icon-position=left] .gov-statsbar-item__icon {
+    top: 2.75rem;
+  }
+}
+@media (min-width: 64em) {
+  .gov-statsbar-item {
+    flex-basis: auto;
+    max-width: 25%;
+  }
+}
