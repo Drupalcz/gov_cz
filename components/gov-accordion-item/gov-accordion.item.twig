@@ -1,0 +1,48 @@
+{# Accordion item
+  ## Variables ##
+  # accordion_size – inherited from the parent Accordion.
+  # accordion_variant – inherited from the parent Accordion.
+  # accordion_item_disabled – Optional, set the button to disabled state.
+  # accordion_item_disabled – Optional, set the button to disabled state.
+  # accordion_item_label_id – Required. Unique. Connects the button and the content.
+  # accordion_item_content_id – Required. Unique. Connects the button and the content.
+  # accordion_item_icon – Optional. Adds svg icon before the label text.
+  # accordion_item_label – Required. String on the button.
+  # accordion_item_content – Required. Content of the accordion.
+
+  ## Notes ##
+  # Button attribute (aria-expanded="false")
+  # and attributes on ".gov-accordion-item__content" (aria-hidden="true" hidden="")
+  # should be set via JS.
+#}
+<div class="gov-accordion-item" role="listitem" size="{{ accordion_size|default('m') }}" variant="{{ accordion_variant|default('primary') }}" {{ accordion_item_disabled ? 'disabled="true"' : '' }}>
+  <button
+    id="{{ accordion_item_label_id }}"
+    class="gov-accordion-item__header"
+    aria-controls="{{ accordion_item_content_id }}"
+    {{ accordion_item_disabled ? 'aria_disabled="true" disabled="true"' : '' }}
+  >
+    <h3 class="gov-accordion-item__title">
+      {% if accordion_item_icon %}
+        <span class="gov-accordion-item__icon">
+          <div class="gov-icon">
+            <span class="gov-icon__holder">
+              {{ accordion_item_icon }}
+            </span>
+          </div>
+        </span>
+      {% endif %}
+      <span class="gov-accordion-item__name">
+        <span class="gov-accordion-item__label">{{ accordion_item_label }}</span>
+      </span>
+    </h3>
+    <div class="gov-accordion-item__arrow gov-icon">
+      <span class="gov-icon__holder">
+        {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-down.svg') }}
+      </span>
+    </div>
+  </button>
+  <div class="gov-accordion-item__content" id="{{ accordion_item_content_id }}" aria-labelledby="{{ accordion_item_label_id }}">
+    {{ accordion_item_content }}
+  </div>
+</div>

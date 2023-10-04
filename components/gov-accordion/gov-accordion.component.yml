@@ -1,14 +1,20 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Accordion
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-accordion/gov-accordion.css: {}
 props:
   type: object
   required:
-    - label
+    - accordion_accessibility_label
+    - accordion_items
   properties:
-    label:
+    accordion_accessibility_label:
       type: string
-      title: Label
-      description: The label for the accordion
-
-
-
+      title: Accessibility Label
+      description: The accessible label for the accordion
+    accordion_items:
+      type: array
+      title: Accordion Items
+      description: The items for the accordion

@@ -1,0 +1,48 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Accordion Item
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-accordion/gov-accordion-item.css: {}
+props:
+  type: object
+  required:
+    - accordion_size
+    - accordion_variant
+    - accordion_item_label_id
+    - accordion_item_content_id
+    - accordion_item_label
+    - accordion_item_content
+  properties:
+    accordion_size:
+      type: string
+      title: Size
+      description: The label size for the accordion item
+    accordion_variant:
+      type: string
+      title: Variant
+      description: The label variant for the accordion item
+    accordion_item_disabled:
+      type: boolean
+      title: Disabled
+      description: Makes the button component disabled.
+    accordion_item_label_id:
+      type: string
+      title: Item ID
+      description: The unique ID for the accordion item label
+    accordion_item_content_id:
+      type: string
+      title: Content ID
+      description: The unique ID for the accordion item content
+    accordion_item_icon:
+      type: string
+      title: Item Icon name
+      description: Optional Icon before the accordion item label
+    accordion_item_label:
+      type: string
+      title: Item Label
+      description: Accordion item label
+    accordion_item_content:
+      type: string
+      title: Item Content
+      description: Accordion item content
