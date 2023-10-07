@@ -1,0 +1,22 @@
+:root,
+:host {
+
+  --gov-alert-warning-bg-color: var(--gov-color-warning);
+  --gov-alert-warning-icon-color: var(--gov-color-secondary);
+  --gov-alert-warning-text-color: var(--gov-color-secondary);
+  --gov-alert-border: 0.0625rem solid var(--gov-color-secondary-400);
+  --gov-alert-inverse-bg: var(--gov-color-neutral-white);
+  --gov-alert-inverse-color: var(--gov-color-secondary-800);
+  --gov-alert-error-bg-color: var(--gov-color-error);
+  --gov-alert-error-icon-color: var(--gov-color-neutral-white);
+  --gov-alert-error-text-color: var(--gov-color-neutral-white);
+  --gov-alert-secondary-bg-color: var(--gov-color-secondary);
+  --gov-alert-secondary-icon-color: var(--gov-color-neutral-white);
+  --gov-alert-secondary-text-color: var(--gov-color-neutral-white);
+  --gov-alert-success-bg-color: var(--gov-color-success-500);
+  --gov-alert-success-icon-color: var(--gov-color-neutral-white);
+  --gov-alert-success-text-color: var(--gov-color-neutral-white);
+  --gov-alert-primary-bg-color: var(--gov-color-primary);
+  --gov-alert-primary-icon-color: var(--gov-color-neutral-white);
+  --gov-alert-primary-text-color: var(--gov-color-neutral-white);
+}

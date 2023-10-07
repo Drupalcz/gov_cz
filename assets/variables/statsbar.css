@@ -1,0 +1,10 @@
+:root,
+:host {
+
+  --gov-statsbar-primary-bg-color: var(--gov-color-primary-200);
+  --gov-statsbar-primary-text-color: var(--gov-color-primary);
+  --gov-statsbar-primary-text-color-inverse: var(--gov-color-primary);
+  --gov-statsbar-secondary-bg-color: var(--gov-color-secondary);
+  --gov-statsbar-secondary-text-color: var(--gov-color-neutral-white);
+  --gov-statsbar-secondary-text-color-inverse: var(--gov-color-secondary);
+}

@@ -1,0 +1,5 @@
+:root,
+:host {
+  --gov-empty-icon-circle-bg: linear-gradient(to bottom, var(--gov-color-primary-200), var(--gov-color-neutral-white));
+  --gov-empty-icon-color: var(--gov-color-primary);
+}

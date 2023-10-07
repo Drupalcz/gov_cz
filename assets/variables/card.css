@@ -1,0 +1,10 @@
+:root,
+:host {
+  --gov-card-border-width: 0.0625rem solid var(--gov-color-secondary-500);
+  --gov-card-bg: var(--gov-color-neutral-white);
+  --gov-card-arrow-color: var(--gov-color-primary);
+  --gov-card-title-color: var(--gov-color-secondary-800);
+  --gov-card-icon-color: var(--gov-color-primary);
+  --gov-card-footer-bg: var(--gov-color-primary-100);
+  --gov-card-header-hover-bg: var(--gov-color-primary-100);
+}

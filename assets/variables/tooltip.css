@@ -1,0 +1,16 @@
+:root,
+:host {
+  --gov-tooltip-secondary-bg-color: var(--gov-color-secondary);
+  --gov-tooltip-secondary-text-color: var(--gov-color-neutral-white);
+  --gov-tooltip-secondary-text-color-inverse: var(--gov-color-secondary);
+  --gov-tooltip-primary-bg-color: var(--gov-color-primary-300);
+  --gov-tooltip-primary-text-color: var(--gov-color-secondary);
+  --gov-tooltip-primary-text-color-inverse: var(--gov-color-primary);
+  --gov-tooltip-content-max-width: 21rem;
+  --gov-tooltip-s-padding: 0.5rem;
+  --gov-tooltip-s-arrow-size: 0.4375rem;
+  --gov-tooltip-s-letter-spacing: 0.0125rem;
+  --gov-tooltip-l-padding: 1rem;
+  --gov-tooltip-l-arrow-size: 0.875rem;
+  --gov-tooltip-l-letter-spacing: 0.002rem;
+}

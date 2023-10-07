@@ -1,0 +1,24 @@
+:root,
+:host {
+  --gov-toast-message-bg: var(--gov-color-neutral-white);
+  --gov-toast-warning-codecor-lor: var(--gov-color-warning);
+  --gov-toast-warning-background: var(--gov-color-warning);
+  --gov-toast-warning-color: var(--gov-color-secondary);
+  --gov-toast-warning-timer-background: rgba(var(--gov-color-warning-500-rgb), 0.3);
+  --gov-toast-error-colodecor-r: var(--gov-color-error);
+  --gov-toast-error-background: var(--gov-color-error);
+  --gov-toast-error-color: var(--gov-color-neutral-white);
+  --gov-toast-error-timer-background: rgba(var(--gov-color-error-500-rgb), 0.5);
+  --gov-toast-success-codecor-lor: var(--gov-color-success);
+  --gov-toast-success-background: var(--gov-color-success-500);
+  --gov-toast-success-color: var(--gov-color-neutral-white);
+  --gov-toast-success-timer-background: rgba(var(--gov-color-success-600-rgb), 0.5);
+  --gov-toast-primary-codecor-lor: var(--gov-color-primary);
+  --gov-toast-primary-background: var(--gov-color-primary);
+  --gov-toast-primary-color: var(--gov-color-neutral-white);
+  --gov-toast-primary-timer-background: rgba(var(--gov-color-primary-700-rgb), 0.5);
+  --gov-toast-secondary-decor-color: var(--gov-color-secondary);
+  --gov-toast-secondary-background: var(--gov-color-secondary);
+  --gov-toast-secondary-color: var(--gov-color-neutral-white);
+  --gov-toast-secondary-timer-background: rgba(var(--gov-color-secondary-900-rgb), 0.5);
+}

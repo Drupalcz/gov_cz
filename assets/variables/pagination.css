@@ -1,0 +1,5 @@
+:root,
+:host {
+  --gov-pagination-s-button-size: 2rem;
+  --gov-pagination-m-button-size: 2.5rem;
+}

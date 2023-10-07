@@ -1,0 +1,91 @@
+@media(min-width: 0) {
+
+  :root,
+  :host {
+    --gov-text-xs-font-size: 0.75rem;
+    --gov-text-xs-line-height: 150%;
+    --gov-text-xs-font-weight: 400;
+    --gov-text-xs-letter-spacing: 0.0166em;
+    --gov-text-xs-margin-bottom: 0.5rem;
+    --gov-text-s-font-size: 0.875rem;
+    --gov-text-s-line-height: 150%;
+    --gov-text-s-font-weight: 400;
+    --gov-text-s-letter-spacing: 0.0125em;
+    --gov-text-s-margin-bottom: 0.5rem;
+    --gov-text-m-font-size: 1rem;
+    --gov-text-m-line-height: 150%;
+    --gov-text-m-font-weight: 400;
+    --gov-text-m-letter-spacing: 0.0125em;
+    --gov-text-m-margin-bottom: 0.5rem;
+    --gov-text-l-font-size: 1.125rem;
+    --gov-text-l-line-height: 150%;
+    --gov-text-l-font-weight: 400;
+    --gov-text-l-letter-spacing: 0.0125em;
+    --gov-text-l-margin-bottom: 0.5rem;
+    --gov-text-xl-font-size: 1.25rem;
+    --gov-text-xl-line-height: 150%;
+    --gov-text-xl-font-weight: 500;
+    --gov-text-xl-letter-spacing: 0.0125em;
+    --gov-text-xl-margin-top: 0.5rem;
+    --gov-text-xl-margin-bottom: 0.5rem;
+    --gov-text-2xl-font-size: 1.375rem;
+    --gov-text-2xl-line-height: 150%;
+    --gov-text-2xl-font-weight: 500;
+    --gov-text-2xl-letter-spacing: 0.0312em;
+    --gov-text-2xl-margin-top: 0.5rem;
+    --gov-text-2xl-margin-bottom: 0.5rem;
+    --gov-text-3xl-font-size: 1.625rem;
+    --gov-text-3xl-line-height: 150%;
+    --gov-text-3xl-font-weight: 400;
+    --gov-text-3xl-margin-top: 1rem;
+    --gov-text-3xl-margin-bottom: 0.5rem;
+    --gov-text-4xl-font-size: 2rem;
+    --gov-text-4xl-line-height: 130%;
+    --gov-text-4xl-font-weight: 300;
+    --gov-text-4xl-margin-top: 1rem;
+    --gov-text-4xl-margin-bottom: 1rem;
+    --gov-text-5xl-font-size: 2.25rem;
+    --gov-text-5xl-line-height: 125%;
+    --gov-text-5xl-font-weight: 300;
+    --gov-text-5xl-margin-top: 1.5rem;
+    --gov-text-5xl-margin-bottom: 1rem;
+    --gov-text-6xl-font-size: 3rem;
+    --gov-text-6xl-line-height: 125%;
+    --gov-text-6xl-font-weight: 300;
+    --gov-text-6xl-margin-top: 2rem;
+    --gov-text-6xl-margin-bottom: 1.5rem
+  }
+}
+
+@media(min-width: 48em) {
+
+  :root,
+  :host {
+    --gov-text-xl-font-size: 1.25rem;
+    --gov-text-xl-margin-top: 1rem;
+    --gov-text-2xl-font-size: 1.25rem;
+    --gov-text-2xl-margin-top: 1rem;
+    --gov-text-3xl-font-size: 1.75rem;
+    --gov-text-3xl-line-height: 150%;
+    --gov-text-3xl-margin-top: 1.5rem;
+    --gov-text-4xl-font-size: 2.25rem;
+    --gov-text-4xl-margin-top: 1.5rem;
+    --gov-text-5xl-font-size: 2.625rem;
+    --gov-text-5xl-margin-top: 2rem;
+    --gov-text-6xl-font-size: 3.625rem;
+    --gov-text-6xl-margin-top: 2.5rem
+  }
+}
+
+@media(min-width: 64em) {
+
+  :root,
+  :host {
+    --gov-text-xl-font-size: 1.25rem;
+    --gov-text-2xl-font-size: 1.5rem;
+    --gov-text-3xl-font-size: 2rem;
+    --gov-text-4xl-font-size: 2.5rem;
+    --gov-text-5xl-font-size: 3rem;
+    --gov-text-6xl-font-size: 4rem
+  }
+}

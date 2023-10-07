@@ -1,0 +1,15 @@
+:root,
+:host {
+  --gov-message-warning-color: var(--gov-color-warning);
+  --gov-message-warning-bg-color: var(--gov-color-warning-100);
+  --gov-message-error-color: var(--gov-color-error);
+  --gov-message-error-bg-color: var(--gov-color-error-100);
+  --gov-message-secondary-color: var(--gov-color-secondary);
+  --gov-message-secondary-bg-color: var(--gov-color-secondary-200);
+  --gov-message-success-color: var(--gov-color-success);
+  --gov-message-success-bg-color: var(--gov-color-success-100);
+  --gov-message-primary-color: var(--gov-color-primary);
+  --gov-message-primary-bg-color: var(--gov-color-primary-100);
+  --gov-message-bg-inverse: var(--gov-color-neutral-white);
+  --gov-message-box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+}

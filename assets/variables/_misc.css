@@ -1,0 +1,5 @@
+:root,
+:host {
+  --gov-border-radius: 0.1875rem;
+  --gov-outline-width: 0.125rem;
+}

@@ -1,0 +1,29 @@
+:root,
+:host {
+  --gov-wizard-bg-color: var(--gov-color-neutral-white);
+  --gov-wizard-title-font-weight: 400;
+  --gov-wizard-primary-color: var(--gov-color-primary-800);
+  --gov-wizard-primary-indicator-bg: var(--gov-color-primary-300);
+  --gov-wizard-primary-indicator-color: var(--gov-color-primary-800);
+  --gov-wizard-secondary-color: var(--gov-color-secondary-700);
+  --gov-wizard-secondary-indicator-bg: var(--gov-color-secondary-400);
+  --gov-wizard-secondary-indicator-color: var(--gov-color-secondary-700);
+  --gov-wizard-success-color: var(--gov-color-success-500);
+  --gov-wizard-success-indicator-bg: var(--gov-color-success);
+  --gov-wizard-success-indicator-color: var(--gov-color-neutral-white);
+  --gov-wizard-error-color: var(--gov-color-error-500);
+  --gov-wizard-error-indicator-bg: var(--gov-color-error);
+  --gov-wizard-error-indicator-color: var(--gov-color-neutral-white);
+  --gov-wizard-warning-color: var(--gov-color-warning-500);
+  --gov-wizard-warning-indicator-bg: var(--gov-color-warning);
+  --gov-wizard-warning-indicator-color: var(--gov-color-neutral-white);
+  --gov-wizard-xs-indicator-size: 1.5rem;
+  --gov-wizard-xs-top: 1rem;
+  --gov-wizard-xs-header-padding: 1rem 1rem 1rem 3.5rem;
+  --gov-wizard-content-padding: 0rem 1rem 1rem 1rem;
+  --gov-wizard-primary-hover-color: var(--gov-color-primary-900);
+  --gov-wizard-secondary-hover-color: var(--gov-color-secondary-800);
+  --gov-wizard-success-hover-color: var(--gov-color-success-600);
+  --gov-wizard-error-hover-color: var(--gov-color-error-600);
+  --gov-wizard-warning-hover-color: var(--gov-color-warning-600);
+}

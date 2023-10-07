@@ -1,0 +1,6 @@
+:root,
+:host {
+  --gov-container-width: 73.75rem;
+  --gov-container-padding: 2.5rem;
+  --gov-container-padding-mobile: 1.25rem;
+}

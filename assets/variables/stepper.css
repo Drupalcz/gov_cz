@@ -1,0 +1,9 @@
+:root,
+:host {
+  --gov-stepper-xs-indicator-size: 1.5rem;
+  --gov-stepper-xs-connect-gap: 0.5rem;
+  --gov-stepper-xs-content-padding: 1rem 1rem 2rem 2.5rem;
+  --gov-stepper-s-indicator-size: 2rem;
+  --gov-stepper-s-connect-gap: 1rem;
+  --gov-stepper-s-content-padding: 1rem 1rem 2rem 3rem;
+}
