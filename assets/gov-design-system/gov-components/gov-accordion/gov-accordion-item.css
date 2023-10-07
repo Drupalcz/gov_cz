@@ -299,6 +299,7 @@
 }
 .gov-accordion-item__label * {
   margin-bottom: 0;
+  display: inline-block;
   transform: translateY(1px);
 }
 .gov-accordion-item__annotation * {

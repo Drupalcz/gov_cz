@@ -281,7 +281,6 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  font-weight: var(--gov-wizard-title-font-weight, 400);
 }
 .gov-stepper-item__annot {
   color: var(--gov-color-secondary);

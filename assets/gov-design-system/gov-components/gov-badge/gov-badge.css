@@ -1044,10 +1044,10 @@
   height: var(--gov-button-xs-icon-size, 1rem);
 }
 [size=s].gov-badge .element {
-  font-weight: var(--gov-button-text-s-font-weight, var(--gov-text-s-font-weight));
-  font-size: var(--gov-button-text-s-font-size, var(--gov-text-s-font-size));
-  line-height: var(--gov-button-text-s-line-height, var(--gov-text-s-line-height));
-  letter-spacing: var(--gov-button-text-s-letter-spacing, var(--gov-text-s-letter-spacing));
+  font-weight: var(--gov-button-text-xs-font-weight, var(--gov-text-xs-font-weight));
+  font-size: var(--gov-button-text-xs-font-size, var(--gov-text-xs-font-size));
+  line-height: var(--gov-button-text-xs-line-height, var(--gov-text-xs-line-height));
+  letter-spacing: var(--gov-button-text-xs-letter-spacing, var(--gov-text-xs-letter-spacing));
   -moz-column-gap: var(--gov-button-s-padding-x, 0.75rem);
        column-gap: var(--gov-button-s-padding-x, 0.75rem);
   min-height: var(--gov-button-s-min-height, 2rem);
@@ -1058,10 +1058,10 @@
   height: var(--gov-button-s-icon-size, 1rem);
 }
 [size=m].gov-badge .element {
-  font-weight: var(--gov-button-text-m-font-weight, var(--gov-text-m-font-weight));
-  font-size: var(--gov-button-text-m-font-size, var(--gov-text-m-font-size));
-  line-height: var(--gov-button-text-m-line-height, var(--gov-text-m-line-height));
-  letter-spacing: var(--gov-button-text-m-letter-spacing, var(--gov-text-m-letter-spacing));
+  font-weight: var(--gov-button-text-s-font-weight, var(--gov-text-s-font-weight));
+  font-size: var(--gov-button-text-s-font-size, var(--gov-text-s-font-size));
+  line-height: var(--gov-button-text-s-line-height, var(--gov-text-s-line-height));
+  letter-spacing: var(--gov-button-text-s-letter-spacing, var(--gov-text-s-letter-spacing));
   -moz-column-gap: var(--gov-button-m-padding-x, 0.75rem);
        column-gap: var(--gov-button-m-padding-x, 0.75rem);
   min-height: var(--gov-button-m-min-height, 2.5rem);
@@ -1072,10 +1072,10 @@
   height: var(--gov-button-m-icon-size, 1.25rem);
 }
 [size=l].gov-badge .element {
-  font-weight: var(--gov-button-text-l-font-weight, var(--gov-text-l-font-weight));
-  font-size: var(--gov-button-text-l-font-size, var(--gov-text-l-font-size));
-  line-height: var(--gov-button-text-l-line-height, var(--gov-text-l-line-height));
-  letter-spacing: var(--gov-button-text-l-letter-spacing, var(--gov-text-l-letter-spacing));
+  font-weight: var(--gov-button-text-m-font-weight, var(--gov-text-m-font-weight));
+  font-size: var(--gov-button-text-m-font-size, var(--gov-text-m-font-size));
+  line-height: var(--gov-button-text-m-line-height, var(--gov-text-m-line-height));
+  letter-spacing: var(--gov-button-text-m-letter-spacing, var(--gov-text-m-letter-spacing));
   -moz-column-gap: var(--gov-button-l-padding-x, 1rem);
        column-gap: var(--gov-button-l-padding-x, 1rem);
   min-height: var(--gov-button-l-min-height, 3rem);

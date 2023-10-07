@@ -284,7 +284,6 @@
 .gov-modal__close {
   flex: 0 0 auto;
   margin-left: auto;
-  padding-top: calc((var(--gov-text-3xl-font-size) * 1.5 - 2rem) / 2);
 }
 .gov-modal__content {
   height: 100%;
@@ -330,9 +329,6 @@
   .gov-modal__header {
     gap: 1.25rem;
     padding: 2rem 2.5rem 2rem 3rem;
-  }
-  .gov-modal__close {
-    padding-top: calc((var(--gov-text-3xl-font-size) * 1.5 - 2.5rem) / 2);
   }
   .gov-modal__content {
     padding: 2rem 3rem;

@@ -283,7 +283,6 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  font-weight: var(--gov-wizard-title-font-weight, 400);
 }
 .gov-wizard-item__annot {
   color: var(--gov-color-secondary);
@@ -344,6 +343,9 @@
 .gov-wizard-item__prefix {
   position: absolute;
   left: 1rem;
+}
+.gov-wizard-item__label {
+  font-weight: var(--gov-wizard-title-font-weight, 700);
 }
 .gov-wizard-item__header[aria-expanded=true] .gov-wizard-item__label .gov-icon {
   transform: scale(-1);
