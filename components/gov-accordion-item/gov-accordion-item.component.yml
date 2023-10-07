@@ -22,10 +22,18 @@ props:
       type: string
       title: Variant
       description: The label variant for the accordion item
+    accordion_trigger_tag:
+      type: string
+      title: Item Tag
+      description: The tag used for the items label
     accordion_item_disabled:
       type: boolean
       title: Disabled
       description: Makes the button component disabled.
+    accordion_item_expanded:
+      type: boolean
+      title: Expanded
+      description: Makes the item expanded by default.
     accordion_item_label_id:
       type: string
       title: Item ID
@@ -42,6 +50,10 @@ props:
       type: string
       title: Item Label
       description: Accordion item label
+    accordion_item_annotation:
+      type: string
+      title: Item Annotation
+      description: Accordion item annotation
     accordion_item_content:
       type: string
       title: Item Content
