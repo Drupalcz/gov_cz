@@ -3,6 +3,7 @@ name: Badge
 libraryOverrides:
   css:
     component:
+      ../../assets/variables/badge.css: {}
       ../../assets/gov-design-system/gov-components/gov-badge/gov-badge.css: {}
 props:
   type: object
@@ -24,7 +25,11 @@ props:
     badge_type:
       type: string
       title: Badge Type
-      description: Solid or inverse type.
+      description: Solid or outlined type.
+    badge_inverse:
+      type: boolean
+      title: Badge Inverse
+      description: Is the badge on dark background.
     badge_tag:
       type: string
       title: Badge Tag
