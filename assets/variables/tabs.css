@@ -1,0 +1,15 @@
+:root,
+:host {
+  --gov-tabs-text-color: var(--gov-color-secondary-700);
+  --gov-tabs-list-border-width: 0.0625rem solid var(--gov-color-secondary-500);
+  --gov-tabs-primary-color: var(--gov-color-primary);
+  --gov-tabs-primary-color-hover: var(--gov-color-primary-800);
+  --gov-tabs-secondary-color: var(--gov-color-secondary-700);
+  --gov-tabs-secondary-color-hover: var(--gov-color-secondary-900);
+  --gov-tabs-success-color: var(--gov-color-success-500);
+  --gov-tabs-success-color-hover: var(--gov-color-success-700);
+  --gov-tabs-warning-color: var(--gov-color-warning-500);
+  --gov-tabs-warning-color-hover: var(--gov-color-warning-700);
+  --gov-tabs-error-color: var(--gov-color-error-400);
+  --gov-tabs-error-color-hover: var(--gov-color-error-600);
+}

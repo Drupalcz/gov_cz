@@ -1,0 +1,41 @@
+:root,
+:host {
+  --gov-accordion-xs-headline-gap: 0.5rem;
+  --gov-accordion-xs-min-height: 3rem;
+  --gov-accordion-xs-padding-y: 0.75rem;
+  --gov-accordion-xs-padding-x: 0.5rem;
+  --gov-accordion-xs-icon-position: 0.1875rem;
+  --gov-accordion-xs-padding-inner: 1rem 0.5rem;
+  --gov-accordion-xs-icon-size: 1rem;
+  --gov-accordion-s-headline-gap: 0.5rem;
+  --gov-accordion-s-min-height: 3rem;
+  --gov-accordion-s-padding-y: 1.125rem;
+  --gov-accordion-s-padding-x: 0.5rem;
+  --gov-accordion-s-icon-position: 0.1875rem;
+  --gov-accordion-s-padding-inner: 1rem 0.5rem;
+  --gov-accordion-s-icon-size: 1rem;
+  --gov-accordion-m-headline-gap: 1rem;
+  --gov-accordion-m-min-height: 4.5rem;
+  --gov-accordion-m-padding-y: 1.25rem;
+  --gov-accordion-m-padding-x: 0.5rem;
+  --gov-accordion-m-icon-position: 0.25rem;
+  --gov-accordion-m-padding-inner: 1.25rem 0.5rem;
+  --gov-accordion-m-icon-size: 1.5rem;
+  --gov-accordion-l-headline-gap: 1rem;
+  --gov-accordion-l-min-height: 5.5rem;
+  --gov-accordion-l-padding-y: 1.375rem;
+  --gov-accordion-l-padding-x: 0.5rem;
+  --gov-accordion-l-icon-position: 0.3125rem;
+  --gov-accordion-l-padding-inner: 1.25rem 0.5rem;
+  --gov-accordion-l-icon-size: 1.5rem;
+  --gov-accordion-primary-separator: var(--gov-color-secondary-500);
+  --gov-accordion-primary-background: transparent;
+  --gov-accordion-primary-color: var(--gov-color-primary);
+  --gov-accordion-primary-background-hover: var(--gov-color-primary-200);
+  --gov-accordion-primary-disabled-color: var(--gov-color-primary-400);
+  --gov-accordion-secondary-separator: var(--gov-color-secondary-500);
+  --gov-accordion-secondary-background: transparent;
+  --gov-accordion-secondary-color: var(--gov-color-secondary);
+  --gov-accordion-secondary-background-hover: var(--gov-color-secondary-200);
+  --gov-accordion-secondary-disabled-color: var(--gov-color-secondary-600);
+}

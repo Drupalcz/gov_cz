@@ -1,0 +1,6 @@
+:root,
+:host {
+  --gov-cookiebar-bg: var(--gov-color-neutral-white);
+  --gov-cookiebar-box-shadow: 0 0.0625rem 2.5rem rgba(var(--gov-color-secondary-800-rgb), 0.45);
+  --gov-cookiebar-color: var(--gov-color-secondary-700);
+}

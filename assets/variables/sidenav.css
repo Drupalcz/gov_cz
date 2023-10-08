@@ -1,0 +1,8 @@
+:root,
+:host {
+  --gov-side-nav-border: 0.0625rem solid var(--gov-color-secondary-500);
+  --gov-side-nav-color: var(--gov-color-secondary);
+  --gov-side-nav-hover-bg: var(--gov-color-primary-200);
+  --gov-side-nav-arrow-color: var(--gov-color-primary);
+  --gov-side-nav-bg-level-2: var(--gov-color-secondary-300);
+}

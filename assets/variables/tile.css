@@ -1,0 +1,6 @@
+:root,
+:host {
+  --gov-tile-main-color: var(--gov-color-primary);
+  --gov-tile-text-color: var(--gov-color-secondary-700);
+  --gov-tile-hover-bg: var(--gov-color-primary-200);
+}

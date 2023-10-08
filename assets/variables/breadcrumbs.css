@@ -1,0 +1,5 @@
+:root,
+:host {
+  --gov-breadcrumbs-link-color: var(--gov-color-primary);
+  --gov-breadcrumbs-arrow-color: var(--gov-color-secondary-600);
+}
