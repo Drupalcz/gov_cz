@@ -1,7 +1,7 @@
 {
   "author": "Petr Illek",
   "name": "copy-czech-design-system",
-  "version": "0.0.56",
+  "version": "0.0.57",
   "scripts": {
     "copy": "npm run delete && npm run copy-components && npm run strip-comments && npm run copy-fonts && npm run copy-icons",
     "delete": "del-cli assets/gov-design-system",
