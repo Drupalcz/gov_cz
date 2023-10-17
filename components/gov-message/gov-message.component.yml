@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Message
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-message/gov-message.css: {}
+props:
+  type: object
+  required:
+    - message_content
+    - message_variant
+  properties:
+    message_content:
+      type: string
+      title: Content
+      description: The content of the message
+    message_variant:
+      type: string
+      title: Variant
+      description: What colour should the message be in.
+    message_icon:
+      type: string
+      title: Icon
+      description: Optional image icon for the message.
+    message_inverse:
+      type: boolean
+      title: Inverse
+      description: Whether the message should have colour background.
