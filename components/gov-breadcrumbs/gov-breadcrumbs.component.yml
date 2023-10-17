@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Breadcrumbs
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-breadcrumbs/gov-breadcrumbs.css: {}
+props:
+  type: object
+  required:
+    - breadcrumbs_accessibility_label
+    - breadcrumbs_items
+  properties:
+    breadcrumbs_accessibility_label:
+      type: string
+      title: Accessibility Label
+      description: The accessible label for the accordion
+    breadcrumbs_items:
+      type: array
+      title: breadcrumbs Items
+      description: The items for the breadcrumbs
