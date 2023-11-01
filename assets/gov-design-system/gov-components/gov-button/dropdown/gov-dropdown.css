@@ -59,8 +59,6 @@
 .gov-dropdown li > * .element {
   justify-content: space-between;
   width: 100%;
-  padding: 0.5rem !important;
-  font-weight: 400 !important;
 }
 .gov-dropdown[position=right] .gov-dropdown__list {
   right: 0;

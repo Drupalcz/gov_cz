@@ -43,3 +43,7 @@
   cursor: pointer;
   box-sizing: border-box;
 }
+.gov-form-label[legend=""] .gov-form-label__label, .gov-form-label[legend=true i] .gov-form-label__label, .gov-form-label[legend="1"] .gov-form-label__label {
+  margin-bottom: 1rem;
+  color: var(--gov-form-legend-color, #3b3b3b);
+}

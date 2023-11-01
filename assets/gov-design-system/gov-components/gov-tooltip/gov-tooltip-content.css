@@ -60,10 +60,31 @@
   height: 0;
   border: 0.625rem solid transparent;
 }
+.gov-tooltip-content gov-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .gov-tooltip-content[is-visible=""], .gov-tooltip-content[is-visible=true i], .gov-tooltip-content[is-visible="1"] {
   opacity: 1;
 }
-.gov-tooltip[size=s] .gov-tooltip-content {
+.gov-tooltip-content[variant=secondary] {
+  --gov-tooltip-content-bg-color: var(--gov-tooltip-secondary-bg-color, var(--gov-color-secondary));
+  --gov-tooltip-content-text-color: var(--gov-tooltip-secondary-text-color, var(--gov-color-neutral-white));
+}
+.gov-tooltip-content[variant=secondary][inverse=""], .gov-tooltip-content[variant=secondary][inverse=true i], .gov-tooltip-content[variant=secondary][inverse="1"] {
+  --gov-tooltip-content-bg-color: var(--gov-color-neutral-white);
+  --gov-tooltip-content-text-color: var(--gov-tooltip-secondary-text-color-inverse, var(--gov-color-secondary));
+}
+.gov-tooltip-content[variant=primary] {
+  --gov-tooltip-content-bg-color: var(--gov-tooltip-primary-bg-color, var(--gov-color-primary-300));
+  --gov-tooltip-content-text-color: var(--gov-tooltip-primary-text-color, var(--gov-color-secondary));
+}
+.gov-tooltip-content[variant=primary][inverse=""], .gov-tooltip-content[variant=primary][inverse=true i], .gov-tooltip-content[variant=primary][inverse="1"] {
+  --gov-tooltip-content-bg-color: var(--gov-color-neutral-white);
+  --gov-tooltip-content-text-color: var(--gov-tooltip-primary-text-color-inverse, var(--gov-color-primary));
+}
+.gov-tooltip-content[size=s] {
   --gov-tooltip-content-padding: var(--gov-tooltip-s-padding, 0.5rem);
   --gov-tooltip-content-arrow-size: var(--gov-tooltip-s-arrow-size, 0.4375rem);
   --gov-tooltip-content-letter-spacing: var(--gov-tooltip-s-letter-spacing, 0.0125rem);
@@ -72,7 +93,7 @@
   line-height: var(--gov-text-s-line-height);
   letter-spacing: var(--gov-text-s-letter-spacing);
 }
-.gov-tooltip[size=l] .gov-tooltip-content {
+.gov-tooltip-content[size=l] {
   --gov-tooltip-content-padding: var(--gov-tooltip-l-padding, 1rem);
   --gov-tooltip-content-arrow-size: var(--gov-tooltip-l-arrow-size, 0.875rem);
   --gov-tooltip-content-letter-spacing: var(--gov-tooltip-l-letter-spacing, 0.002rem);
@@ -81,54 +102,38 @@
   line-height: var(--gov-text-xl-line-height);
   letter-spacing: var(--gov-text-xl-letter-spacing);
 }
-.gov-tooltip[position=top] .gov-tooltip-content {
-  bottom: 100%;
-  margin-bottom: 0.625rem;
-}
-.gov-tooltip[position=top] .gov-tooltip-content, .gov-tooltip[position=top] .gov-tooltip-content::before {
+.gov-tooltip-content[position=top]::before {
   left: 50%;
   transform: translateX(-50%);
 }
-.gov-tooltip[position=top] .gov-tooltip-content::before {
+.gov-tooltip-content[position=top]::before {
   top: 100%;
   border-bottom-width: 0;
   border-top-color: var(--gov-tooltip-content-bg-color, var(--gov-color-primary-300));
 }
-.gov-tooltip[position=bottom] .gov-tooltip-content {
-  top: 100%;
-  margin-top: 0.625rem;
-}
-.gov-tooltip[position=bottom] .gov-tooltip-content, .gov-tooltip[position=bottom] .gov-tooltip-content::before {
+.gov-tooltip-content[position=bottom]::before {
   left: 50%;
   transform: translateX(-50%);
 }
-.gov-tooltip[position=bottom] .gov-tooltip-content::before {
+.gov-tooltip-content[position=bottom]::before {
   bottom: 100%;
   border-top-width: 0;
   border-bottom-color: var(--gov-tooltip-content-bg-color, var(--gov-color-primary-300));
 }
-.gov-tooltip[position=left] .gov-tooltip-content {
-  right: 100%;
-  margin-right: 0.625rem;
-}
-.gov-tooltip[position=left] .gov-tooltip-content, .gov-tooltip[position=left] .gov-tooltip-content::before {
+.gov-tooltip-content[position=left]::before {
   top: 50%;
   transform: translateY(-50%);
 }
-.gov-tooltip[position=left] .gov-tooltip-content::before {
+.gov-tooltip-content[position=left]::before {
   left: 100%;
   border-right-width: 0;
   border-left-color: var(--gov-tooltip-content-bg-color, var(--gov-color-primary-300));
 }
-.gov-tooltip[position=right] .gov-tooltip-content {
-  left: 100%;
-  margin-left: 0.625rem;
-}
-.gov-tooltip[position=right] .gov-tooltip-content, .gov-tooltip[position=right] .gov-tooltip-content::before {
+.gov-tooltip-content[position=right]::before {
   top: 50%;
   transform: translateY(-50%);
 }
-.gov-tooltip[position=right] .gov-tooltip-content::before {
+.gov-tooltip-content[position=right]::before {
   right: 100%;
   border-left-width: 0;
   border-right-color: var(--gov-tooltip-content-bg-color, var(--gov-color-primary-300));

@@ -43,19 +43,3 @@
   display: inline-flex;
   border-bottom: 0;
 }
-.gov-tooltip[variant=secondary] {
-  --gov-tooltip-content-bg-color: var(--gov-tooltip-secondary-bg-color, var(--gov-color-secondary));
-  --gov-tooltip-content-text-color: var(--gov-tooltip-secondary-text-color, var(--gov-color-neutral-white));
-}
-.gov-tooltip[variant=secondary][inverse=""], .gov-tooltip[variant=secondary][inverse=true i], .gov-tooltip[variant=secondary][inverse="1"] {
-  --gov-tooltip-content-bg-color: var(--gov-color-neutral-white);
-  --gov-tooltip-content-text-color: var(--gov-tooltip-secondary-text-color-inverse, var(--gov-color-secondary));
-}
-.gov-tooltip[variant=primary] {
-  --gov-tooltip-content-bg-color: var(--gov-tooltip-primary-bg-color, var(--gov-color-primary-300));
-  --gov-tooltip-content-text-color: var(--gov-tooltip-primary-text-color, var(--gov-color-secondary));
-}
-.gov-tooltip[variant=primary][inverse=""], .gov-tooltip[variant=primary][inverse=true i], .gov-tooltip[variant=primary][inverse="1"] {
-  --gov-tooltip-content-bg-color: var(--gov-color-neutral-white);
-  --gov-tooltip-content-text-color: var(--gov-tooltip-primary-text-color-inverse, var(--gov-color-primary));
-}

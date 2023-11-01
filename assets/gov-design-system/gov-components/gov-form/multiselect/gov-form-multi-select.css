@@ -343,20 +343,68 @@
   width: var(--gov-form-select-s-arrow-size, 0.75rem);
   height: var(--gov-form-select-s-arrow-size, 0.75rem);
 }
+[size=s][invalid=""].gov-form-multi-select .icon-arrow, [size=s][invalid=true i].gov-form-multi-select .icon-arrow, [size=s][invalid="1"].gov-form-multi-select .icon-arrow {
+  right: calc(3 * var(--gov-form-select-s-arrow-right-position, 0.75rem));
+}
+[size=s][success=""].gov-form-multi-select .icon-arrow, [size=s][success=true i].gov-form-multi-select .icon-arrow, [size=s][success="1"].gov-form-multi-select .icon-arrow {
+  right: calc(3 * var(--gov-form-select-s-arrow-right-position, 0.75rem));
+}
 [size=m].gov-form-multi-select *[slot=right-icon] {
   right: var(--gov-form-select-m-arrow-right-position, 1rem);
   width: var(--gov-form-select-m-arrow-size, 0.75rem);
   height: var(--gov-form-select-m-arrow-size, 0.75rem);
+}
+[size=m][invalid=""].gov-form-multi-select .icon-arrow, [size=m][invalid=true i].gov-form-multi-select .icon-arrow, [size=m][invalid="1"].gov-form-multi-select .icon-arrow {
+  right: calc(3 * var(--gov-form-select-m-arrow-right-position, 1rem));
+}
+[size=m][success=""].gov-form-multi-select .icon-arrow, [size=m][success=true i].gov-form-multi-select .icon-arrow, [size=m][success="1"].gov-form-multi-select .icon-arrow {
+  right: calc(3 * var(--gov-form-select-m-arrow-right-position, 1rem));
 }
 [size=l].gov-form-multi-select *[slot=right-icon] {
   right: var(--gov-form-select-l-arrow-right-position, 1rem);
   width: var(--gov-form-select-l-arrow-size, 1rem);
   height: var(--gov-form-select-l-arrow-size, 1rem);
 }
+[size=l][invalid=""].gov-form-multi-select .icon-arrow, [size=l][invalid=true i].gov-form-multi-select .icon-arrow, [size=l][invalid="1"].gov-form-multi-select .icon-arrow {
+  right: calc(3 * var(--gov-form-select-l-arrow-right-position, 1rem));
+}
+[size=l][success=""].gov-form-multi-select .icon-arrow, [size=l][success=true i].gov-form-multi-select .icon-arrow, [size=l][success="1"].gov-form-multi-select .icon-arrow {
+  right: calc(3 * var(--gov-form-select-l-arrow-right-position, 1rem));
+}
 [size=xl].gov-form-multi-select *[slot=right-icon] {
   right: var(--gov-form-select-xl-arrow-right-position, 1.3125rem);
   width: var(--gov-form-select-xl-arrow-size, 1rem);
   height: var(--gov-form-select-xl-arrow-size, 1rem);
+}
+[size=xl][invalid=""].gov-form-multi-select .icon-arrow, [size=xl][invalid=true i].gov-form-multi-select .icon-arrow, [size=xl][invalid="1"].gov-form-multi-select .icon-arrow {
+  right: calc(3 * var(--gov-form-select-xl-arrow-right-position, 1.3125rem));
+}
+[size=xl][success=""].gov-form-multi-select .icon-arrow, [size=xl][success=true i].gov-form-multi-select .icon-arrow, [size=xl][success="1"].gov-form-multi-select .icon-arrow {
+  right: calc(3 * var(--gov-form-select-xl-arrow-right-position, 1.3125rem));
+}
+[size=s][invalid=""].gov-form-multi-select *[slot=right-icon] ~ select, [size=s][invalid=""].gov-form-multi-select *[slot=right-icon] ~ input, [size=s][invalid=true i].gov-form-multi-select *[slot=right-icon] ~ select, [size=s][invalid=true i].gov-form-multi-select *[slot=right-icon] ~ input, [size=s][invalid="1"].gov-form-multi-select *[slot=right-icon] ~ select, [size=s][invalid="1"].gov-form-multi-select *[slot=right-icon] ~ input {
+  padding-right: calc(2 * var(--gov-form-input-core-s-icon-padding, 2rem));
+}
+[size=s][success=""].gov-form-multi-select *[slot=right-icon] ~ select, [size=s][success=""].gov-form-multi-select *[slot=right-icon] ~ input, [size=s][success=true i].gov-form-multi-select *[slot=right-icon] ~ select, [size=s][success=true i].gov-form-multi-select *[slot=right-icon] ~ input, [size=s][success="1"].gov-form-multi-select *[slot=right-icon] ~ select, [size=s][success="1"].gov-form-multi-select *[slot=right-icon] ~ input {
+  padding-right: calc(2 * var(--gov-form-input-core-s-icon-padding, 2rem));
+}
+[size=m][invalid=""].gov-form-multi-select *[slot=right-icon] ~ select, [size=m][invalid=""].gov-form-multi-select *[slot=right-icon] ~ input, [size=m][invalid=true i].gov-form-multi-select *[slot=right-icon] ~ select, [size=m][invalid=true i].gov-form-multi-select *[slot=right-icon] ~ input, [size=m][invalid="1"].gov-form-multi-select *[slot=right-icon] ~ select, [size=m][invalid="1"].gov-form-multi-select *[slot=right-icon] ~ input {
+  padding-right: calc(2 * var(--gov-form-input-core-m-icon-padding, 2.5rem));
+}
+[size=m][success=""].gov-form-multi-select *[slot=right-icon] ~ select, [size=m][success=""].gov-form-multi-select *[slot=right-icon] ~ input, [size=m][success=true i].gov-form-multi-select *[slot=right-icon] ~ select, [size=m][success=true i].gov-form-multi-select *[slot=right-icon] ~ input, [size=m][success="1"].gov-form-multi-select *[slot=right-icon] ~ select, [size=m][success="1"].gov-form-multi-select *[slot=right-icon] ~ input {
+  padding-right: calc(2 * var(--gov-form-input-core-m-icon-padding, 2.5rem));
+}
+[size=l][invalid=""].gov-form-multi-select *[slot=right-icon] ~ select, [size=l][invalid=""].gov-form-multi-select *[slot=right-icon] ~ input, [size=l][invalid=true i].gov-form-multi-select *[slot=right-icon] ~ select, [size=l][invalid=true i].gov-form-multi-select *[slot=right-icon] ~ input, [size=l][invalid="1"].gov-form-multi-select *[slot=right-icon] ~ select, [size=l][invalid="1"].gov-form-multi-select *[slot=right-icon] ~ input {
+  padding-right: calc(2 * var(--gov-form-input-core-l-icon-padding, 2.5rem));
+}
+[size=l][success=""].gov-form-multi-select *[slot=right-icon] ~ select, [size=l][success=""].gov-form-multi-select *[slot=right-icon] ~ input, [size=l][success=true i].gov-form-multi-select *[slot=right-icon] ~ select, [size=l][success=true i].gov-form-multi-select *[slot=right-icon] ~ input, [size=l][success="1"].gov-form-multi-select *[slot=right-icon] ~ select, [size=l][success="1"].gov-form-multi-select *[slot=right-icon] ~ input {
+  padding-right: calc(2 * var(--gov-form-input-core-l-icon-padding, 2.5rem));
+}
+[size=xl][invalid=""].gov-form-multi-select *[slot=right-icon] ~ select, [size=xl][invalid=""].gov-form-multi-select *[slot=right-icon] ~ input, [size=xl][invalid=true i].gov-form-multi-select *[slot=right-icon] ~ select, [size=xl][invalid=true i].gov-form-multi-select *[slot=right-icon] ~ input, [size=xl][invalid="1"].gov-form-multi-select *[slot=right-icon] ~ select, [size=xl][invalid="1"].gov-form-multi-select *[slot=right-icon] ~ input {
+  padding-right: calc(2 * var(--gov-form-input-core-xl-icon-padding, 3rem));
+}
+[size=xl][success=""].gov-form-multi-select *[slot=right-icon] ~ select, [size=xl][success=""].gov-form-multi-select *[slot=right-icon] ~ input, [size=xl][success=true i].gov-form-multi-select *[slot=right-icon] ~ select, [size=xl][success=true i].gov-form-multi-select *[slot=right-icon] ~ input, [size=xl][success="1"].gov-form-multi-select *[slot=right-icon] ~ select, [size=xl][success="1"].gov-form-multi-select *[slot=right-icon] ~ input {
+  padding-right: calc(2 * var(--gov-form-input-core-xl-icon-padding, 3rem));
 }
 
 .gov-form-multi-select {
@@ -384,7 +432,4 @@
   padding: 0rem 0rem 0rem 0.5rem;
   background: var(--gov-form-multiselect-bg, var(--gov-color-primary-200));
   transition: 150ms linear background-color;
-}
-.gov-form-multi-select .icon-validation {
-  display: none;
 }

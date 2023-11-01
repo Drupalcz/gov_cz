@@ -909,6 +909,9 @@
   border-radius: var(--gov-border-radius, 0.1875rem);
 }
 .gov-button[type=link] .element {
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
   min-height: inherit;
   padding: 0 !important;
   line-height: inherit;
@@ -956,4 +959,10 @@
 }
 .gov-button[size=xl] .element {
   font-weight: var(--gov-button-xl-font-weight, 700);
+}
+.gov-button[size=s][type=link] .gov-icon {
+  margin-top: 4px;
+}
+.gov-button[size=m][type=link] .gov-icon {
+  margin-top: 2px;
 }

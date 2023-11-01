@@ -80,7 +80,7 @@
   margin: 0;
 }
 .gov-pagination__item--more .gov-form-select select {
-  border: none;
+  border: none !important;
   padding-right: 0.75rem !important;
 }
 .gov-pagination__item--more .gov-form-select .gov-icon {
