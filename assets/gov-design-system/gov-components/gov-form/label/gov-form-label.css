@@ -1,0 +1,45 @@
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gov-form-label {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.gov-form-label__label {
+  display: inline-block;
+  color: var(--gov-form-label-color, #686868);
+  cursor: pointer;
+  box-sizing: border-box;
+}

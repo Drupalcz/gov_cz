@@ -1,0 +1,103 @@
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gov-form-file {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.gov-form-file__label .gov-form-label__label > *:last-child {
+  margin-bottom: 0;
+}
+.gov-form-file__input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.0001;
+  cursor: pointer;
+}
+.gov-form-file__attachments {
+  margin-top: 1rem 0rem 0rem;
+}
+.gov-form-file__item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.gov-form-file[disabled=""] .gov-form-file__label .gov-form-label__label, .gov-form-file[disabled=true i] .gov-form-file__label .gov-form-label__label, .gov-form-file[disabled="1"] .gov-form-file__label .gov-form-label__label {
+  pointer-events: none;
+}
+.gov-form-file[disabled=""] .gov-form-file__label .gov-form-label__label *, .gov-form-file[disabled=true i] .gov-form-file__label .gov-form-label__label *, .gov-form-file[disabled="1"] .gov-form-file__label .gov-form-label__label * {
+  color: var(--gov-form-file-disabled-color, var(--gov-color-secondary-600));
+}
+.gov-form-file[expanded=""] .gov-form-file__area, .gov-form-file[expanded=true i] .gov-form-file__area, .gov-form-file[expanded="1"] .gov-form-file__area {
+  position: relative;
+  width: 100%;
+  padding: 2rem 1.375rem 1.375rem;
+  border: var(--gov-form-file-border, 0.0625rem dashed var(--gov-color-secondary-500));
+  text-align: center;
+  transition: background-color 150ms ease-in-out;
+  will-change: background-color;
+}
+.gov-form-file[expanded=""] .gov-form-file__area.highlight, .gov-form-file[expanded=true i] .gov-form-file__area.highlight, .gov-form-file[expanded="1"] .gov-form-file__area.highlight {
+  background-color: var(--gov-color-primary-200);
+}
+.gov-form-file[expanded=""] .gov-form-file__label .gov-form-label__label, .gov-form-file[expanded=true i] .gov-form-file__label .gov-form-label__label, .gov-form-file[expanded="1"] .gov-form-file__label .gov-form-label__label {
+  width: 100%;
+  padding: 1.375rem;
+  border: var(--gov-form-file-border, 0.0625rem dashed var(--gov-color-secondary-500));
+  text-align: center;
+}
+.gov-form-file[expanded=""] .gov-form-file__attachments, .gov-form-file[expanded=true i] .gov-form-file__attachments, .gov-form-file[expanded="1"] .gov-form-file__attachments {
+  margin: 1.5rem 0rem 0rem;
+}
+.gov-form-file[expanded=""][invalid=""] .gov-form-file__label .gov-form-label__label, .gov-form-file[expanded=""][invalid=true i] .gov-form-file__label .gov-form-label__label, .gov-form-file[expanded=""][invalid="1"] .gov-form-file__label .gov-form-label__label, .gov-form-file[expanded=true i][invalid=""] .gov-form-file__label .gov-form-label__label, .gov-form-file[expanded=true i][invalid=true i] .gov-form-file__label .gov-form-label__label, .gov-form-file[expanded=true i][invalid="1"] .gov-form-file__label .gov-form-label__label, .gov-form-file[expanded="1"][invalid=""] .gov-form-file__label .gov-form-label__label, .gov-form-file[expanded="1"][invalid=true i] .gov-form-file__label .gov-form-label__label, .gov-form-file[expanded="1"][invalid="1"] .gov-form-file__label .gov-form-label__label {
+  border-color: var(--gov-form-state-color-error, var(--gov-color-error));
+}
+.gov-form-file[expanded=""][invalid=""] .gov-form-file__area, .gov-form-file[expanded=""][invalid=true i] .gov-form-file__area, .gov-form-file[expanded=""][invalid="1"] .gov-form-file__area, .gov-form-file[expanded=true i][invalid=""] .gov-form-file__area, .gov-form-file[expanded=true i][invalid=true i] .gov-form-file__area, .gov-form-file[expanded=true i][invalid="1"] .gov-form-file__area, .gov-form-file[expanded="1"][invalid=""] .gov-form-file__area, .gov-form-file[expanded="1"][invalid=true i] .gov-form-file__area, .gov-form-file[expanded="1"][invalid="1"] .gov-form-file__area {
+  border-color: var(--gov-form-state-color-error, var(--gov-color-error));
+}
+.gov-form-file[expanded=""][disabled=""] .gov-form-file__area, .gov-form-file[expanded=""][disabled=true i] .gov-form-file__area, .gov-form-file[expanded=""][disabled="1"] .gov-form-file__area, .gov-form-file[expanded=true i][disabled=""] .gov-form-file__area, .gov-form-file[expanded=true i][disabled=true i] .gov-form-file__area, .gov-form-file[expanded=true i][disabled="1"] .gov-form-file__area, .gov-form-file[expanded="1"][disabled=""] .gov-form-file__area, .gov-form-file[expanded="1"][disabled=true i] .gov-form-file__area, .gov-form-file[expanded="1"][disabled="1"] .gov-form-file__area {
+  pointer-events: none;
+  color: var(--gov-form-file-disabled-color, var(--gov-color-secondary-600));
+}
+@media (min-width: 30em) {
+  .gov-form-file[expanded=""] .gov-form-file__label .gov-form-label__label, .gov-form-file[expanded=true i] .gov-form-file__label .gov-form-label__label, .gov-form-file[expanded="1"] .gov-form-file__label .gov-form-label__label {
+    padding: 2rem;
+  }
+}

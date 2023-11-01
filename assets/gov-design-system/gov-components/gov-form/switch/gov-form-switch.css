@@ -1,0 +1,240 @@
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gov-form-switch {
+  position: relative;
+  display: flex;
+}
+.gov-form-switch__holder {
+  display: inline-flex;
+}
+.gov-form-switch__input {
+  position: relative;
+  z-index: 1;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.gov-form-switch .gov-form-label__label {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  color: var(--gov-form-switch-color, var(--gov-color-secondary-800));
+}
+.gov-form-switch__indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: var(--gov-form-switch-indicator-border, 0.0625rem solid var(--gov-color-secondary-500));
+  background-color: var(--gov-form-switch-indicator-bg, var(--gov-color-secondary-300));
+  transition: 150ms linear background-color;
+}
+.gov-form-switch__indicator::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background-color: var(--gov-form-switch-indicator-circle-bg, var(--gov-color-neutral-white));
+  transition: 150ms linear left;
+  box-shadow: var(--gov-form-switch-indicator-circle-box-shadow, 0 0.125rem 0.25rem rgba(0, 0, 0, 0.35));
+}
+.gov-form-switch__input:focus-visible ~ .gov-form-switch__indicator {
+  outline: var(--gov-outline-width, 0.125rem) solid var(--gov-color-focus-base);
+}
+.gov-form-switch__input:checked + .gov-form-switch__indicator {
+  border-color: var(--gov-form-switch-indicator-bg-checked, var(--gov-color-primary));
+  background-color: var(--gov-form-switch-indicator-bg-checked, var(--gov-color-primary));
+}
+.gov-form-switch[disabled=""], .gov-form-switch[disabled=true i], .gov-form-switch[disabled="1"] {
+  pointer-events: none;
+}
+.gov-form-switch[disabled=""] .gov-form-label__label, .gov-form-switch[disabled=true i] .gov-form-label__label, .gov-form-switch[disabled="1"] .gov-form-label__label {
+  color: var(--gov-form-state-color-disabled, var(--gov-color-secondary-600));
+}
+.gov-form-switch[disabled=""] .gov-form-switch__indicator::before, .gov-form-switch[disabled=true i] .gov-form-switch__indicator::before, .gov-form-switch[disabled="1"] .gov-form-switch__indicator::before {
+  background: var(--gov-form-input-disabled-bg, var(--gov-color-secondary-300));
+}
+.gov-form-switch[disabled=""] .gov-form-switch__input:checked + .gov-form-switch__indicator, .gov-form-switch[disabled=true i] .gov-form-switch__input:checked + .gov-form-switch__indicator, .gov-form-switch[disabled="1"] .gov-form-switch__input:checked + .gov-form-switch__indicator {
+  border-color: var(--gov-form-input-disabled-bg, var(--gov-color-primary-400));
+  background-color: var(--gov-form-input-disabled-bg, var(--gov-color-primary-400));
+}
+.gov-form-switch[invalid=""] .gov-form-label__label, .gov-form-switch[invalid=true i] .gov-form-label__label, .gov-form-switch[invalid="1"] .gov-form-label__label {
+  color: var(--gov-form-state-color-error, var(--gov-color-error));
+}
+.gov-form-switch[invalid=""] .gov-form-switch__indicator, .gov-form-switch[invalid=true i] .gov-form-switch__indicator, .gov-form-switch[invalid="1"] .gov-form-switch__indicator {
+  border-color: var(--gov-form-state-color-error, var(--gov-color-error));
+}
+.gov-form-switch[invalid=""] .gov-form-switch__input:checked + .gov-form-switch__indicator, .gov-form-switch[invalid=true i] .gov-form-switch__input:checked + .gov-form-switch__indicator, .gov-form-switch[invalid="1"] .gov-form-switch__input:checked + .gov-form-switch__indicator {
+  background-color: var(--gov-form-state-color-error, var(--gov-color-error));
+}
+.gov-form-switch[size=xs] .gov-form-label__label {
+  font-weight: var(--gov-text-xs-font-weight);
+  font-size: var(--gov-text-xs-font-size);
+  line-height: var(--gov-text-xs-line-height);
+  letter-spacing: var(--gov-text-xs-letter-spacing);
+  margin-bottom: 0;
+}
+.gov-form-switch[size=xs] .gov-form-switch__holder {
+  gap: var(--gov-form-switch-xs-gap, 0.75rem);
+}
+.gov-form-switch[size=xs] .gov-form-switch__input {
+  width: calc(var(--gov-form-switch-xs-indicator-height, 1.25rem) * 1.6666666667);
+  height: var(--gov-form-switch-xs-indicator-height, 1.25rem);
+}
+.gov-form-switch[size=xs] .gov-form-switch__indicator {
+  display: block;
+  width: calc(var(--gov-form-switch-xs-indicator-height, 1.25rem) * 1.6666666667);
+  height: var(--gov-form-switch-xs-indicator-height, 1.25rem);
+  border-radius: calc(var(--gov-form-switch-xs-indicator-height, 1.25rem) * 0.5);
+}
+.gov-form-switch[size=xs] .gov-form-switch__indicator::before {
+  top: calc(var(--gov-form-switch-xs-toggle-offset, 0.051875rem) - 0.0625rem);
+  left: calc(var(--gov-form-switch-xs-toggle-offset, 0.051875rem) - 0.0625rem);
+  width: calc(var(--gov-form-switch-xs-indicator-height, 1.25rem) - 2 * var(--gov-form-switch-xs-toggle-offset, 0.051875rem));
+  height: calc(var(--gov-form-switch-xs-indicator-height, 1.25rem) - 2 * var(--gov-form-switch-xs-toggle-offset, 0.051875rem));
+}
+.gov-form-switch[size=xs] .gov-form-switch__input[aria-checked] + .gov-form-switch__indicator::before {
+  left: calc(var(--gov-form-switch-xs-indicator-height, 1.25rem) * 1.6666666667 - var(--gov-form-switch-xs-indicator-height, 1.25rem) + var(--gov-form-switch-xs-toggle-offset, 0.051875rem) - 0.0625rem);
+}
+.gov-form-switch[size=xs] label {
+  display: inline-flex;
+}
+.gov-form-switch[size=xs] label .gov-form-switch__input {
+  width: calc(var(--gov-form-switch-xs-indicator-height, 1.25rem) * 1.6666666667);
+}
+.gov-form-switch[size=s] .gov-form-label__label {
+  font-weight: var(--gov-text-s-font-weight);
+  font-size: var(--gov-text-s-font-size);
+  line-height: var(--gov-text-s-line-height);
+  letter-spacing: var(--gov-text-s-letter-spacing);
+  margin-bottom: 0;
+}
+.gov-form-switch[size=s] .gov-form-switch__holder {
+  gap: var(--gov-form-switch-s-gap, 0.75rem);
+}
+.gov-form-switch[size=s] .gov-form-switch__input {
+  width: calc(var(--gov-form-switch-s-indicator-height, 1.375rem) * 1.6666666667);
+  height: var(--gov-form-switch-s-indicator-height, 1.375rem);
+}
+.gov-form-switch[size=s] .gov-form-switch__indicator {
+  display: block;
+  width: calc(var(--gov-form-switch-s-indicator-height, 1.375rem) * 1.6666666667);
+  height: var(--gov-form-switch-s-indicator-height, 1.375rem);
+  border-radius: calc(var(--gov-form-switch-s-indicator-height, 1.375rem) * 0.5);
+}
+.gov-form-switch[size=s] .gov-form-switch__indicator::before {
+  top: calc(var(--gov-form-switch-s-toggle-offset, 0.0575rem) - 0.0625rem);
+  left: calc(var(--gov-form-switch-s-toggle-offset, 0.0575rem) - 0.0625rem);
+  width: calc(var(--gov-form-switch-s-indicator-height, 1.375rem) - 2 * var(--gov-form-switch-s-toggle-offset, 0.0575rem));
+  height: calc(var(--gov-form-switch-s-indicator-height, 1.375rem) - 2 * var(--gov-form-switch-s-toggle-offset, 0.0575rem));
+}
+.gov-form-switch[size=s] .gov-form-switch__input[aria-checked] + .gov-form-switch__indicator::before {
+  left: calc(var(--gov-form-switch-s-indicator-height, 1.375rem) * 1.6666666667 - var(--gov-form-switch-s-indicator-height, 1.375rem) + var(--gov-form-switch-s-toggle-offset, 0.0575rem) - 0.0625rem);
+}
+.gov-form-switch[size=s] label {
+  display: inline-flex;
+}
+.gov-form-switch[size=s] label .gov-form-switch__input {
+  width: calc(var(--gov-form-switch-s-indicator-height, 1.375rem) * 1.6666666667);
+}
+.gov-form-switch[size=m] .gov-form-label__label {
+  font-weight: var(--gov-text-m-font-weight);
+  font-size: var(--gov-text-m-font-size);
+  line-height: var(--gov-text-m-line-height);
+  letter-spacing: var(--gov-text-m-letter-spacing);
+  margin-bottom: 0;
+}
+.gov-form-switch[size=m] .gov-form-switch__holder {
+  gap: var(--gov-form-switch-m-gap, 1rem);
+}
+.gov-form-switch[size=m] .gov-form-switch__input {
+  width: calc(var(--gov-form-switch-m-indicator-height, 1.5rem) * 1.6666666667);
+  height: var(--gov-form-switch-m-indicator-height, 1.5rem);
+}
+.gov-form-switch[size=m] .gov-form-switch__indicator {
+  display: block;
+  width: calc(var(--gov-form-switch-m-indicator-height, 1.5rem) * 1.6666666667);
+  height: var(--gov-form-switch-m-indicator-height, 1.5rem);
+  border-radius: calc(var(--gov-form-switch-m-indicator-height, 1.5rem) * 0.5);
+}
+.gov-form-switch[size=m] .gov-form-switch__indicator::before {
+  top: calc(var(--gov-form-switch-m-toggle-offset, 0.0625rem) - 0.0625rem);
+  left: calc(var(--gov-form-switch-m-toggle-offset, 0.0625rem) - 0.0625rem);
+  width: calc(var(--gov-form-switch-m-indicator-height, 1.5rem) - 2 * var(--gov-form-switch-m-toggle-offset, 0.0625rem));
+  height: calc(var(--gov-form-switch-m-indicator-height, 1.5rem) - 2 * var(--gov-form-switch-m-toggle-offset, 0.0625rem));
+}
+.gov-form-switch[size=m] .gov-form-switch__input[aria-checked] + .gov-form-switch__indicator::before {
+  left: calc(var(--gov-form-switch-m-indicator-height, 1.5rem) * 1.6666666667 - var(--gov-form-switch-m-indicator-height, 1.5rem) + var(--gov-form-switch-m-toggle-offset, 0.0625rem) - 0.0625rem);
+}
+.gov-form-switch[size=m] label {
+  display: inline-flex;
+}
+.gov-form-switch[size=m] label .gov-form-switch__input {
+  width: calc(var(--gov-form-switch-m-indicator-height, 1.5rem) * 1.6666666667);
+}
+.gov-form-switch[size=l] .gov-form-label__label {
+  font-weight: var(--gov-text-l-font-weight);
+  font-size: var(--gov-text-l-font-size);
+  line-height: var(--gov-text-l-line-height);
+  letter-spacing: var(--gov-text-l-letter-spacing);
+  margin-bottom: 0;
+}
+.gov-form-switch[size=l] .gov-form-switch__holder {
+  gap: var(--gov-form-switch-l-gap, 1rem);
+}
+.gov-form-switch[size=l] .gov-form-switch__input {
+  width: calc(var(--gov-form-switch-l-indicator-height, 2rem) * 1.6666666667);
+  height: var(--gov-form-switch-l-indicator-height, 2rem);
+}
+.gov-form-switch[size=l] .gov-form-switch__indicator {
+  display: block;
+  width: calc(var(--gov-form-switch-l-indicator-height, 2rem) * 1.6666666667);
+  height: var(--gov-form-switch-l-indicator-height, 2rem);
+  border-radius: calc(var(--gov-form-switch-l-indicator-height, 2rem) * 0.5);
+}
+.gov-form-switch[size=l] .gov-form-switch__indicator::before {
+  top: calc(var(--gov-form-switch-l-toggle-offset, 0.083125rem) - 0.0625rem);
+  left: calc(var(--gov-form-switch-l-toggle-offset, 0.083125rem) - 0.0625rem);
+  width: calc(var(--gov-form-switch-l-indicator-height, 2rem) - 2 * var(--gov-form-switch-l-toggle-offset, 0.083125rem));
+  height: calc(var(--gov-form-switch-l-indicator-height, 2rem) - 2 * var(--gov-form-switch-l-toggle-offset, 0.083125rem));
+}
+.gov-form-switch[size=l] .gov-form-switch__input[aria-checked] + .gov-form-switch__indicator::before {
+  left: calc(var(--gov-form-switch-l-indicator-height, 2rem) * 1.6666666667 - var(--gov-form-switch-l-indicator-height, 2rem) + var(--gov-form-switch-l-toggle-offset, 0.083125rem) - 0.0625rem);
+}
+.gov-form-switch[size=l] label {
+  display: inline-flex;
+}
+.gov-form-switch[size=l] label .gov-form-switch__input {
+  width: calc(var(--gov-form-switch-l-indicator-height, 2rem) * 1.6666666667);
+}

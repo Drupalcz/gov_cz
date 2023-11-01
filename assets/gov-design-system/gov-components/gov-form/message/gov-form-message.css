@@ -1,0 +1,64 @@
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gov-form-message {
+  font-weight: var(--gov-text-s-font-weight);
+  font-size: var(--gov-text-s-font-size);
+  line-height: var(--gov-text-s-line-height);
+  letter-spacing: var(--gov-text-s-letter-spacing);
+  display: flex;
+  gap: 0.5rem;
+  margin: 0rem 0rem 1rem;
+}
+.gov-form-message__icon {
+  position: relative;
+  top: calc(var(--gov-text-s-font-size) / 6);
+  display: flex;
+}
+.gov-form-message__icon > * {
+  width: calc(var(--gov-text-s-font-size) * 1.167);
+  height: calc(var(--gov-text-s-font-size) * 1.167);
+}
+.gov-form-message[variant=error] {
+  color: var(--gov-form-message-error-color, var(--gov-color-error-400));
+}
+.gov-form-message[variant=secondary] {
+  color: var(--gov-form-message-secondary-color, var(--gov-color-secondary-700));
+}
+.gov-form-message[variant=warning] {
+  color: var(--gov-form-message-warning-color, var(--gov-color-warning-500));
+}
+.gov-form-message[variant=success] {
+  color: var(--gov-form-message-success-color, var(--gov-color-success-500));
+}

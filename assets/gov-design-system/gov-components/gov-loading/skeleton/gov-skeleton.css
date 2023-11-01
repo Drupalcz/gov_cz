@@ -1,0 +1,105 @@
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gov-skeleton__loader {
+  position: relative;
+  display: inline-block;
+  width: var(--gov-skeleton-width, 100%);
+  height: var(--gov-skeleton-height, 20px);
+  border-radius: var(--gov-skeleton-border-radius, var(--gov-border-radius, 0.1875rem));
+  outline: none;
+  overflow: hidden;
+  box-sizing: border-box;
+  will-change: transform;
+}
+.gov-skeleton__loader + .gov-skeleton__loader {
+  margin-top: var(--gov-skeleton-margin-top, 8px);
+}
+.gov-skeleton__loader.circle {
+  width: var(--gov-skeleton-circle-size, 60px);
+  height: var(--gov-skeleton-circle-size, 60px);
+  border-radius: var(--gov-skeleton-circle-radius, 50%);
+}
+.gov-skeleton__loader.rect {
+  border-radius: var(--gov-skeleton-rect-radius, 0);
+}
+.gov-skeleton__loader.progress {
+  background-size: 200px 100%;
+  animation: progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+.gov-skeleton__loader.pulse {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: 0.5s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .gov-skeleton__loader.pulse, .gov-skeleton__loader.progress {
+    background-image: none;
+    animation: none;
+  }
+}
+.gov-skeleton[variant=warning] .gov-skeleton__loader {
+  background-color: var(--gov-skeleton-warning-background, var(--gov-color-warning-100));
+  background-repeat: no-repeat;
+}
+.gov-skeleton[variant=warning] .gov-skeleton__loader.progress {
+  background-image: linear-gradient(90deg, var(--gov-skeleton-warning-background, var(--gov-color-warning-100)), var(--gov-skeleton-warning-foreground, var(--gov-color-warning-200)), var(--gov-skeleton-warning-background, var(--gov-color-warning-100)));
+}
+.gov-skeleton[variant=error] .gov-skeleton__loader {
+  background-color: var(--gov-skeleton-error-background, var(--gov-color-error-100));
+  background-repeat: no-repeat;
+}
+.gov-skeleton[variant=error] .gov-skeleton__loader.progress {
+  background-image: linear-gradient(90deg, var(--gov-skeleton-error-background, var(--gov-color-error-100)), var(--gov-skeleton-error-foreground, var(--gov-color-error-200)), var(--gov-skeleton-error-background, var(--gov-color-error-100)));
+}
+.gov-skeleton[variant=secondary] .gov-skeleton__loader {
+  background-color: var(--gov-skeleton-secondary-background, var(--gov-color-secondary-300));
+  background-repeat: no-repeat;
+}
+.gov-skeleton[variant=secondary] .gov-skeleton__loader.progress {
+  background-image: linear-gradient(90deg, var(--gov-skeleton-secondary-background, var(--gov-color-secondary-300)), var(--gov-skeleton-secondary-foreground, var(--gov-color-secondary-100)), var(--gov-skeleton-secondary-background, var(--gov-color-secondary-300)));
+}
+.gov-skeleton[variant=success] .gov-skeleton__loader {
+  background-color: var(--gov-skeleton-success-background, var(--gov-color-success-100));
+  background-repeat: no-repeat;
+}
+.gov-skeleton[variant=success] .gov-skeleton__loader.progress {
+  background-image: linear-gradient(90deg, var(--gov-skeleton-success-background, var(--gov-color-success-100)), var(--gov-skeleton-success-foreground, var(--gov-color-success-200)), var(--gov-skeleton-success-background, var(--gov-color-success-100)));
+}
+.gov-skeleton[variant=primary] .gov-skeleton__loader {
+  background-color: var(--gov-skeleton-primary-background, var(--gov-color-primary-100));
+  background-repeat: no-repeat;
+}
+.gov-skeleton[variant=primary] .gov-skeleton__loader.progress {
+  background-image: linear-gradient(90deg, var(--gov-skeleton-primary-background, var(--gov-color-primary-100)), var(--gov-skeleton-primary-foreground, var(--gov-color-primary-200)), var(--gov-skeleton-primary-background, var(--gov-color-primary-100)));
+}

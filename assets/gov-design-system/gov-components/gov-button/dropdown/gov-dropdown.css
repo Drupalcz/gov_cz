@@ -1,0 +1,68 @@
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gov-dropdown {
+  position: relative;
+}
+.gov-dropdown__list {
+  position: absolute;
+  left: 0;
+  z-index: 100;
+}
+.gov-dropdown ul {
+  padding: 0.25rem;
+  border-radius: var(--gov-border-radius, 0.1875rem);
+  background-color: var(--gov-dropdown-bg-color, var(--gov-color-neutral-white));
+  box-shadow: var(--gov-dropdown-box-shadow, 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1));
+}
+.gov-dropdown li {
+  margin: 0;
+  white-space: nowrap;
+}
+.gov-dropdown li::before {
+  content: none;
+}
+.gov-dropdown li > * {
+  width: 100%;
+}
+.gov-dropdown li > * .element {
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem !important;
+  font-weight: 400 !important;
+}
+.gov-dropdown[position=right] .gov-dropdown__list {
+  right: 0;
+  left: initial;
+}

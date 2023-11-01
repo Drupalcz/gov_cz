@@ -1,0 +1,94 @@
+.gov-form-autocomplete__list {
+  margin: 0;
+  padding: 0;
+}
+
+.gov-form-autocomplete__list > .gov-form-autocomplete__item {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+.gov-form-autocomplete__list > .gov-form-autocomplete__item::before {
+  display: none;
+}
+
+.gov-spin-animation,
+.gov-pseudo-spin-animation::before {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes countdown {
+  to {
+    transform: scaleX(0);
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gov-form-autocomplete {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.gov-form-autocomplete__list {
+  font-weight: var(--gov-text-s-font-weight);
+  font-size: var(--gov-text-s-font-size);
+  line-height: var(--gov-text-s-line-height);
+  letter-spacing: var(--gov-text-s-letter-spacing);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  max-height: 14.0625rem;
+  margin-top: 0.5rem;
+  border: var(--gov-autocomplete-item-hover, 0.0625rem solid var(--gov-color-secondary-500));
+  border-radius: var(--gov-border-radius, 0.1875rem);
+  background: var(--gov-autocomplete-bg, var(--gov-color-neutral-white));
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: none;
+}
+.gov-form-autocomplete__list > .gov-form-autocomplete__item {
+  padding: 0.75rem 0.5rem;
+  cursor: pointer;
+}
+.gov-form-autocomplete__item--empty, .gov-form-autocomplete__item--loading {
+  padding: 0.75rem 0.5rem;
+  color: var(--gov-autocomplete-item-disable-color, var(--gov-color-secondary-600));
+}
+.gov-form-autocomplete__item--empty .gov-icon, .gov-form-autocomplete__item--loading .gov-icon {
+  height: 12px;
+}
+.gov-form-autocomplete__list:empty {
+  display: none;
+}
+.gov-form-autocomplete__item[aria-selected=""], .gov-form-autocomplete__item[aria-selected=true i], .gov-form-autocomplete__item[aria-selected="1"] {
+  background: var(--gov-autocomplete-item-select, var(--gov-color-secondary-400));
+}
+@media not all and (pointer: coarse) {
+  .gov-form-autocomplete__item:hover {
+    background: var(--gov-autocomplete-item-hover, var(--gov-color-primary-100));
+  }
+}
