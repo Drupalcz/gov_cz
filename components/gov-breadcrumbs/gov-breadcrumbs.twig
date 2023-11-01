@@ -1,0 +1,32 @@
+{# Breadcrumbs
+  ## Variables ##
+  # breadcrumbs_accessibility_label – Screen reader description of the whole breadcrumbs.
+  # breadcrumbs_items – List of Bradcrumb items.
+  # # item.url – the path related to the item.
+  # # item.text – the textual content representing the item.
+#}
+
+{% if breadcrumbs_items %}
+  <div class="gov-breadcrumbs">
+    <nav aria-label="{{ breadcrumbs_accessibility_label }}">
+      <ol>
+        {% for item in breadcrumbs_items %}
+          <li>
+            <span class="gov-icon">
+              <span class="gov-icon__holder">
+                {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-right.svg') }}
+              </span>
+            </span>
+            {% if item.url %}
+              <a href="#">{{ item.text }}</a>
+            {% else if not item.url and loop.last %}
+              <strong>{{ item.text }}</strong>
+            {% else %}
+              {{ item.text }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    </nav>
+  </div>
+{% endif %}

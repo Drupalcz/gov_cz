@@ -1,0 +1,22 @@
+{# Message
+  ## Variables ##
+  # message_content – What's the message.
+  # message_variant – Message colour and severity.
+  # message_icon – Optional. Icon before the message.
+  # message_inverse – Optional. Inverse the colours.
+#}
+
+<div variant="{{ message_variant }}" class="gov-message" {{ message_variant == "error" ? 'role="alert"' }} {{ message_inverse ? 'inverse="true"' }}>
+  {% if message__icon %}
+    <span class="gov-message__icon">
+      <span class="gov-icon">
+        <span class="gov-icon__holder">
+          {{ message__icon }}
+        </span>
+      </span>
+    </span>
+  {% endif %}
+  <div class="gov-message__content">
+    {{ message__content }}
+  </div>
+</div>
