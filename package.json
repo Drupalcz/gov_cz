@@ -1,17 +1,17 @@
 {
   "author": "Petr Illek",
   "name": "copy-czech-design-system",
-  "version": "0.0.57",
+  "version": "0.0.58",
   "scripts": {
     "copy": "npm run delete && npm run copy-components && npm run strip-comments && npm run copy-fonts && npm run copy-icons",
     "delete": "del-cli assets/gov-design-system",
-    "copy-components": "copyfiles -u 6 node_modules/@gov-design-system-ce/components/dist/collection/components/**/*.css assets/gov-design-system/gov-components",
+    "copy-components": "copyfiles -u 6 'node_modules/@gov-design-system-ce/components/dist/collection/components/**/*.css' assets/gov-design-system/gov-components",
     "strip-comments": "node dev-scripts/strip-comments.js",
     "copy-fonts": "copyfiles -u 4 node_modules/@gov-design-system-ce/fonts/lib/*.woff2 assets/gov-design-system/gov-fonts",
     "copy-icons": "copyfiles -u 4 node_modules/@gov-design-system-ce/icons/lib/**/*.svg assets/gov-design-system/gov-icons"
   },
   "dependencies": {
-    "@gov-design-system-ce/components": "0.0.57",
+    "@gov-design-system-ce/components": "0.0.58",
     "@gov-design-system-ce/fonts": "0.0.2",
     "@gov-design-system-ce/icons": "0.0.11",
     "copyfiles": "^2.4.1",
