@@ -1,5 +1,5 @@
 base:
   version: VERSION
   css:
-    component:
-      css/styles.css: { weight: -10 }
+    theme:
+      assets/gov-design-system/gov-styles/styles.css: {}

@@ -3,10 +3,11 @@
   "name": "copy-czech-design-system",
   "version": "0.0.62",
   "scripts": {
-    "copy": "npm run delete && npm run copy-components && npm run strip-comments && npm run copy-fonts && npm run copy-icons",
+    "copy": "npm run delete && npm run copy-components && npm run copy-styles && npm run strip-comments && npm run copy-fonts && npm run copy-icons",
     "delete": "del-cli assets/gov-design-system",
     "copy-components": "copyfiles -u 6 'node_modules/@gov-design-system-ce/components/dist/collection/components/**/*.css' assets/gov-design-system/gov-components",
     "strip-comments": "node dev-scripts/strip-comments.js",
+    "copy-styles": "copyfiles -u 4 node_modules/@gov-design-system-ce/styles/lib/*.css assets/gov-design-system/gov-styles",
     "copy-fonts": "copyfiles -u 4 node_modules/@gov-design-system-ce/fonts/lib/*.woff2 assets/gov-design-system/gov-fonts",
     "copy-icons": "copyfiles -u 4 node_modules/@gov-design-system-ce/icons/lib/**/*.svg assets/gov-design-system/gov-icons"
   },
