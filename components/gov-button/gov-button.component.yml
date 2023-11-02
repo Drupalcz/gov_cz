@@ -1,0 +1,44 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Button
+libraryOverrides:
+  css:
+    component:
+      ../../assets/variables/button.css: {}
+      ../../assets/gov-design-system/gov-components/gov-button/default/gov-button.css: {}
+props:
+  type: object
+  required:
+    - button_content
+  properties:
+    button_content:
+      type: string
+      title: Button Content
+      description: The content for the button
+    button_variant:
+      type: string
+      title: Variant
+      description: Choose colour variant for the button.
+    button_size:
+      type: string
+      title: Button Size
+      description: Render the button in different sizes.
+    button_type:
+      type: string
+      title: Button Type
+      description: Solid or outlined type.
+    button_inverse:
+      type: boolean
+      title: Button Inverse
+      description: Is the button on dark background.
+    button_tag_aria_label:
+      type: string
+      title: Button Tag Aria Label
+      description: Accessibility label for link or button.
+    button_icon_left:
+      type: string
+      title: Button Icon Left
+      description: Icon on the left side of the button.
+    button_icon_right:
+      type: string
+      title: Button Icon Right
+      description: Icon on the right side of the button.

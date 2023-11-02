@@ -1,0 +1,34 @@
+{# Button
+  ## Variables ##
+  # button_variant – Colour variant of the button.
+  # button_size – Size of button.
+  # button_tag_aria_label – Accessibility label for link or button.
+  # button_type – Is the button solid or outlined.
+  # button_inverse – Is the button on dark background.
+  # button_content – button string.
+  # button_icon_left – left icon
+  # button_icon_right – right icon
+#}
+<div class="gov-button" variant="{{ button_variant|default('primary') }}" size="{{ button_size|default('m') }}" type="{{ button_type|default('solid') }}" hoverable="" {{ button_inverse ? 'inverse=""' }}>
+  {% if button_tag == 'button' %}
+    <button {{ attributes.addClass('element') }} {{ button_tag_aria_label ? 'aria-label="' ~ button_tag_aria_label ~ '"'}}>
+      {% if button_icon_left %}
+        <span class="gov-icon">
+          <span class="gov-icon__holder">
+            {{ button_icon_left }}
+          </span>
+        </span>
+      {% endif %}
+      {{ button_content }}
+      {% if button_icon_right %}
+        <span class="gov-icon">
+          <span class="gov-icon__holder">
+            {{ button_icon_right }}
+          </span>
+        </span>
+      {% endif %}
+    </button>
+  {% else %}
+    <input {{ attributes.addClass('element') }} value="{{ button_content }}" {{ button_tag_aria_label ? 'aria-label="' ~ button_tag_aria_label ~ '"'}}>
+  {% endif %}
+</div>
