@@ -1,0 +1,39 @@
+{# Tile
+  ## Variables ##
+  # tile_link – The link for the tile.
+  # tile_icon – Icon for the item.
+  # tile_title – Title of the tile.
+  # tile_content – Title of the tile.
+#}
+<div class="gov-tile" {{ tile_link ? 'href' : '' }}>
+  {% if tile_link %}
+    <a href="{{ tile_link }}" class="gov-tile__link">
+    {% endif %}
+    {% if tile_icon %}
+      <span class="gov-tile__icon">
+        <div class="gov-icon">
+          <span class="gov-icon__holder">
+            {{ source(tile_icon) }}
+          </span>
+        </div>
+      </span>
+    {% endif %}
+    <span class="gov-tile__title">
+      <h3 slot="title">{{ tile_title }}</h3>
+      {% if tile_link %}
+        <div class="gov-tile__arrow gov-icon">
+          <span class="gov-icon__holder">
+            {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-right.svg') }}
+          </span>
+        </div>
+      {% endif %}
+    </span>
+    {% if tile_content %}
+      <div class="gov-tile__content">
+        {{ tile_content }}
+      </div>
+    {% endif %}
+    {% if tile_link %}
+    </a>
+  {% endif %}
+</div>

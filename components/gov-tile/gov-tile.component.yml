@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Tile
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-tile/gov-tile.css: {}
+props:
+  type: object
+  required:
+    - tile_title
+  properties:
+    tile_title:
+      type: string
+      title: Title
+      description: Title of the item.
+    tile_link:
+      type: string
+      title: Link
+      description: Where should the tile point to?
+    tile_icon:
+      type: string
+      title: Tile Icon
+      description: The icon for the tile.

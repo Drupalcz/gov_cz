@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Tiles
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-tile/container/gov-tiles.css: {}
+props:
+  type: object
+  required:
+    - tiles_items
+  properties:
+    tiles_border:
+      type: boolean
+      title: Border
+      description: Border for the items.
+    tiles_column:
+      type: integer
+      title: Number of columns
+      description: How many columns of tiles?
+    tiles_items:
+      type: array
+      title: Tiles Items
+      description: The items for the tiles
