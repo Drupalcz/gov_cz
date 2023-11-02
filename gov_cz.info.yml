@@ -12,5 +12,9 @@ regions:
 libraries:
   - gov_cz/base
 
+libraries-extend:
+  core/drupal.ajax:
+    - gov_cz/throbber
+
 dependencies:
   - drupal:sdc

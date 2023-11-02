@@ -3,3 +3,14 @@ base:
   css:
     theme:
       assets/gov-design-system/gov-styles/styles.css: {}
+
+throbber:
+  css:
+    component:
+      assets/gov-design-system/gov-components/gov-loading/loading/gov-loading.css: {}
+      assets/gov-design-system/gov-components/gov-backdrop/gov-backdrop.css: {}
+  js:
+    components/gov-loading/loading.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
