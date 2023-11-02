@@ -1,0 +1,23 @@
+{# Statsbar item
+  ## Variables ##
+  # statsbar_item_icon – The icon for the item.
+  # statsbar_item_value – The value for the item.
+  # statsbar_item_description – Description for the item.
+#}
+<div class="gov-statsbar-item">
+  <article>
+    {% if statsbar_item_icon %}
+      <span class="gov-statsbar-item__icon">
+        <div class="gov-icon">
+          <span class="gov-icon__holder">
+            {{ statsbar_item_icon }}
+          </span>
+        </div>
+      </span>
+    {% endif %}
+    <p class="gov-statsbar-item__number">{{ statsbar_item_value }}</p>
+    <div class="gov-statsbar-item__text">
+      {{ statsbar_item_description }}
+    </div>
+  </article>
+</div>

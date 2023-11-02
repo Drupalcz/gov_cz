@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Statsbar
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-statsbar/gov-statsbar.css: {}
+props:
+  type: object
+  required:
+    - statsbar_items
+  properties:
+    statsbar_variant:
+      type: string
+      title: Variant
+      description: The colour for the statsbar
+    statsbar_items:
+      type: array
+      title: Statsbar Items
+      description: The items for the statsbar

@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Statsbar Item
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-statsbar/gov-statsbar-item.css: {}
+props:
+  type: object
+  required:
+    - statsbar_items
+  properties:
+    statsbar_item_icon :
+      type: string
+      title: Icon
+      description: SVG icon for the item. Optional.
+    statsbar_item_value:
+      type: string
+      title: Value
+      description: The prominent value for the item. Keep it short.
+    statsbar_item_description:
+      type: array
+      title: Description
+      description: A short description of the Value.
