@@ -1,0 +1,24 @@
+{# empty
+  ## Variables ##
+  # empty_icon – Optional. Adds svg icon before the label text.
+  # empty_title - nadpis komponenty
+  # empty_text - popisny text komponenty
+  # empty_button_aria_label - popis pro ctecky obrazu
+  # empty_button_text - text tlacitka
+#}
+<div align="left" class="gov-empty">
+  <div class="gov-empty__icon">
+		<div class="gov-icon">
+			<span class="gov-icon__holder">
+				{{ empty_icon }}
+			</span>
+		</div>
+	</div>
+	<div class="gov-empty__content">
+		<p class="gov-text--2xl">{{ empty_title }}</p>
+		<p class="gov-text--m gov-color--secondary-700">{{ empty_text }}</p>
+		<div size="l" class="gov-spacer"></div>
+		<div variant="primary" size="m" type="solid" hoverable="" class="gov-button"><button class="element" type="button" tabindex="0" aria-label="{{ empty_button_aria_label }}" aria-pressed="false" aria-disabled="false">{{ empty_button_text }}</button>
+		</div>
+	</div>
+</div>
