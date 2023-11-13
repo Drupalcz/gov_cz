@@ -1,0 +1,24 @@
+{# error code
+  ## Variables ##
+  # empty_icon – Optional. Adds svg icon before the label text.
+  # empty_title - nadpis komponenty
+  # empty_text - popisny text komponenty
+  # empty_button_aria_label - popis pro ctecky obrazu
+  # empty_button_text - text tlacitka
+#}
+<div class="gov-error-code__holder">
+	<div class="gov-error-code__icon">
+		<div class="gov-icon hydrated">
+			<span class="gov-icon__holder">
+				{{ error_code_icon }}
+			</span>
+		</div>
+	</div>
+	<div class="gov-error-code__content">
+		<h2 class="gov-text--6xl">{{ error_code_title }}</h2>
+		<p class="gov-text--l">{{ error_code_text }}</p>
+		<div size="l" class="gov-spacer hydrated"></div>
+		<div variant="primary" size="m" type="solid" hoverable="" class="gov-button hydrated"><button class="element" type="button" tabindex="0" aria-label="{{ error_code_arial_label }}" aria-pressed="false" aria-disabled="false">{{ error_code_button_text }}</button>
+		</div>
+	</div>
+</div>
