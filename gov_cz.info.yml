@@ -1,13 +1,8 @@
 name: 'Design system gov.cz'
-type: theme
-base theme: false
-description: 'Base theme implementing Design system gov.cz in Single Directory Components.'
-core_version_requirement: ^10
-
-regions:
-  header: Header
-  content: Content
-  footer: Footer
+type: module
+description: 'Implementing Design system gov.cz using Single Directory Components.'
+package: 'CZ Desing System'
+core_version_requirement: ^10.1
 
 libraries:
   - gov_cz/base

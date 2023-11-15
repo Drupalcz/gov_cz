@@ -1,4 +1,6 @@
-# Starter implementation of Design System gov.cz
+# Implementation of [Design system gov.cz](https://designsystem.gov.cz)
+
+This module brings the styles and components made in DesignSystem v 4 into Drupal 10.
 
 ## For developers
 
@@ -10,5 +12,5 @@
   component_variable_2: drupal_variable_2,
 } %}
 ```
-The npm scripts are only needed while developing the gov_cz theme directly.
-For normal use, all the necesary files are already prepared.
+The npm scripts is only needed while developing the gov_cz module directly.
+For normal use, all the necesary files are already included.
