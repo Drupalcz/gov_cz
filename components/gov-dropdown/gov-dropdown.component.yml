@@ -1,0 +1,44 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Dropdown Item
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-dropdown/gov-dropdown.css: {}
+props:
+  type: object
+  required:
+    - dropdown_label
+    - dropdown_items
+  properties:
+    dropdown_size:
+      type: string
+      title: Size
+      description: The label size for the dropdown item
+    dropdown_variant:
+      type: string
+      title: Variant
+      description: The label variant for the dropdown item
+    dropdown_disabled:
+      type: boolean
+      title: Disabled
+      description: Makes the button component disabled.
+    dropdown_label_id:
+      type: string
+      title: Dropdown ID
+      description: The unique ID for the dropdown label
+    dropdown_items_id:
+      type: string
+      title: Items ID
+      description: The unique ID for the dropdown items list.
+    dropdown_label:
+      type: string
+      title: Main Label
+      description: Dropdown label
+    dropdown_aria_label:
+      type: string
+      title: Aria Label
+      description: Accessibility label for the dropdown button
+    dropdown_items:
+      type: array
+      title: Items
+      description: List of items

@@ -1,0 +1,48 @@
+{# Dropdown
+  ## Variables ##
+  # dropdown_size – Size of the element.
+  # dropdown_variant – Variant of the main button.
+  # dropdown_disabled – Optional, set the button to disabled state.
+  # dropdown_label_id – Required. Unique. Connects the button and the content.
+  # dropdown_items_id – Required. Unique. Connects the button and the content.
+  # dropdown_aria_label – Accessibility description for the main button.
+  # dropdown_label – Required. String on the main button.
+  # dropdown_items – Required. Aray of items for the dropdown.
+  # # dropdown_item.aria_label – Accessibility description for the item.
+  # # dropdown_item.label – Text for the item.
+
+  ## Notes ##
+  # Attributes on "gov-dropdown__list" (aria-hidden="true" hidden="")
+  # should be set via JS.
+#}
+
+<div position="{{ dropdown_position|default('left') }}" class="gov-dropdown">
+  <div variant="{{ dropdown_variant|default('primary') }}" size="{{ dropdown_size|default('m') }}" type="{{ dropdown_type|default('solid') }}" hoverable="" class="gov-button gov-button--w-icon">
+    <button id="{{ dropdown_label_id }}" class="element" type="button" aria-controls="{{ dropdown_items_id }}" {{ dropdown_disabled ? 'aria_disabled="true" disabled="true"' }} aria-label="{{ dropdown_aria_label|default(dropdown_label) }}" aria-haspopup="true">
+      {{ dropdown_label }}
+      <span class="gov-icon">
+        <span class="gov-icon__holder">
+          {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-down.svg') }}
+        </span>
+      </span>
+    </button>
+  </div>
+  <div class="gov-dropdown__list" id="{{ dropdown_items_id }}" aria-labelledby="{{ dropdown_label_id }}">
+    <ul>
+      {% for dropdown_item in dropdown_items %}
+        <li>
+          <div variant="{{ dropdown_variant|default('secondary') }}" size="{{ dropdown_size|default('m') }}" type="base" hoverable="" class="gov-button gov-button--w-icon">
+            <button class="element" type="button" aria-label="{{ dropdown_item.aria_label|default(dropdown_item.label) }}" aria-disabled="false">
+              {{ dropdown_item.label }}
+              <span class="gov-icon">
+                <span class="gov-icon__holder">
+                  {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-right.svg') }}
+                </span>
+              </span>
+            </button>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
