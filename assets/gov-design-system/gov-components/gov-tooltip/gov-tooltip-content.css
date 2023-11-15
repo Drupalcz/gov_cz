@@ -65,6 +65,9 @@
   right: 0;
   top: 0;
 }
+.gov-tooltip-content[persist=""], .gov-tooltip-content[persist=true i], .gov-tooltip-content[persist="1"] {
+  padding-right: 3.25rem;
+}
 .gov-tooltip-content[is-visible=""], .gov-tooltip-content[is-visible=true i], .gov-tooltip-content[is-visible="1"] {
   opacity: 1;
 }
@@ -93,6 +96,9 @@
   line-height: var(--gov-text-s-line-height);
   letter-spacing: var(--gov-text-s-letter-spacing);
 }
+.gov-tooltip-content[size=s][persist=true i] {
+  padding-right: var(--gov-tooltip-s-persist-space, 3rem);
+}
 .gov-tooltip-content[size=l] {
   --gov-tooltip-content-padding: var(--gov-tooltip-l-padding, 1rem);
   --gov-tooltip-content-arrow-size: var(--gov-tooltip-l-arrow-size, 0.875rem);
@@ -101,6 +107,9 @@
   font-size: var(--gov-text-xl-font-size);
   line-height: var(--gov-text-xl-line-height);
   letter-spacing: var(--gov-text-xl-letter-spacing);
+}
+.gov-tooltip-content[size=l][persist=true i] {
+  padding-right: var(--gov-tooltip-s-persist-space, 4rem);
 }
 .gov-tooltip-content[position=top]::before {
   left: 50%;

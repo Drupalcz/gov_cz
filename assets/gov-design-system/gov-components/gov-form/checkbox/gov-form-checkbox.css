@@ -159,6 +159,9 @@
   opacity: 0;
   transition: 150ms linear opacity;
 }
+.gov-form-checkbox__label {
+  position: relative;
+}
 .gov-form-checkbox input:checked + span::before {
   background: var(--gov-form-checkbox-indicator-bg, var(--gov-color-primary));
 }

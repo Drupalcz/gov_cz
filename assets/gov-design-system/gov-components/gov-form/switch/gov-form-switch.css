@@ -45,6 +45,8 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 .gov-form-switch .gov-form-label__label {
   position: relative;

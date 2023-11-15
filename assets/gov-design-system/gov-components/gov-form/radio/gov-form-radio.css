@@ -162,6 +162,9 @@
   opacity: 0;
   transition: 150ms linear opacity;
 }
+.gov-form-radio__label {
+  position: relative;
+}
 .gov-form-radio input:checked + span::after {
   opacity: 1;
 }

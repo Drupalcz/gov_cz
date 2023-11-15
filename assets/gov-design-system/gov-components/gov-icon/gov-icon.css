@@ -40,6 +40,9 @@
   width: 100%;
   height: 100%;
 }
+.gov-icon__holder + .gov-icon__holder {
+  display: none !important;
+}
 .gov-icon svg {
   display: inline-flex;
   width: 100%;

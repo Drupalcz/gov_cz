@@ -33,13 +33,11 @@
   }
 }
 .gov-tooltip {
-  position: relative;
-  display: inline;
+  display: inline-block;
   border-bottom: 1px dashed currentcolor;
   color: var(--gov-color-primary);
   cursor: help;
 }
 .gov-tooltip[icon=""], .gov-tooltip[icon=true i], .gov-tooltip[icon="1"] {
-  display: inline-flex;
   border-bottom: 0;
 }

@@ -56,8 +56,8 @@
   color: var(--gov-error-icon-color, var(--gov-color-primary));
 }
 .gov-error-code__icon > * {
-  width: 7.125rem;
-  height: 7.125rem;
+  width: 6.5625rem;
+  height: 6.5625rem;
 }
 @media (min-width: 48em) {
   .gov-error-code__icon {
@@ -66,7 +66,7 @@
     margin: 0 auto 2rem;
   }
   .gov-error-code__icon > * {
-    width: 9.5rem;
-    height: 9.5rem;
+    width: 8.75rem;
+    height: 8.75rem;
   }
 }

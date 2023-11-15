@@ -56,6 +56,24 @@
 .gov-control-group[variant=secondary] > * {
   border-right: var(--gov-control-group-border-secondary, 0.0625rem solid var(--gov-color-secondary-700));
 }
+.gov-control-group[variant=success] {
+  border: var(--gov-control-group-border-success, 0.0625rem solid var(--gov-color-success-500));
+}
+.gov-control-group[variant=success] > * {
+  border-right: var(--gov-control-group-border-success, 0.0625rem solid var(--gov-color-success-500));
+}
+.gov-control-group[variant=warning] {
+  border: var(--gov-control-group-border-warning, 0.0625rem solid var(--gov-color-warning-500));
+}
+.gov-control-group[variant=warning] > * {
+  border-right: var(--gov-control-group-border-warning, 0.0625rem solid var(--gov-color-warning-500));
+}
+.gov-control-group[variant=error] {
+  border: var(--gov-control-group-border-error, 0.0625rem solid var(--gov-color-error-400));
+}
+.gov-control-group[variant=error] > * {
+  border-right: var(--gov-control-group-border-error, 0.0625rem solid var(--gov-color-error-400));
+}
 .gov-control-group > *:last-child {
   border-right: none;
 }

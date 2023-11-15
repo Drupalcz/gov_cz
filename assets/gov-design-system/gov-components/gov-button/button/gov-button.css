@@ -97,7 +97,6 @@
 [type=solid][variant=primary].gov-button .element {
   background-color: var(--gov-button-primary-solid-bg, var(--gov-color-primary));
   color: var(--gov-button-primary-solid-color, var(--gov-color-neutral-white));
-  border-width: 0;
 }
 [type=solid][variant=primary][inverse=""].gov-button .element, [type=solid][variant=primary][inverse=true i].gov-button .element, [type=solid][variant=primary][inverse="1"].gov-button .element {
   color: var(--gov-button-primary-solid-inverse-color, var(--gov-color-primary));
@@ -174,7 +173,6 @@
 }
 [type=base][variant=primary].gov-button .element {
   color: var(--gov-button-primary-base-color, var(--gov-color-primary));
-  border-width: 0;
 }
 [type=base][variant=primary][inverse=""].gov-button .element, [type=base][variant=primary][inverse=true i].gov-button .element, [type=base][variant=primary][inverse="1"].gov-button .element {
   color: var(--gov-button-primary-base-inverse-color, var(--gov-color-neutral-white));
@@ -208,7 +206,6 @@
 }
 [type=link][variant=primary].gov-button .element {
   color: var(--gov-button-primary-link-color, var(--gov-color-primary));
-  border-width: 0;
 }
 [type=link][variant=primary][inverse=""].gov-button .element, [type=link][variant=primary][inverse=true i].gov-button .element, [type=link][variant=primary][inverse="1"].gov-button .element {
   color: var(--gov-button-primary-link-inverse-color, var(--gov-color-neutral-white));
@@ -244,7 +241,6 @@
 [type=solid][variant=secondary].gov-button .element {
   background-color: var(--gov-button-secondary-solid-bg, var(--gov-color-secondary));
   color: var(--gov-button-secondary-solid-color, var(--gov-color-neutral-white));
-  border-width: 0;
 }
 [type=solid][variant=secondary][inverse=""].gov-button .element, [type=solid][variant=secondary][inverse=true i].gov-button .element, [type=solid][variant=secondary][inverse="1"].gov-button .element {
   color: var(--gov-button-secondary-solid-inverse-color, var(--gov-color-secondary));
@@ -323,7 +319,6 @@
 }
 [type=base][variant=secondary].gov-button .element {
   color: var(--gov-button-secondary-base-color, var(--gov-color-secondary));
-  border-width: 0;
 }
 [type=base][variant=secondary][inverse=""].gov-button .element, [type=base][variant=secondary][inverse=true i].gov-button .element, [type=base][variant=secondary][inverse="1"].gov-button .element {
   color: var(--gov-button-secondary-base-inverse-color, var(--gov-color-neutral-white));
@@ -357,7 +352,6 @@
 }
 [type=link][variant=secondary].gov-button .element {
   color: var(--gov-button-secondary-link-color, var(--gov-color-secondary));
-  border-width: 0;
 }
 [type=link][variant=secondary][inverse=""].gov-button .element, [type=link][variant=secondary][inverse=true i].gov-button .element, [type=link][variant=secondary][inverse="1"].gov-button .element {
   color: var(--gov-button-secondary-link-inverse-color, var(--gov-color-neutral-white));
@@ -393,7 +387,6 @@
 [type=solid][variant=error].gov-button .element {
   background-color: var(--gov-button-error-solid-bg, var(--gov-color-error));
   color: var(--gov-button-error-solid-color, var(--gov-color-neutral-white));
-  border-width: 0;
 }
 [type=solid][variant=error][inverse=""].gov-button .element, [type=solid][variant=error][inverse=true i].gov-button .element, [type=solid][variant=error][inverse="1"].gov-button .element {
   color: var(--gov-button-error-solid-inverse-color, var(--gov-color-error));
@@ -470,7 +463,6 @@
 }
 [type=base][variant=error].gov-button .element {
   color: var(--gov-button-error-base-color, var(--gov-color-error));
-  border-width: 0;
 }
 [type=base][variant=error][inverse=""].gov-button .element, [type=base][variant=error][inverse=true i].gov-button .element, [type=base][variant=error][inverse="1"].gov-button .element {
   color: var(--gov-button-error-base-inverse-color, var(--gov-color-neutral-white));
@@ -504,7 +496,6 @@
 }
 [type=link][variant=error].gov-button .element {
   color: var(--gov-button-error-link-color, var(--gov-color-error));
-  border-width: 0;
 }
 [type=link][variant=error][inverse=""].gov-button .element, [type=link][variant=error][inverse=true i].gov-button .element, [type=link][variant=error][inverse="1"].gov-button .element {
   color: var(--gov-button-error-link-inverse-color, var(--gov-color-neutral-white));
@@ -540,7 +531,6 @@
 [type=solid][variant=success].gov-button .element {
   background-color: var(--gov-button-success-solid-bg, var(--gov-color-success-500));
   color: var(--gov-button-success-solid-color, var(--gov-color-neutral-white));
-  border-width: 0;
 }
 [type=solid][variant=success][inverse=""].gov-button .element, [type=solid][variant=success][inverse=true i].gov-button .element, [type=solid][variant=success][inverse="1"].gov-button .element {
   color: var(--gov-button-success-solid-inverse-color, var(--gov-color-success));
@@ -617,7 +607,6 @@
 }
 [type=base][variant=success].gov-button .element {
   color: var(--gov-button-success-base-color, var(--gov-color-success-500));
-  border-width: 0;
 }
 [type=base][variant=success][inverse=""].gov-button .element, [type=base][variant=success][inverse=true i].gov-button .element, [type=base][variant=success][inverse="1"].gov-button .element {
   color: var(--gov-button-success-base-inverse-color, var(--gov-color-neutral-white));
@@ -651,7 +640,6 @@
 }
 [type=link][variant=success].gov-button .element {
   color: var(--gov-button-success-link-color, var(--gov-color-success-500));
-  border-width: 0;
 }
 [type=link][variant=success][inverse=""].gov-button .element, [type=link][variant=success][inverse=true i].gov-button .element, [type=link][variant=success][inverse="1"].gov-button .element {
   color: var(--gov-button-success-link-inverse-color, var(--gov-color-neutral-white));
@@ -687,7 +675,6 @@
 [type=solid][variant=warning].gov-button .element {
   background-color: var(--gov-button-warning-solid-bg, var(--gov-color-warning-500));
   color: var(--gov-button-warning-solid-color, var(--gov-color-neutral-white));
-  border-width: 0;
 }
 [type=solid][variant=warning][inverse=""].gov-button .element, [type=solid][variant=warning][inverse=true i].gov-button .element, [type=solid][variant=warning][inverse="1"].gov-button .element {
   color: var(--gov-button-warning-solid-inverse-color, var(--gov-color-warning));
@@ -764,7 +751,6 @@
 }
 [type=base][variant=warning].gov-button .element {
   color: var(--gov-button-warning-base-color, var(--gov-color-warning-500));
-  border-width: 0;
 }
 [type=base][variant=warning][inverse=""].gov-button .element, [type=base][variant=warning][inverse=true i].gov-button .element, [type=base][variant=warning][inverse="1"].gov-button .element {
   color: var(--gov-button-warning-base-inverse-color, var(--gov-color-neutral-white));
@@ -798,7 +784,6 @@
 }
 [type=link][variant=warning].gov-button .element {
   color: var(--gov-button-warning-link-color, var(--gov-color-warning-500));
-  border-width: 0;
 }
 [type=link][variant=warning][inverse=""].gov-button .element, [type=link][variant=warning][inverse=true i].gov-button .element, [type=link][variant=warning][inverse="1"].gov-button .element {
   color: var(--gov-button-warning-link-inverse-color, var(--gov-color-neutral-white));

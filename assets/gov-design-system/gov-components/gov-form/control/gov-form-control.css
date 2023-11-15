@@ -41,47 +41,47 @@
 .gov-form-control__bottom > *:last-child {
   margin-bottom: 0;
 }
+.gov-form-control__bottom > :first-child {
+  margin-top: 0.25rem;
+}
 .gov-form-control .gov-form-label .gov-form-label__label {
   margin: 0rem 0rem 0.25rem;
-}
-.gov-form-control .gov-form-control__bottom {
-  margin: 0.25rem 0rem 0rem;
 }
 .gov-form-control[type=file] .gov-form-label[slot=top] .gov-form-label__label {
   margin: 0rem 0rem 0.5rem;
 }
-.gov-form-control[type=file] .gov-form-control__bottom {
-  margin: 0.5rem 0rem 0rem;
+.gov-form-control[type=file] .gov-form-control__bottom > :first-child {
+  margin-top: 0.5rem;
 }
-.gov-form-control[size=xs][type=checkbox] .gov-form-control__holder > .gov-form-control__bottom, .gov-form-control[size=xs][type=radio] .gov-form-control__holder > .gov-form-control__bottom {
+.gov-form-control[size=xs][type=checkbox] .gov-form-control__holder > .gov-form-control__bottom > :first-child, .gov-form-control[size=xs][type=radio] .gov-form-control__holder > .gov-form-control__bottom > :first-child {
   margin-top: var(--gov-form-checkbox-core-xs-message-gap, 0.5rem);
   margin-left: calc(var(--gov-form-checkbox-core-xs-indicator-size, 1.25rem) + var(--gov-form-checkbox-core-xs-gap, 0.75rem));
 }
-.gov-form-control[size=s][type=checkbox] .gov-form-control__holder > .gov-form-control__bottom, .gov-form-control[size=s][type=radio] .gov-form-control__holder > .gov-form-control__bottom {
+.gov-form-control[size=s][type=checkbox] .gov-form-control__holder > .gov-form-control__bottom > :first-child, .gov-form-control[size=s][type=radio] .gov-form-control__holder > .gov-form-control__bottom > :first-child {
   margin-top: var(--gov-form-checkbox-core-s-message-gap, 0.5rem);
   margin-left: calc(var(--gov-form-checkbox-core-s-indicator-size, 1.375rem) + var(--gov-form-checkbox-core-s-gap, 0.75rem));
 }
-.gov-form-control[size=m][type=checkbox] .gov-form-control__holder > .gov-form-control__bottom, .gov-form-control[size=m][type=radio] .gov-form-control__holder > .gov-form-control__bottom {
+.gov-form-control[size=m][type=checkbox] .gov-form-control__holder > .gov-form-control__bottom > :first-child, .gov-form-control[size=m][type=radio] .gov-form-control__holder > .gov-form-control__bottom > :first-child {
   margin-top: var(--gov-form-checkbox-core-m-message-gap, 0.75rem);
   margin-left: calc(var(--gov-form-checkbox-core-m-indicator-size, 1.5rem) + var(--gov-form-checkbox-core-m-gap, 1rem));
 }
-.gov-form-control[size=l][type=checkbox] .gov-form-control__holder > .gov-form-control__bottom, .gov-form-control[size=l][type=radio] .gov-form-control__holder > .gov-form-control__bottom {
+.gov-form-control[size=l][type=checkbox] .gov-form-control__holder > .gov-form-control__bottom > :first-child, .gov-form-control[size=l][type=radio] .gov-form-control__holder > .gov-form-control__bottom > :first-child {
   margin-top: var(--gov-form-checkbox-core-l-message-gap, 0.75rem);
   margin-left: calc(var(--gov-form-checkbox-core-l-indicator-size, 2rem) + var(--gov-form-checkbox-core-l-gap, 1rem));
 }
-.gov-form-control[size=xs][type=switch] .gov-form-control__bottom {
+.gov-form-control[size=xs][type=switch] .gov-form-control__bottom > :first-child {
   margin-top: var(--gov-form-switch-xs-message-gap, 0.5rem);
   margin-left: calc(var(--gov-form-switch-xs-indicator-height, 1.25rem) * 1.6666666667 + var(--gov-form-switch-xs-gap, 0.75rem));
 }
-.gov-form-control[size=s][type=switch] .gov-form-control__bottom {
+.gov-form-control[size=s][type=switch] .gov-form-control__bottom > :first-child {
   margin-top: var(--gov-form-switch-s-message-gap, 0.5rem);
   margin-left: calc(var(--gov-form-switch-s-indicator-height, 1.375rem) * 1.6666666667 + var(--gov-form-switch-s-gap, 0.75rem));
 }
-.gov-form-control[size=m][type=switch] .gov-form-control__bottom {
+.gov-form-control[size=m][type=switch] .gov-form-control__bottom > :first-child {
   margin-top: var(--gov-form-switch-m-message-gap, 0.75rem);
   margin-left: calc(var(--gov-form-switch-m-indicator-height, 1.5rem) * 1.6666666667 + var(--gov-form-switch-m-gap, 1rem));
 }
-.gov-form-control[size=l][type=switch] .gov-form-control__bottom {
+.gov-form-control[size=l][type=switch] .gov-form-control__bottom > :first-child {
   margin-top: var(--gov-form-switch-l-message-gap, 0.75rem);
   margin-left: calc(var(--gov-form-switch-l-indicator-height, 2rem) * 1.6666666667 + var(--gov-form-switch-l-gap, 1rem));
 }

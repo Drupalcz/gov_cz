@@ -101,7 +101,7 @@ button.gov-side-nav-item__name {
 .gov-side-nav-item__label {
   color: inherit;
 }
-.gov-side-nav-item__badge {
+.gov-side-nav-item__chip {
   display: flex;
   flex: 0 0 auto;
 }

@@ -82,7 +82,6 @@
   border-bottom: 0.125rem solid transparent;
   font-weight: 700;
   text-align: center;
-  text-transform: uppercase;
   transition: 150ms linear color, 150ms linear border-color;
 }
 .gov-tabs__btn:focus {
@@ -100,7 +99,7 @@
   gap: 0.5rem 2rem;
   border-bottom: var(--gov-tabs-list-border-width, 0.0625rem solid var(--gov-color-secondary-500));
 }
-.gov-tabs[type=badge] .gov-tabs__list {
+.gov-tabs[type=chip] .gov-tabs__list {
   gap: 0.5rem 1rem;
 }
 .gov-tabs[variant=primary][type=text] .gov-tabs__btn {
@@ -112,8 +111,8 @@
   }
 }
 .gov-tabs[variant=primary][type=text] .gov-tabs__btn[aria-selected=true] {
-  border-bottom-color: cmake-var(tabs-primary-color-active, var(--gov-color-primary-800));
-  color: cmake-var(tabs-primary-color-active, var(--gov-color-primary-800));
+  border-bottom-color: var(--gov-tabs-primary-color-active, var(--gov-color-primary-800));
+  color: var(--gov-tabs-primary-color-active, var(--gov-color-primary-800));
 }
 .gov-tabs[variant=secondary][type=text] .gov-tabs__btn {
   color: var(--gov-tabs-secondary-color, var(--gov-color-secondary-700));
@@ -124,8 +123,8 @@
   }
 }
 .gov-tabs[variant=secondary][type=text] .gov-tabs__btn[aria-selected=true] {
-  border-bottom-color: cmake-var(tabs-secondary-color-active, var(--gov-color-secondary-900));
-  color: cmake-var(tabs-secondary-color-active, var(--gov-color-secondary-900));
+  border-bottom-color: var(--gov-tabs-secondary-color-active, var(--gov-color-secondary-900));
+  color: var(--gov-tabs-secondary-color-active, var(--gov-color-secondary-900));
 }
 .gov-tabs[variant=success][type=text] .gov-tabs__btn {
   color: var(--gov-tabs-success-color, var(--gov-color-success-500));
@@ -136,8 +135,8 @@
   }
 }
 .gov-tabs[variant=success][type=text] .gov-tabs__btn[aria-selected=true] {
-  border-bottom-color: cmake-var(tabs-success-color-active, var(--gov-color-success-700));
-  color: cmake-var(tabs-success-color-active, var(--gov-color-success-700));
+  border-bottom-color: var(--gov-tabs-success-color-active, var(--gov-color-success-700));
+  color: var(--gov-tabs-success-color-active, var(--gov-color-success-700));
 }
 .gov-tabs[variant=warning][type=text] .gov-tabs__btn {
   color: var(--gov-tabs-warning-color, var(--gov-color-warning-500));
@@ -148,8 +147,8 @@
   }
 }
 .gov-tabs[variant=warning][type=text] .gov-tabs__btn[aria-selected=true] {
-  border-bottom-color: cmake-var(tabs-warning-color-active, var(--gov-color-warning-700));
-  color: cmake-var(tabs-warning-color-active, var(--gov-color-warning-700));
+  border-bottom-color: var(--gov-tabs-warning-color-active, var(--gov-color-warning-700));
+  color: var(--gov-tabs-warning-color-active, var(--gov-color-warning-700));
 }
 .gov-tabs[variant=error][type=text] .gov-tabs__btn {
   color: var(--gov-tabs-error-color, var(--gov-color-error-400));
@@ -160,8 +159,8 @@
   }
 }
 .gov-tabs[variant=error][type=text] .gov-tabs__btn[aria-selected=true] {
-  border-bottom-color: cmake-var(tabs-error-color-active, var(--gov-color-error-600));
-  color: cmake-var(tabs-error-color-active, var(--gov-color-error-600));
+  border-bottom-color: var(--gov-tabs-error-color-active, var(--gov-color-error-600));
+  color: var(--gov-tabs-error-color-active, var(--gov-color-error-600));
 }
 .gov-tabs[orientation=vertical] .gov-tabs__btn {
   text-align: left;

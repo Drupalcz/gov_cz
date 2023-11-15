@@ -40,7 +40,7 @@
 .gov-statsbar-item__icon, .gov-statsbar-item__number {
   margin-bottom: 1rem;
 }
-.gov-statsbar-item__icon {
+.gov-statsbar-item__icon, .gov-statsbar-item__icon .gov-icon {
   display: block;
   width: 2rem;
   height: 2rem;
@@ -79,7 +79,7 @@
   .gov-statsbar-item {
     padding: 2.5rem;
   }
-  .gov-statsbar-item__icon {
+  .gov-statsbar-item__icon, .gov-statsbar-item__icon .gov-icon {
     width: 3rem;
     height: 3rem;
   }

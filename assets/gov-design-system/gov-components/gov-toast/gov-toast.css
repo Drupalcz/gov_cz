@@ -112,7 +112,7 @@
   box-shadow: none;
 }
 .gov-toast[type=solid i].is-initialized .gov-toast__timer {
-  transform-origin: left;
+  transform-origin: right;
   animation: countdown linear forwards var(--toast-duration, 0);
 }
 .gov-toast[variant=warning] {

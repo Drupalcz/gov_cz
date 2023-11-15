@@ -44,6 +44,11 @@
   box-sizing: border-box;
 }
 .gov-form-label[legend=""] .gov-form-label__label, .gov-form-label[legend=true i] .gov-form-label__label, .gov-form-label[legend="1"] .gov-form-label__label {
+  font-weight: var(--gov-text-l-font-weight);
+  font-size: var(--gov-text-l-font-size);
+  line-height: var(--gov-text-l-line-height);
+  letter-spacing: var(--gov-text-l-letter-spacing);
   margin-bottom: 1rem;
+  padding: 0;
   color: var(--gov-form-legend-color, #3b3b3b);
 }
