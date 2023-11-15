@@ -1,0 +1,16 @@
+{# Chip
+  ## Variables ##
+  # chip_variant – Colour variant of the chip.
+  # chip_size – Size of chip.
+  # chip_tag – Which HTML tag to render the chip – span, button, a.
+  # chip_tag_aria_label – Accessibility label for link or button.
+  # chip_type – Is the chip solid or outlined.
+  # chip_inverse – Is the chip on dark background.
+  # chip_content – Chip string.
+#}
+
+<div variant="{{ chip_variant|default('primary') }}" size="{{ chip_size|default('m') }}" class="gov-chip" {{ chip_tag != 'span' ? 'hoverable="' }} type="{{ chip_type|'solid' }}" {{ chip_inverse ? 'inverse=""' }}>
+  <{{ chip_tag ?? 'span' }} class="element" {{ chip_tag != 'span' && chip_tag_aria_label ? 'aria-label="' ~ chip_tag_aria_label ~ '"'}}>
+    {{ chip_content }}
+  </{{ chip_tag ?? 'span' }}>
+</div>

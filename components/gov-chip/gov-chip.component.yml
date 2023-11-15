@@ -1,0 +1,40 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Chip
+libraryOverrides:
+  css:
+    component:
+      ../../assets/variables/chip.css: {}
+      ../../assets/gov-design-system/gov-components/gov-chip/gov-chip.css: {}
+props:
+  type: object
+  required:
+    - chip_content
+  properties:
+    chip_content:
+      type: string
+      title: Chip Content
+      description: The content for the chip
+    chip_variant:
+      type: string
+      title: Variant
+      description: Choose colour variant for the chip.
+    chip_size:
+      type: string
+      title: Chip Size
+      description: Render the chip in different sizes.
+    chip_type:
+      type: string
+      title: Chip Type
+      description: Solid or outlined type.
+    chip_inverse:
+      type: boolean
+      title: Chip Inverse
+      description: Is the chip on dark background.
+    chip_tag:
+      type: string
+      title: Chip Tag
+      description: What tag to render the chip – span, button, a.
+    chip_tag_aria_label:
+      type: string
+      title: Chip Tag Aria Label
+      description: Accessibility label for link or button.
