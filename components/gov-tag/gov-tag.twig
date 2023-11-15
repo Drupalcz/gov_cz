@@ -1,0 +1,11 @@
+{# Tag
+  ## Variables ##
+  # tag_variant – Colour variant of the tag.
+  # tag_size – Size of tag.
+  # tag_type – Is the tag solid or outlined.
+  # tag_inverse – Is the tag on dark background.
+  # tag_content – Tag string.
+#}
+<div variant="{{ tag_variant|default('primary') }}" size="{{ tag_size|default('m') }}" class="gov-tag" type="{{ tag_type|'solid' }}" {{ tag_inverse ? 'inverse=""' }}>
+  <span class="element">{{ tag_content }}</span>
+</div>
