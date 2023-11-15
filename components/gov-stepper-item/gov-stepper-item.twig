@@ -1,0 +1,39 @@
+{# Stepper item
+  ## Variables ##
+  # stepper_item_id – The link for the tile.
+  # stepper_item_variant – Icon for the item.
+  # stepper_item_size – Title of the tile.
+  # stepper_item_icon – Title of the tile.
+  # stepper_item_prefix – Title of the tile.
+  # stepper_item_label – Title of the tile.
+  # stepper_item_annotation – Title of the tile.
+  # stepper_item_content – Title of the tile.
+#}
+<div class="gov-stepper-item gov-stepper-item--w-annot" variant="{{ stepper_item_variant|default('primary') }}" size="{{ stepper_item_size|default('m') }}">
+  <div id="{{ stepper_item_id }}" class="gov-stepper-item__header" role="listitem">
+    <h3 class="gov-stepper-item__title">
+      <span class="gov-stepper-item__prefix">
+        {% if stepper_item_icon %}
+          <div class="gov-icon">
+            <span class="gov-icon__holder">
+              {{ stepper_item_icon }}
+            </span>
+          </div>
+        {% else %}
+          {{ stepper_item_prefix }}
+        {% endif %}
+      </span>
+      <span class="gov-stepper-item__name">
+        <span class="gov-stepper-item__label">{{ stepper_item_label }}</span>
+        {% if stepper_item_annotation %}
+          <span class="gov-stepper-item__annot">{{ stepper_item_annotation }}</span>
+        {% endif %}
+      </span>
+    </h3>
+  </div>
+  {% if stepper_item_content %}
+    <div class="gov-stepper-item__content" aria-labelledby="{{ stepper_item_id }}" role="tabpanel">
+      {{ stepper_item_content }}
+    </div>
+  {% endif %}
+</div>

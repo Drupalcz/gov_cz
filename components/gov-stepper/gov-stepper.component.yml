@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Stepper
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-stepper/gov-stepper.css: {}
+props:
+  type: object
+  required:
+    - stepper_items
+  properties:
+    stepper_size:
+      type: boolean
+      title: Size
+      description: Size of the items.
+    stepper_items:
+      type: array
+      title: Stepper Items
+      description: The items for the stepper.

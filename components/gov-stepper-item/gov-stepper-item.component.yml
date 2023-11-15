@@ -1,0 +1,43 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Stepper Item
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-tile/gov-tile.css: {}
+props:
+  type: object
+  required:
+    - stepper_item_label
+  properties:
+    stepper_item_id:
+      type: string
+      title: Item ID
+      description: ID of the item.
+    stepper_item_label:
+      type: string
+      title: Title
+      description: Title of the item.
+    stepper_item_variant:
+      type: string
+      title: Variant
+      description: The colour of the item?
+    stepper_item_size:
+      type: string
+      title: Size
+      description: The size of the item.
+    stepper_item_icon:
+      type: string
+      title: Icon
+      description: Icon for the item.
+    stepper_item_prefix:
+      type: string
+      title: Prefix
+      description: Prefix for the item.
+    stepper_item_annotation:
+      type: string
+      title: Annotation
+      description: Annotation for the item.
+    stepper_item_content:
+      type: string
+      title: Content
+      description: Content for the item.

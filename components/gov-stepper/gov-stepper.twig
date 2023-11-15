@@ -1,0 +1,9 @@
+{# Stepper
+  ## Variables ##
+  # stepper_size – Number of columns.
+  # stepper_border – Visible borders between the items. Default false.
+  # stepper_items – List of tiles.
+#}
+<div size="{{ stepper_size|default('m') }}" class="gov-stepper" role="list">
+  {{ stepper_items }}
+</div>
