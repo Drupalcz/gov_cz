@@ -1,0 +1,15 @@
+<div size="{{ gov_form_size|default('m') }}" class="gov-form-control" disabled="{{ gov_form_disabled|default('false') }}" {{ gov_form_input_error ? 'invalid' }} type="input">
+  <div class="gov-form-control__holder">
+    <div size="{{ gov_form_size|default('m') }}" class="gov-form-label" required="{{ gov_form_required|default('false') }}">
+      <label class="gov-form-label__label" for="{{ gov_form_id }}">{{ gov_form_input_label }}</label>
+    </div>
+    <div class="gov-form-group">
+      <div size="{{ gov_form_size|default('m') }}" variant="{{ gov_form_input_variant|default('secondary') }}" input-type="{{ gov_form_input_type }}" class="gov-form-input" {{ gov_form_input_error ? 'invalid' }} {{ gov_form_input_type == 'hidden' ? "hidden" }}>
+        <span class="element">
+          <input type="{{ gov_form_input_type }}" id="{{ gov_form_id }}" aria-required="{{ gov_form_required|default('false') }}" aria-disabled="{{ gov_form_disabled|default('false') }}" aria-invalid="{{ gov_form_input_error }}">
+          {{ gov_form_children }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

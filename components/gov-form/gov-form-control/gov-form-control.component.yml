@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Form input
+libraryOverrides:
+  css:
+    component:
+      ../../../assets/gov-design-system/gov-components/gov-form/input/gov-form-input.css: {}
+props:
+  type: object
+  required:
+    - gov_form_input
+  properties:
+    gov_form_input:
+      type: string
+      title: The Input
+      description:
+    gov_form_input_variant:
+      type: string
+      title: Variant
+      description: Choose colour variant for the input.
+    gov_form_input_size:
+      type: string
+      title: Input Size
+      description: Render the input in different sizes.

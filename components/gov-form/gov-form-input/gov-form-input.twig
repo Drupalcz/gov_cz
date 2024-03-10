@@ -1,0 +1,5 @@
+<div size="{{ gov_form_input_size|default('m') }}" variant="{{ gov_form_input_variant|default('secondary') }}" input-type="{{ gov_form_input_type }}" class="gov-form-input" {{ gov_form_input_error ? 'invalid' }} {{ gov_form_input_type == 'hidden' ? "hidden" }}>
+  <span class="element">
+    {{ gov_form_input|raw }}
+  </span>
+</div>
