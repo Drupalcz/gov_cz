@@ -2,6 +2,9 @@ base:
   version: VERSION
   css:
     theme:
+      assets/gov-design-system/gov-styles/content.css: {}
+      assets/gov-design-system/gov-styles/layout.css: {}
+      assets/gov-design-system/gov-styles/print.css: {}
       assets/gov-design-system/gov-styles/styles.css: {}
 
 throbber:
@@ -12,5 +15,53 @@ throbber:
   js:
     components/gov-loading/loading.js: {}
   dependencies:
-    - core/jquery
     - core/drupal
+
+# Gov.cz libraries without SDC.
+gov-grid:
+  css:
+    theme:
+      assets/gov-design-system/gov-components/gov-grid/gov-grid.css: {}
+
+gov-grid-item:
+  css:
+    theme:
+      assets/gov-design-system/gov-components/gov-grid/gov-grid-item.css: {}
+
+# Gov.cz form libraries for manually crafted forms
+gov-form-input:
+  css:
+    theme:
+      assets/gov-design-system/gov-components/gov-form/input/gov-form-input.css: {}
+
+gov-button:
+  css:
+    theme:
+      assets/gov-design-system/gov-components/gov-button/button/gov-button.css: {}
+
+# Custom styles
+overrides:
+  css:
+    component:
+      assets/additions/overrides.css: {}
+
+font-face:
+  css:
+    component:
+      assets/additions/font-face.css: {}
+
+toggle-section:
+  js:
+    assets/additions/js/toggle-section/toggle-section.js: {}
+
+focus-trap:
+  js:
+    assets/additions/js/toggle-section/focus-trap.js: {}
+
+gov-accordion-item:
+  js:
+    components/gov-accordion-item/gov-accordion-item.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - gov_cz/toggle-section

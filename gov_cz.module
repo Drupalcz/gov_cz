@@ -1,0 +1,12 @@
+<?php
+/**
+ * Implements hook_page_attachments().
+ */
+function gov_cz_page_attachments(array &$page) {
+  if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+    return;
+  }
+  $page['#attached']['library'][] = 'gov_cz/base';
+  $page['#attached']['library'][] = 'gov_cz/font-face';
+  $page['#attached']['library'][] = 'gov_cz/overrides';
+}

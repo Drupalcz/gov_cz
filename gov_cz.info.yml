@@ -6,10 +6,8 @@ core_version_requirement: ^10.1
 
 libraries:
   - gov_cz/base
-
-libraries-extend:
-  core/drupal.ajax:
-    - gov_cz/throbber
+  - gov_cz/font-face
+  - gov_cz/overrides
 
 dependencies:
   - drupal:sdc
