@@ -1,0 +1,37 @@
+/* This file cleans up some styling issues */
+
+/* We need to remove the UL/LI styling from most of the admin toolbar. */
+.toolbar-menu li.menu-item,
+.tabs li.tabs__tab {
+  margin-bottom: 0;
+  position: initial;
+  letter-spacing: normal;
+}
+
+.toolbar-menu li.menu-item:before,
+.tabs li.tabs__tab:before,
+.contextual-links li:before {
+  display: none;
+}
+
+[dir="ltr"] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before {
+  left: initial;
+}
+
+/* This adds support for third party icons like FontAwesome. */
+.gov-icon {
+  fill: currentColor;
+}
+
+/* Adds bottom margin to block elements not in gov.cz style. */
+.gov-content ul,
+.gov-content ol,
+.gov-content table,
+.gov-content blockquote {
+  margin-bottom: 1rem;
+}
+
+/* If input contains hidden element it should be hidden too. */
+.gov-form-input[hidden] {
+  display: none;
+}
