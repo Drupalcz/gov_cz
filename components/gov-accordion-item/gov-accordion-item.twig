@@ -17,28 +17,31 @@
   # and attributes on ".gov-accordion-item__content" (aria-hidden="true" hidden="")
   # should be set via JS.
 #}
+{{ attach_library('gov_cz/gov-accordion-item') }}
 <div class="gov-accordion-item" role="listitem" size="{{ accordion_size|default('m') }}" variant="{{ accordion_variant|default('primary') }}" {{ accordion_item_expanded ? 'is-expanded="true"'}} {{ accordion_item_disabled ? 'disabled=""'}}>
   <button id="{{ accordion_item_label_id }}" class="gov-accordion-item__header" aria-controls="{{ accordion_item_content_id }}" {{ accordion_item_disabled ? 'aria_disabled="true" disabled="true"' }}>
-    <{{ accordion_trigger_tag ?? 'h3' }} class="gov-accordion-item__title">
-      {% if accordion_item_icon %}
-        <span class="gov-accordion-item__icon">
-          <div class="gov-icon">
-            <span class="gov-icon__holder">
-              {{ accordion_item_icon }}
-            </span>
-          </div>
-        </span>
-      {% endif %}
-      <span class="gov-accordion-item__title">
-        <span class="gov-accordion-item__label">{{ accordion_item_label }}</span>
-        {% if accordion_item_annotation %}
-          <span class="gov-accordion-item__annotation">{{ accordion_item_annotation }}</span>
-        {% endif %}
+    {% if accordion_item_icon %}
+      <span class="gov-accordion-item__icon">
+        <div class="gov-icon" aria-hidden="true">
+          <span class="gov-icon__holder">
+            {{ source(accordion_item_icon, ignore_missing = true) }}
+          </span>
+        </div>
       </span>
-    </{{ accordion_trigger_tag ?? 'h3' }}>
+    {% endif %}
+    <span class="gov-accordion-item__title">
+      <span class="gov-accordion-item__label">
+        <{{accordion_trigger_tag??'h3'}}>
+          {{ accordion_item_label }}
+        </{{accordion_trigger_tag??'h3'}}>
+      </span>
+      {% if accordion_item_annotation %}
+        <span class="gov-accordion-item__annotation">{{ accordion_item_annotation }}</span>
+      {% endif %}
+    </span>
     <span class="gov-accordion-item__right">
       <span class="gov-accordion-item__arrow gov-icon">
-        <span class="gov-icon">
+        <span class="gov-icon" aria-hidden="true">
           <span class="gov-icon__holder">
             {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-down.svg') }}
           </span>

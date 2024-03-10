@@ -4,6 +4,8 @@
   # tiles_border – Visible borders between the items. Default false.
   # tiles_items – List of tiles.
 #}
-<div {{ tiles_border ? '' : 'no-border="true"' }} class="gov-tiles gov-tiles--x{{ tiles_column|default(3) }}">
+<div {{ tiles_border ? 'no-border="true"' : '' }} class="gov-tiles gov-tiles--x{{ tiles_column|default(3) }}">
   {{ tiles_items }}
 </div>
+
+{{ tiles_border }}

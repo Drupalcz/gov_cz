@@ -11,9 +11,9 @@
     {% endif %}
     {% if tile_icon %}
       <span class="gov-tile__icon">
-        <div class="gov-icon">
+        <div class="gov-icon" aria-hidden="true">
           <span class="gov-icon__holder">
-            {{ source(tile_icon) }}
+            {{ source(tile_icon, ignore_missing = true) }}
           </span>
         </div>
       </span>
@@ -23,7 +23,11 @@
       {% if tile_link %}
         <div class="gov-tile__arrow gov-icon">
           <span class="gov-icon__holder">
-            {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-right.svg') }}
+            {% if tile_link_external %}
+              {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/box-arrow-up-right.svg') }}
+            {% else %}
+              {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-right.svg') }}
+            {% endif %}
           </span>
         </div>
       {% endif %}

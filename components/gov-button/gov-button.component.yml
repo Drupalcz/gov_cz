@@ -3,7 +3,6 @@ name: Button
 libraryOverrides:
   css:
     component:
-      ../../assets/variables/button.css: {}
       ../../assets/gov-design-system/gov-components/gov-button/button/gov-button.css: {}
 props:
   type: object

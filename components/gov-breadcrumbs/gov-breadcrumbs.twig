@@ -9,24 +9,28 @@
 {% if breadcrumbs_items %}
   <div class="gov-breadcrumbs">
     <nav aria-label="{{ breadcrumbs_accessibility_label }}">
-      <ol>
+      <ul>
         {% for item in breadcrumbs_items %}
           <li>
-            <span class="gov-icon">
+            {# We don't want to print the icon before the first item.
+            But we do want to print it, if there is just one e.g. small screens. #}
+            {% if (breadcrumbs_items|length >= 2 and loop.index > 1) or (breadcrumbs_items|length == 1) %}
+            <span class="gov-icon" aria-hidden="true">
               <span class="gov-icon__holder">
                 {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-right.svg') }}
               </span>
             </span>
+            {% endif %}
             {% if item.url %}
-              <a href="#">{{ item.text }}</a>
-            {% else if not item.url and loop.last %}
+              <a href="{{ item.url }}">{{ item.text }}</a>
+            {% elseif not item.url and loop.last %}
               <strong>{{ item.text }}</strong>
             {% else %}
               {{ item.text }}
             {% endif %}
           </li>
         {% endfor %}
-      </ol>
+      </ul>
     </nav>
   </div>
 {% endif %}

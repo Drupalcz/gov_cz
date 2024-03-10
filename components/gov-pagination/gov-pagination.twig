@@ -6,107 +6,31 @@
   ## pagination_display – How the pager is rendered.
 #}
 
-{% if pagination_display == 'full' %}
-  <div variant="{{ pagination_variant|default('primary') }}" size="{{ pagination_size|default('m') }}" type="button" class="gov-pagination">
-    <nav aria-labelledby="{{ pagination_aria_label }}">
-      <h4 id="{{ pagination_aria_label }}" class="visually-hidden">{{ 'Pagination'|t }}</h4>
-      <ul
-        class="gov-pagination__list pager__items js-pager__items">
 
-        {# Print first item if we are not on the first page. #}
-        {% if pagination_items.first %}
-          <li class="gov-pagination__item gov-pagination__item--arrow">
-            <span class="gov-pagination__inner gov-button" hoverable="" size="{{ pagination_size|default('m') }}" variant="{{ pagination_variant|default('primary') }}" type="base">
-              <a class="element" href="{{ pagination_items.first.href }}" title="{{ 'Go to first page'|t }}" {{ pagination_items.first.attributes|without('href', 'title') }}>
-                <span class="gov-pagination__arrow gov-icon">
-                  <span class="gov-icon__holder">
-                    {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-double-left.svg') }}
-                  </span>
-                </span>
-                <span class="visually-hidden">{{ 'First page'|t }}</span>
-              </a>
-            </span>
-          </li>
-        {% endif %}
-
-        {# Print previous item if we are not on the first page. #}
-        {% if pagination_items.previous %}
-          <li class="gov-pagination__item gov-pagination__item--arrow">
-            <span class="gov-pagination__inner gov-button" hoverable="" size="{{ pagination_size|default('m') }}" variant="{{ pagination_variant|default('primary') }}" type="base">
-              <a class="element" href="{{ pagination_items.previous.href }}" title="{{ 'Go to previous page'|t }}" {{ pagination_items.previous.attributes|without('href', 'title') }}>
-                <span class="gov-pagination__arrow gov-icon">
-                  <span class="gov-icon__holder">
-                    {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-left.svg') }}
-                  </span>
-                </span>
-                <span class="visually-hidden">{{ 'Previous page'|t }}</span>
-              </a>
-            </span>
-          </li>
-        {% endif %}
-
-        {# Now generate the actual pager piece. #}
-        {% for key, item in pagination_items.pages %}
-          <li class="gov-pagination__item{{ pagination_current == key ? ' is-active' : '' }}">
-            <span class="gov-pagination__inner gov-button" hoverable="" size="{{ pagination_size|default('m') }}" variant="{{ pagination_variant|default('primary') }}" type="base" {{ pagination_current == key ? 'wcag-current="true"' }}>
-              {% if pagination_current == key %}
-                {% set title = 'Current page'|t %}
-              {% else %}
-                {% set title = 'Go to page @key'|t({'@key': key}) %}
-              {% endif %}
-              <a class="element" href="{{ item.href }}" aria-label="{{ title }}" title="{{ title }}" {{ item.attributes|without('href', 'title') }} {{ pagination_current == key ? 'aria-current="true"' }}>
-                <span class="visually-hidden">
-                  {{ pagination_current == key ? 'Current page'|t : 'Page'|t }}
-                </span>
-                {{- key -}}
-              </a>
-            </span>
-          </li>
-        {% endfor %}
-
-        {# Print next item if we are not on the last page. #}
-        {% if pagination_items.next %}
-          <li class="gov-pagination__item gov-pagination__item--arrow">
-            <span class="gov-pagination__inner gov-button" hoverable="" size="{{ pagination_size|default('m') }}" variant="{{ pagination_variant|default('primary') }}" type="base">
-              <a class="element" href="{{ pagination_items.next.href }}" title="{{ 'Go to next page'|t }}" {{ pagination_items.next.attributes|without('href', 'title') }}>
-                <span class="gov-pagination__arrow gov-icon">
-                  <span class="gov-icon__holder">
-                    {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-right.svg') }}
-                  </span>
-                </span>
-                <span class="visually-hidden">{{ 'Next page'|t }}</span>
-              </a>
-            </span>
-          </li>
-        {% endif %}
-
-        {# Print last item if we are not on the last page. #}
-        {% if pagination_items.last %}
-          <li class="gov-pagination__item gov-pagination__item--arrow">
-            <span class="gov-pagination__inner gov-button" hoverable="" size="{{ pagination_size|default('m') }}" variant="{{ pagination_variant|default('primary') }}" type="base">
-              <a class="element" href="{{ pagination_items.last.href }}" title="{{ 'Go to last page'|t }}" {{ pagination_items.last.attributes|without('href', 'title') }}>
-                <span class="gov-pagination__arrow gov-icon">
-                  <span class="gov-icon__holder">
-                    {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-double-right.svg') }}
-                  </span>
-                </span>
-                <span class="visually-hidden">{{ 'Last page'|t }}</span>
-              </a>
-            </span>
-          </li>
-        {% endif %}
-      </ul>
-    </nav>
-  </div>
-{% endif %}
-
-{% if pagination_display == 'mini' %}
-  {% if items.previous or items.next %}
-    <div variant="{{ pagination_variant|default('primary') }}" size="{{ pagination_size|default('m') }}" type="button" class="gov-pagination">
-      <nav class="pager" role="navigation" aria-labelledby="{{ heading_id }}">
-        <h4 id="{{ heading_id }}" class="pager__heading visually-hidden">{{ 'Pagination'|t }}</h4>
+{% if pagination_items %}
+  {% if pagination_display == 'full' %}
+    <div variant="{{ pagination_variant|default('primary') }}" size="{{ pagination_size|default('m') }}" type="button" class="gov-pagination pager--{{ pagination_display }}">
+      <nav aria-labelledby="{{ pagination_aria_label|default('Pagination'|t) }}">
+        <h4 id="{{ pagination_aria_label|default('Pagination'|t) }}" class="visually-hidden">{{ 'Pagination'|t }}</h4>
         <ul
           class="gov-pagination__list pager__items js-pager__items">
+
+          {# Print first item if we are not on the first page. #}
+          {% if pagination_items.first %}
+            <li class="gov-pagination__item gov-pagination__item--arrow">
+              <span class="gov-pagination__inner gov-button" hoverable="" size="{{ pagination_size|default('m') }}" variant="{{ pagination_variant|default('primary') }}" type="base">
+                <a class="element" href="{{ pagination_items.first.href }}" title="{{ 'Go to first page'|t }}" {{ pagination_items.first.attributes|without('href', 'title') }}>
+                  <span class="gov-pagination__arrow gov-icon">
+                    <span class="gov-icon__holder">
+                      {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-double-left.svg') }}
+                    </span>
+                  </span>
+                  <span class="visually-hidden">{{ 'First page'|t }}</span>
+                </a>
+              </span>
+            </li>
+          {% endif %}
+
           {# Print previous item if we are not on the first page. #}
           {% if pagination_items.previous %}
             <li class="gov-pagination__item gov-pagination__item--arrow">
@@ -122,14 +46,27 @@
               </span>
             </li>
           {% endif %}
-          {% if items.current %}
-            <li class="pager__item is-active">
-              {% trans %}
-              Page
-              {{ items.current }}
-              {% endtrans %}
+
+          {# Now generate the actual pager piece. #}
+          {% for key, item in pagination_items.pages %}
+            <li class="gov-pagination__item{{ pagination_current == key ? ' is-active' : '' }}">
+              <span class="gov-pagination__inner gov-button" hoverable="" size="{{ pagination_size|default('m') }}" variant="{{ pagination_variant|default('primary') }}" type="base" {{ pagination_current == key ? 'wcag-current="true"' }}>
+                {% if pagination_current == key %}
+                  {% set title = 'Current page'|t %}
+                {% else %}
+                  {% set title = 'Go to page @key'|t({'@key': key}) %}
+                {% endif %}
+                <a class="element" href="{{ item.href }}" aria-label="{{ title }}" title="{{ title }}" {{ item.attributes|without('href', 'title') }} {{ pagination_current == key ? 'aria-current="true"' }}>
+                  <span class="visually-hidden">
+                    {{ pagination_current == key ? 'Current page'|t : 'Page'|t }}
+                  </span>
+                  {{- key -}}
+                </a>
+              </span>
             </li>
-          {% endif %}
+          {% endfor %}
+
+          {# Print next item if we are not on the last page. #}
           {% if pagination_items.next %}
             <li class="gov-pagination__item gov-pagination__item--arrow">
               <span class="gov-pagination__inner gov-button" hoverable="" size="{{ pagination_size|default('m') }}" variant="{{ pagination_variant|default('primary') }}" type="base">
@@ -144,8 +81,74 @@
               </span>
             </li>
           {% endif %}
+
+          {# Print last item if we are not on the last page. #}
+          {% if pagination_items.last %}
+            <li class="gov-pagination__item gov-pagination__item--arrow">
+              <span class="gov-pagination__inner gov-button" hoverable="" size="{{ pagination_size|default('m') }}" variant="{{ pagination_variant|default('primary') }}" type="base">
+                <a class="element" href="{{ pagination_items.last.href }}" title="{{ 'Go to last page'|t }}" {{ pagination_items.last.attributes|without('href', 'title') }}>
+                  <span class="gov-pagination__arrow gov-icon">
+                    <span class="gov-icon__holder">
+                      {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-double-right.svg') }}
+                    </span>
+                  </span>
+                  <span class="visually-hidden">{{ 'Last page'|t }}</span>
+                </a>
+              </span>
+            </li>
+          {% endif %}
         </ul>
       </nav>
     </div>
+  {% endif %}
+
+  {% if pagination_display == 'mini' %}
+    {% if items.previous or items.next %}
+      <div variant="{{ pagination_variant|default('primary') }}" size="{{ pagination_size|default('m') }}" type="button" class="gov-pagination pager--{{ pagination_display }}">
+        <nav class="pager" role="navigation" aria-labelledby="{{ pagination_aria_label|default('Pagination'|t) }}">
+          <h4 id="{{ pagination_aria_label|default('Pagination'|t) }}" class="pager__heading visually-hidden">{{ 'Pagination'|t }}</h4>
+          <ul
+            class="gov-pagination__list pager__items js-pager__items">
+            {# Print previous item if we are not on the first page. #}
+            {% if pagination_items.previous %}
+              <li class="gov-pagination__item gov-pagination__item--arrow">
+                <span class="gov-pagination__inner gov-button" hoverable="" size="{{ pagination_size|default('m') }}" variant="{{ pagination_variant|default('primary') }}" type="base">
+                  <a class="element" href="{{ pagination_items.previous.href }}" title="{{ 'Go to previous page'|t }}" {{ pagination_items.previous.attributes|without('href', 'title') }}>
+                    <span class="gov-pagination__arrow gov-icon">
+                      <span class="gov-icon__holder">
+                        {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-left.svg') }}
+                      </span>
+                    </span>
+                    <span class="visually-hidden">{{ 'Previous page'|t }}</span>
+                  </a>
+                </span>
+              </li>
+            {% endif %}
+            {% if items.current %}
+              <li class="pager__item is-active">
+                {% trans %}
+                Page
+                {{ items.current }}
+                {% endtrans %}
+              </li>
+            {% endif %}
+            {% if pagination_items.next %}
+              <li class="gov-pagination__item gov-pagination__item--arrow">
+                <span class="gov-pagination__inner gov-button" hoverable="" size="{{ pagination_size|default('m') }}" variant="{{ pagination_variant|default('primary') }}" type="base">
+                  <a class="element" href="{{ pagination_items.next.href }}" title="{{ 'Go to next page'|t }}" {{ pagination_items.next.attributes|without('href', 'title') }}>
+                    <span class="gov-pagination__arrow gov-icon">
+                      <span class="gov-icon__holder">
+                        {{ source('@gov_cz/assets/gov-design-system/gov-icons/basic/chevron-right.svg') }}
+                      </span>
+                    </span>
+                    <span class="visually-hidden">{{ 'Next page'|t }}</span>
+                  </a>
+                </span>
+              </li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+    {% endif %}
   {% endif %}
 {% endif %}
