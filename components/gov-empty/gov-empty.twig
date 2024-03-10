@@ -1,0 +1,23 @@
+<div align="left" class="gov-empty">
+  <div class="gov-empty__icon">
+    <div class="gov-icon">
+      <span class="gov-icon__holder">
+        {{ source('@gov_cz/assets/gov-design-system/gov-icons/complex/confusion.svg') }}
+      </span>
+    </div>
+  </div>
+  <div class="gov-empty__content">
+    {% if empty_title %}
+      <h2>{{ empty_title }}</h2>
+    {% endif %}
+    {% if empty_content %}
+      {{ empty_content }}
+    {% endif %}
+    <div size="l" class="gov-spacer"></div>
+    {% if empty_action %}
+      <div variant="primary" size="m" type="solid" hoverable="" class="gov-button">
+        <button class="element" type="button" tabindex="0" aria-label="{{ empty_action_aria_label }}" aria-pressed="false" aria-disabled="false">{{ empty_action_label }}</button>
+      </div>
+    {% endif %}
+  </div>
+</div>

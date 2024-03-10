@@ -1,0 +1,33 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Empty
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
+      ../../assets/gov-design-system/gov-components/gov-button/button/gov-button.css: {}
+      ../../assets/gov-design-system/gov-components/gov-empty/gov-empty.css: {}
+props:
+  type: object
+  required:
+    - empty_content
+  properties:
+    empty_content:
+      type: string
+      title: Content
+      description: Main content for the Empty component
+    empty_title:
+      type: string
+      title: Title
+      description: The label for emtpy component
+    empty_action:
+      type: boolean
+      title: Empty action switch
+      description: Should there be a CTA button to do something?
+    empty_action_aria_label:
+      type: string
+      title: CTA Button aria label
+      description: Description for the CTA button
+    empty_action_label:
+      type: string
+      title: CTA Button label
+      description: Text on the button
