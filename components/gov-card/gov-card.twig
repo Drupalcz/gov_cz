@@ -1,0 +1,50 @@
+{# Card
+  ## Variables ##
+  # card_title – Required. Main title of the card.
+  # card_content – Optional. Content of the card.
+  # card_image – Optional. Image for the card.
+  # card_promotion – Optional. One or multiple links.
+  # card_footer – Optional. Short information in the card footer.
+#}
+{% set classes = [
+  'gov-card',
+] %}
+<div {{ attributes.addClass(classes) }} {{ card_promotion ? 'promotion=""' }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <div class="gov-card__inner">
+    {% if card_image %}
+      <p class="gov-card__img">
+        {{ card_image }}
+      </p>
+    {% endif %}
+    <div class="gov-card__header">
+      {% if card_url %}
+        <a href="{{ card_url }}">
+      {% endif %}
+        <h3 class="gov-card__title">{{ card_title }}</h3>
+      {% if card_url %}
+        </a>
+      {% endif %}
+    </div>
+    <div class="gov-card__main">
+      {% block card_main %}
+        {% if card_content %}
+          <div class="gov-card__content">
+            {{ card_content }}
+          </div>
+        {% endif %}
+      {% endblock %}
+      {% if card_promotion %}
+        <div class="gov-card__btns">
+          {{ card_promotion }}
+        </div>
+      {% endif %}
+    </div>
+    {% if card_footer %}
+      <div class="gov-card__footer">
+        {{ card_footer }}
+      </div>
+    {% endif %}
+  </div>
+</div>

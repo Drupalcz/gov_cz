@@ -1,0 +1,33 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Card
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-button/button/gov-button.css: {}
+      ../../assets/gov-design-system/gov-components/gov-card/gov-card.css: {}
+props:
+  type: object
+  required:
+    - card_content
+  properties:
+    card_footer:
+      type: string
+      title: Footer
+      description: Short content for the footer area.
+    card_promotion:
+      type: string
+      title: Promotion are
+      description: Promotion for the cards, expects one or more links.
+    card_image:
+      type: string
+      title: Image
+      description: Image for the card.
+    card_content:
+      type: string
+      title: Card Content
+      description: Main content for card.
+
+slots:
+  card_main:
+    title: Card main area
+    description: Slot for main content.
