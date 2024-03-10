@@ -1,0 +1,35 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Infobar
+libraryOverrides:
+  css:
+    component:
+      ../../assets/gov-design-system/gov-components/gov-infobar/gov-infobar.css: {}
+props:
+  type: object
+  required:
+    - infobar_variant
+    - infobar_content
+  properties:
+    infobar_content:
+      type: string
+      title: Infobar Content
+      description: The content for the infobar
+    infobar_variant:
+      type: string
+      title: Variant
+      description: Choose severity variant for the infobar.
+    infobar_icon:
+      type: string
+      title: Icon
+      description: Icon for the infobar.
+    infobar_closable:
+      title: Closable
+      description: Display the close button.
+    infobar_closable_label:
+      type: string
+      title: Screen reader close label
+      description: Label on the close button for screen readers.
+slots:
+  infobar_main:
+    title: Infobar main area
+    description: Slot for main content.
