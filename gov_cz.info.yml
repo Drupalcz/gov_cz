@@ -4,6 +4,9 @@ description: 'Implementing Design system gov.cz using Single Directory Component
 package: 'CZ Desing System'
 core_version_requirement: ^10.1
 
+'interface translation project': gov_cz
+'interface translation server pattern': modules/contrib/gov_cz/translations/%language.po
+
 libraries:
   - gov_cz/base
   - gov_cz/font-face

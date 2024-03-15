@@ -1,0 +1,7 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgctxt "Loading text for Drupal cores Ajax throbber (fullscreen)"
+msgid "Loading…"
+msgstr "Nahrávám…"
