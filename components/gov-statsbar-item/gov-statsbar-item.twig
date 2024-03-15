@@ -4,13 +4,13 @@
   # statsbar_item_value – The value for the item.
   # statsbar_item_description – Description for the item.
 #}
-<div class="gov-statsbar-item">
+<div class="gov-statsbar-item" {{ statsbar_item_icon_position ? 'icon-position="left"' }}>
   <article>
     {% if statsbar_item_icon %}
       <span class="gov-statsbar-item__icon">
         <div class="gov-icon" aria-hidden="true">
           <span class="gov-icon__holder">
-            {{ statsbar_item_icon }}
+            {{ source(statsbar_item_icon, ignore_missing = true) }}
           </span>
         </div>
       </span>

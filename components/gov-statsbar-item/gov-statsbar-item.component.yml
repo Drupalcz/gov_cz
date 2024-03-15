@@ -7,7 +7,7 @@ libraryOverrides:
 props:
   type: object
   required:
-    - statsbar_items
+    - statsbar_item_value
   properties:
     statsbar_item_icon :
       type: string
@@ -18,6 +18,6 @@ props:
       title: Value
       description: The prominent value for the item. Keep it short.
     statsbar_item_description:
-      type: array
+      type: string
       title: Description
       description: A short description of the Value.
