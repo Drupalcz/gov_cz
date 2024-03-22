@@ -4,6 +4,7 @@ libraryOverrides:
   css:
     component:
       ../../assets/gov-design-system/gov-components/gov-dropdown/gov-dropdown.css: {}
+      ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
 props:
   type: object
   required:

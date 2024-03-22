@@ -3,6 +3,7 @@ name: Loading
 libraryOverrides:
   css:
     component:
+      ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
       ../../assets/gov-design-system/gov-components/gov-backdrop/gov-backdrop.css: {}
       ../../assets/gov-design-system/gov-components/gov-loading/gov-loading.css: {}
 props:
