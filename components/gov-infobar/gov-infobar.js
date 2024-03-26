@@ -48,7 +48,7 @@
         }
 
         // If current time is smaller then the stored time we hide the infobar.
-        if (nowTimestamp < (dateString + (3600 * infobarCloseTime))) {
+        if (nowTimestamp < (dateString + (3600 * 1000 * infobarCloseTime))) {
           infobarHide();
         }
         // If not, we remove the local storage entry.
