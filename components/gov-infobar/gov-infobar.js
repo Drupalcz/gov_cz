@@ -25,7 +25,7 @@
         // Hide the infobar and set local storage.
         function infobarClose() {
           // Hide the infobar.
-          infobar.classList.add('visually-hidden');
+          infobar.hidden = true;
           // Prepare the current timestamp.
           var infobarLS = { timestamp: nowTimestamp }
           localStorage.setItem(infobarId, JSON.stringify(infobarLS));
@@ -33,7 +33,7 @@
 
         // Hide the infobar if it is set in localStorage.
         function infobarHide() {
-          infobar.classList.add('visually-hidden');
+          infobar.hidden = true;
         };
 
         // Remove the infobar from Local storage if it is too old.

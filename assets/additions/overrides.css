@@ -35,3 +35,8 @@
 .gov-form-input[hidden] {
   display: none;
 }
+
+/* We need to make sure, that hidden infobar remains hidden. */
+.gov-infobar[hidden] {
+  display: none;
+}
