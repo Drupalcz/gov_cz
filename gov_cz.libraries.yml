@@ -28,6 +28,11 @@ gov-grid-item:
     theme:
       assets/gov-design-system/gov-components/gov-grid/gov-grid-item.css: {}
 
+gov-icon:
+  css:
+    theme:
+      assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
+
 # Gov.cz form libraries for manually crafted forms
 gov-form-input:
   css:

@@ -3,6 +3,7 @@ name: Statsbar Item
 libraryOverrides:
   css:
     component:
+      ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
       ../../assets/gov-design-system/gov-components/gov-statsbar/gov-statsbar-item.css: {}
 props:
   type: object
