@@ -20,18 +20,22 @@ class ToggleSection {
   expand() {
     this._button.setAttribute('aria-expanded', 'true');
     this._content.setAttribute('data-toggle-section-expanded', 'true');
-    this._content.setAttribute('aria-hidden', 'false');
     if (this._settings.applyHiddenAttribute) {
       this._content.removeAttribute('hidden');
+    }
+    else {
+      this._content.setAttribute('aria-hidden', 'false');
     }
   }
 
   collapse(focus = false) {
     this._button.setAttribute('aria-expanded', 'false');
     this._content.setAttribute('data-toggle-section-expanded', 'false');
-    this._content.setAttribute('aria-hidden', 'true');
     if (this._settings.applyHiddenAttribute) {
       this._content.setAttribute('hidden', '');
+    }
+    else {
+      this._content.setAttribute('aria-hidden', 'true');
     }
     if (focus) {
       this._button.focus();
