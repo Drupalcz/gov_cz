@@ -11,6 +11,8 @@
       if (!infobars.length > 0) {
         return;
       }
+      const sourceCloseForeverString = 'forever';
+      const localStorageCloseForeverString = 'do not display';
 
       infobars.forEach((infobar) => {
         var infobarId = infobar.dataset.infobarId;
@@ -27,8 +29,13 @@
           // Hide the infobar.
           infobar.hidden = true;
           // Prepare the current timestamp.
-          var infobarLS = { timestamp: nowTimestamp }
-          localStorage.setItem(infobarId, JSON.stringify(infobarLS));
+          if (infobarCloseTime == sourceCloseForeverString) {
+            localStorage.setItem(infobarId, localStorageCloseForeverString);
+          }
+          else {
+            var infobarLS = { timestamp: nowTimestamp }
+            localStorage.setItem(infobarId, JSON.stringify(infobarLS));
+          }
         };
 
         // Hide the infobar if it is set in localStorage.
@@ -37,23 +44,28 @@
         };
 
         // Remove the infobar from Local storage if it is too old.
-        function infobarRemove() {
+        function infobarLSRemove() {
           localStorage.removeItem(infobarId);
         };
 
         // Read the stored value from local storage.
-        var readInfobarLS = JSON.parse(localStorage.getItem(infobarId));
-        if (readInfobarLS) {
-          var dateString = readInfobarLS.timestamp;
-        }
-
-        // If current time is smaller then the stored time we hide the infobar.
-        if (nowTimestamp < (dateString + (3600 * 1000 * infobarCloseTime))) {
+        var readInfobarLS = localStorage.getItem(infobarId);
+        // If the value is 'forever', we hide the infobar.
+        if (readInfobarLS && typeof readInfobarLS === 'string' && readInfobarLS == localStorageCloseForeverString) {
           infobarHide();
         }
-        // If not, we remove the local storage entry.
-        else {
-          infobarRemove();
+        // If there is other value we process it and act accordingly.
+        else if (readInfobarLS) {
+          var dateString = JSON.parse(readInfobarLS).timestamp;
+
+          // If current time is smaller then the stored time we hide the infobar.
+          if (nowTimestamp < (dateString + (3600 * 1000 * infobarCloseTime))) {
+            infobarHide();
+          }
+          // If not, we remove the local storage entry.
+          else {
+            infobarLSRemove();
+          }
         }
 
         // Add event listeners.
