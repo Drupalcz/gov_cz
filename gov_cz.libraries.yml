@@ -70,3 +70,11 @@ gov-accordion-item:
     - core/drupal
     - core/once
     - gov_cz/toggle-section
+
+gov-infobar:
+  header: true
+  js:
+    components/gov-infobar/gov-infobar-header.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
