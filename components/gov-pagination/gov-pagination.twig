@@ -126,7 +126,7 @@
             {% endif %}
             {% if items.current %}
               <li class="pager__item is-active">
-                {% trans %}
+                {% trans with {'context': 'CSGOV: Pager'}  %}
                 Page
                 {{ items.current }}
                 {% endtrans %}

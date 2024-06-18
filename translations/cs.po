@@ -5,3 +5,7 @@ msgstr ""
 msgctxt "Loading text for Drupal cores Ajax throbber (fullscreen)"
 msgid "Loading…"
 msgstr "Nahrávám…"
+
+msgctxt "CSGOV: Pager"
+msgid "Page @items.current"
+msgstr "Strana @items.current"
