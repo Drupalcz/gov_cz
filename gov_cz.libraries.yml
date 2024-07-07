@@ -33,6 +33,11 @@ gov-icon:
     theme:
       assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
 
+gov-stepper:
+  css:
+    theme:
+      assets/gov-design-system/gov-components/gov-stepper/gov-stepper-item.css: {}
+
 # Gov.cz form libraries for manually crafted forms
 gov-form-input:
   css:
