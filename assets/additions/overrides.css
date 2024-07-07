@@ -1,4 +1,8 @@
 /* This file cleans up some styling issues */
+/* The site should react to user font size changes. */
+html {
+  font-size: initial !important;
+}
 
 /* We need to remove the UL/LI styling from most of the admin toolbar. */
 .toolbar-menu li.menu-item,
