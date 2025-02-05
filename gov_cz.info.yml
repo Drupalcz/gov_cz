@@ -11,6 +11,3 @@ libraries:
   - gov_cz/base
   - gov_cz/font-face
   - gov_cz/overrides
-
-dependencies:
-  - drupal:sdc
