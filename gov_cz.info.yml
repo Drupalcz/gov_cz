@@ -11,6 +11,3 @@ regions:
 
 libraries:
   - gov_cz/base
-
-dependencies:
-  - drupal:sdc
