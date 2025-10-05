@@ -2,7 +2,7 @@ name: 'Design system gov.cz'
 type: module
 description: 'Implementing Design system gov.cz using Single Directory Components.'
 package: 'CZ Desing System'
-core_version_requirement: ^10.1
+core_version_requirement: ^11.2
 
 'interface translation project': gov_cz
 'interface translation server pattern': modules/contrib/gov_cz/translations/%language.po
