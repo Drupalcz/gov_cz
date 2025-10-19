@@ -1,6 +1,6 @@
 # Implementation of [Design system gov.cz](https://designsystem.gov.cz)
 
-This module brings the styles and components made in DesignSystem v 4 into Drupal 10.
+This module brings the styles and components made in DesignSystem v 4 into Drupal 11.
 
 ## For developers
 

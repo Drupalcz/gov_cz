@@ -1,22 +1,23 @@
 {
   "author": "Petr Illek",
   "name": "copy-czech-design-system",
-  "version": "4.0.4",
+  "version": "4.1.0",
   "scripts": {
     "copy": "npm run delete && npm run copy-components && npm run copy-styles && npm run strip-comments && npm run copy-fonts && npm run copy-icons",
     "delete": "del-cli assets/gov-design-system",
-    "copy-components": "copyfiles -u 6 'node_modules/@gov-design-system-ce/components/dist/collection/components/**/*.css' assets/gov-design-system/gov-components",
+    "copy-components": "copyfiles -u 5 node_modules/@gov-design-system-ce/styles/lib/components/*.css assets/gov-design-system/gov-components",
     "strip-comments": "node dev-scripts/strip-comments.js",
     "copy-styles": "copyfiles -u 4 node_modules/@gov-design-system-ce/styles/lib/*.css assets/gov-design-system/gov-styles",
     "copy-fonts": "copyfiles -u 4 node_modules/@gov-design-system-ce/fonts/lib/*.woff2 assets/gov-design-system/gov-fonts",
     "copy-icons": "copyfiles -u 4 node_modules/@gov-design-system-ce/icons/lib/**/*.svg assets/gov-design-system/gov-icons"
   },
   "dependencies": {
-    "@gov-design-system-ce/components": "4.0.4",
+    "@gov-design-system-ce/components": "4.2.9",
     "@gov-design-system-ce/fonts": "0.0.2",
     "@gov-design-system-ce/icons": "0.0.12",
+    "@gov-design-system-ce/styles": "4.2.7",
     "copyfiles": "^2.4.1",
-    "del-cli": "^5.1.0",
+    "del-cli": "^7.0.0",
     "strip-comments": "^2.0.1"
   }
 }
