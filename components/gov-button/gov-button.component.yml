@@ -7,38 +7,36 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
 props:
   type: object
-  required:
-    - button_content
   properties:
     button_content:
-      type: string
+      type: ['string', 'null']
       title: Button Content
       description: The content for the button
     button_variant:
-      type: string
+      type: ['string', 'null']
       title: Variant
       description: Choose colour variant for the button.
     button_size:
-      type: string
+      type: ['string', 'null']
       title: Button Size
       description: Render the button in different sizes.
     button_type:
-      type: string
+      type: ['string', 'null']
       title: Button Type
       description: Solid or outlined type.
     button_inverse:
-      type: boolean
+      type: ['string', 'null']
       title: Button Inverse
       description: Is the button on dark background.
     button_tag_aria_label:
-      type: string
+      type: ['string', 'null']
       title: Button Tag Aria Label
       description: Accessibility label for link or button.
     button_icon_left:
-      type: string
+      type: ['string', 'null']
       title: Button Icon Left
       description: Icon on the left side of the button.
     button_icon_right:
-      type: string
+      type: ['string', 'null']
       title: Button Icon Right
       description: Icon on the right side of the button.

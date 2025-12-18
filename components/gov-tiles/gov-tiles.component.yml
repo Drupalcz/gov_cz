@@ -6,18 +6,16 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-tile/container/gov-tiles.css: {}
 props:
   type: object
-  required:
-    - tiles_items
   properties:
     tiles_border:
-      type: boolean
+      type: ['string', 'null']
       title: Border
       description: Border for the items.
     tiles_column:
-      type: integer
+      type: ['integer', 'null']
       title: Number of columns
       description: How many columns of tiles?
     tiles_items:
-      type: array
+      type: ['array', 'null']
       title: Tiles Items
       description: The items for the tiles

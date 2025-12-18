@@ -7,26 +7,24 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-tag/gov-tag.css: {}
 props:
   type: object
-  required:
-    - tag_content
   properties:
     tag_content:
-      type: string
+      type: ['string', 'null']
       title: Tag Content
       description: The content for the tag
     tag_variant:
-      type: string
+      type: ['string', 'null']
       title: Variant
       description: Choose colour variant for the tag.
     tag_size:
-      type: string
+      type: ['string', 'null']
       title: Tag Size
       description: Render the tag in different sizes.
     tag_type:
-      type: string
+      type: ['string', 'null']
       title: Tag Type
       description: Solid or outlined type.
     tag_inverse:
-      type: boolean
+      type: ['string', 'null']
       title: Tag Inverse
       description: Is the tag on dark background.

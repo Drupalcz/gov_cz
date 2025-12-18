@@ -7,27 +7,25 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
 props:
   type: object
-  required:
-    - infobar_variant
-    - infobar_content
   properties:
     infobar_content:
-      type: string
+      type: ['string', 'null']
       title: Infobar Content
       description: The content for the infobar
     infobar_variant:
-      type: string
+      type: ['string', 'null']
       title: Variant
       description: Choose severity variant for the infobar.
     infobar_icon:
-      type: string
+      type: ['string', 'null']
       title: Icon
       description: Icon for the infobar.
     infobar_closable:
+      type: ['string', 'null']
       title: Closable
       description: Display the close button.
     infobar_closable_label:
-      type: string
+      type: ['string', 'null']
       title: Screen reader close label
       description: Label on the close button for screen readers.
 slots:

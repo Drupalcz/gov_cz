@@ -6,15 +6,12 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-accordion/gov-accordion.css: {}
 props:
   type: object
-  required:
-    - accordion_accessibility_label
-    - accordion_items
   properties:
     accordion_accessibility_label:
-      type: string
+      type: ['string', 'null']
       title: Accessibility Label
       description: The accessible label for the accordion
     accordion_items:
-      type: array
+      type: ['array', 'null']
       title: Accordion Items
       description: The items for the accordion

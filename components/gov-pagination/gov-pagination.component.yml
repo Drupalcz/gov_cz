@@ -8,26 +8,24 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-pagination/gov-pagination.css: {}
 props:
   type: object
-  required:
-    - pagination_items
   properties:
     pagination_display:
-      type: string
+      type: ['string', 'null']
       title: Pagination display
       description: How the pagination is rendered.
     pagination_items:
-      type: array
+      type: ['array', 'null']
       title: Pager Items
       description: Individual items for the pager.
     pagination_variant:
-      type: string
+      type: ['string', 'null']
       title: Variant
       description: Choose colour variant for the pagination.
     pagination_size:
-      type: string
+      type: ['string', 'null']
       title: Size
       description: Pagination items sizes.
     pagination_aria_label:
-      type: string
+      type: ['string', 'null']
       title: Pagination Aria Label
       description: Accessibility label for pagination.

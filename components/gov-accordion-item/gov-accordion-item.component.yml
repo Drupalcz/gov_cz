@@ -7,55 +7,48 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-accordion/gov-accordion-item.css: {}
 props:
   type: object
-  required:
-    - accordion_size
-    - accordion_variant
-    - accordion_item_label_id
-    - accordion_item_content_id
-    - accordion_item_label
-    - accordion_item_content
   properties:
     accordion_size:
-      type: string
+      type: ['string', 'null']
       title: Size
       description: The label size for the accordion item
     accordion_variant:
-      type: string
+      type: ['string', 'null']
       title: Variant
       description: The label variant for the accordion item
     accordion_trigger_tag:
-      type: string
+      type: ['string', 'null']
       title: Item Tag
       description: The tag used for the items label
     accordion_item_disabled:
-      type: boolean
+      type: ['string', 'null']
       title: Disabled
       description: Makes the button component disabled.
     accordion_item_expanded:
-      type: boolean
+      type: ['string', 'null']
       title: Expanded
       description: Makes the item expanded by default.
     accordion_item_label_id:
-      type: string
+      type: ['string', 'null']
       title: Item ID
       description: The unique ID for the accordion item label
     accordion_item_content_id:
-      type: string
+      type: ['string', 'null']
       title: Content ID
       description: The unique ID for the accordion item content
     accordion_item_icon:
-      type: string
+      type: ['string', 'null']
       title: Item Icon name
       description: Optional Icon before the accordion item label
     accordion_item_label:
-      type: string
+      type: ['string', 'null']
       title: Item Label
       description: Accordion item label
     accordion_item_annotation:
-      type: string
+      type: ['string', 'null']
       title: Item Annotation
       description: Accordion item annotation
     accordion_item_content:
-      type: string
+      type: ['string', 'null']
       title: Item Content
       description: Accordion item content

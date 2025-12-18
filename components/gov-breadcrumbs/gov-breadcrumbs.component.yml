@@ -7,15 +7,12 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
 props:
   type: object
-  required:
-    - breadcrumbs_accessibility_label
-    - breadcrumbs_items
   properties:
     breadcrumbs_accessibility_label:
-      type: string
+      type: ['string', 'null']
       title: Accessibility Label
       description: The accessible label for the accordion
     breadcrumbs_items:
-      type: array
+      type: ['array', 'null']
       title: breadcrumbs Items
       description: The items for the breadcrumbs

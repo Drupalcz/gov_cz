@@ -7,15 +7,13 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-card/gov-card.css: {}
 props:
   type: object
-  required:
-    - card_content
   properties:
     card_footer:
-      type: string
+      type: ['string', 'null']
       title: Footer
       description: Short content for the footer area.
     card_promotion:
-      type: string
+      type: ['string', 'null']
       title: Promotion are
       description: Promotion for the cards, expects one or more links.
     card_image:
@@ -23,7 +21,7 @@ props:
       title: Image
       description: Image for the card.
     card_content:
-      type: string
+      type: ['string', 'null']
       title: Card Content
       description: Main content for card.
 

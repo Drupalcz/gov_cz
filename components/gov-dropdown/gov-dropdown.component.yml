@@ -7,39 +7,36 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
 props:
   type: object
-  required:
-    - dropdown_label
-    - dropdown_items
   properties:
     dropdown_size:
-      type: string
+      type: ['string', 'null']
       title: Size
       description: The label size for the dropdown item
     dropdown_variant:
-      type: string
+      type: ['string', 'null']
       title: Variant
       description: The label variant for the dropdown item
     dropdown_disabled:
-      type: boolean
+      type: ['string', 'null']
       title: Disabled
       description: Makes the button component disabled.
     dropdown_label_id:
-      type: string
+      type: ['string', 'null']
       title: Dropdown ID
       description: The unique ID for the dropdown label
     dropdown_items_id:
-      type: string
+      type: ['string', 'null']
       title: Items ID
       description: The unique ID for the dropdown items list.
     dropdown_label:
-      type: string
+      type: ['string', 'null']
       title: Main Label
       description: Dropdown label
     dropdown_aria_label:
-      type: string
+      type: ['string', 'null']
       title: Aria Label
       description: Accessibility label for the dropdown button
     dropdown_items:
-      type: array
+      type: ['array', 'null']
       title: Items
       description: List of items

@@ -6,6 +6,6 @@
   # tag_inverse – Is the tag on dark background.
   # tag_content – Tag string.
 #}
-<div variant="{{ tag_variant|default('primary') }}" size="{{ tag_size|default('m') }}" class="gov-tag" type="{{ tag_type|'solid' }}" {{ tag_inverse ? 'inverse=""' }}>
+<div variant="{{ tag_variant|default('primary') }}" size="{{ tag_size|default('m') }}" class="gov-tag" type="{{ tag_type|default('solid') }}" {{ tag_inverse ? 'inverse=""' }}>
   <span class="element">{{ tag_content }}</span>
 </div>

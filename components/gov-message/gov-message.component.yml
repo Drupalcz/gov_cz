@@ -7,23 +7,20 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-message/gov-message.css: {}
 props:
   type: object
-  required:
-    - message_content
-    - message_variant
   properties:
     message_content:
-      type: string
+      type: ['string', 'null']
       title: Content
       description: The content of the message
     message_variant:
-      type: string
+      type: ['string', 'null']
       title: Variant
       description: What colour should the message be in.
     message_icon:
-      type: string
+      type: ['string', 'null']
       title: Icon
       description: Optional image icon for the message.
     message_inverse:
-      type: boolean
+      type: ['string', 'null']
       title: Inverse
       description: Whether the message should have colour background.

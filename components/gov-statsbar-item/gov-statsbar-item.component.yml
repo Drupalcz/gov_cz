@@ -7,18 +7,16 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-statsbar/gov-statsbar-item.css: {}
 props:
   type: object
-  required:
-    - statsbar_item_value
   properties:
-    statsbar_item_icon :
-      type: string
+    statsbar_item_icon:
+      type: ['string', 'null']
       title: Icon
       description: SVG icon for the item. Optional.
     statsbar_item_value:
-      type: string
+      type: ['string', 'null']
       title: Value
       description: The prominent value for the item. Keep it short.
     statsbar_item_description:
-      type: string
+      type: ['string', 'null']
       title: Description
       description: A short description of the Value.

@@ -7,18 +7,16 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-tile/gov-tile.css: {}
 props:
   type: object
-  required:
-    - tile_title
   properties:
     tile_title:
-      type: string
+      type: ['string', 'null']
       title: Title
       description: Title of the item.
     tile_link:
-      type: string
+      type: ['string', 'null']
       title: Link
       description: Where should the tile point to?
     tile_icon:
-      type: string
+      type: ['string', 'null']
       title: Tile Icon
       description: The icon for the tile.
