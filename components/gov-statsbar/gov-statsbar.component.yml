@@ -12,6 +12,6 @@ props:
       title: Variant
       description: The colour for the statsbar
     statsbar_items:
-      type: ['array', 'null']
+      type: ['array', 'string', 'null']
       title: Statsbar Items
       description: The items for the statsbar

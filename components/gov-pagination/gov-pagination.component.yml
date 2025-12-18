@@ -14,7 +14,7 @@ props:
       title: Pagination display
       description: How the pagination is rendered.
     pagination_items:
-      type: ['array', 'null']
+      type: ['array', 'string', 'null']
       title: Pager Items
       description: Individual items for the pager.
     pagination_variant:

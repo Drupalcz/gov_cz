@@ -37,6 +37,6 @@ props:
       title: Aria Label
       description: Accessibility label for the dropdown button
     dropdown_items:
-      type: ['array', 'null']
+      type: ['array', 'string', 'null']
       title: Items
       description: List of items

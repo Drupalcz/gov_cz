@@ -16,6 +16,6 @@ props:
       title: Number of columns
       description: How many columns of tiles?
     tiles_items:
-      type: ['array', 'null']
+      type: ['array', 'string', 'null']
       title: Tiles Items
       description: The items for the tiles

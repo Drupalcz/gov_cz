@@ -12,6 +12,6 @@ props:
       title: Accessibility Label
       description: The accessible label for the accordion
     accordion_items:
-      type: ['array', 'null']
+      type: ['array', 'string', 'null']
       title: Accordion Items
       description: The items for the accordion

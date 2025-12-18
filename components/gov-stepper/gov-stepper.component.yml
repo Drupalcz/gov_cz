@@ -12,6 +12,6 @@ props:
       title: Size
       description: Size of the items.
     stepper_items:
-      type: ['array', 'null']
+      type: ['array', 'string', 'null']
       title: Stepper Items
       description: The items for the stepper.

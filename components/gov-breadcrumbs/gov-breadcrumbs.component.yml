@@ -13,6 +13,6 @@ props:
       title: Accessibility Label
       description: The accessible label for the accordion
     breadcrumbs_items:
-      type: ['array', 'null']
+      type: ['array', 'string', 'null']
       title: breadcrumbs Items
       description: The items for the breadcrumbs
