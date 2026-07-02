@@ -8,14 +8,14 @@ props:
   type: object
   properties:
     tiles_border:
-      type: ['string', 'null']
+      type: ['boolean', 'string', 'null']
       title: Border
       description: Border for the items.
     tiles_column:
-      type: ['integer', 'null']
+      type: ['integer', 'string', 'null']
       title: Number of columns
       description: How many columns of tiles?
     tiles_items:
-      type: ['array', 'string', 'null']
+      type: ['array', 'object', 'string', 'null']
       title: Tiles Items
       description: The items for the tiles

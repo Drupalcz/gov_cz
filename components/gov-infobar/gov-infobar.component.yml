@@ -21,7 +21,7 @@ props:
       title: Icon
       description: Icon for the infobar.
     infobar_closable:
-      type: ['string', 'null']
+      type: ['boolean', 'string', 'null']
       title: Closable
       description: Display the close button.
     infobar_closable_label:
