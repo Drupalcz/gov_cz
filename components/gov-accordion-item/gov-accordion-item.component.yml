@@ -3,8 +3,8 @@ name: Accordion Item
 libraryOverrides:
   css:
     component:
-      ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
-      ../../assets/gov-design-system/gov-components/gov-accordion/gov-accordion-item.css: {}
+      ../../assets/gov-design-system/gov-components/gov-icon.css: {}
+      ../../assets/gov-design-system/gov-components/gov-accordion-item.css: {}
 props:
   type: object
   properties:

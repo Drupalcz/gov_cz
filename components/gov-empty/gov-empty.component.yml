@@ -3,9 +3,9 @@ name: Empty
 libraryOverrides:
   css:
     component:
-      ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
-      ../../assets/gov-design-system/gov-components/gov-button/button/gov-button.css: {}
-      ../../assets/gov-design-system/gov-components/gov-empty/gov-empty.css: {}
+      ../../assets/gov-design-system/gov-components/gov-icon.css: {}
+      ../../assets/gov-design-system/gov-components/gov-button.css: {}
+      ../../assets/gov-design-system/gov-components/gov-empty.css: {}
 props:
   type: object
   properties:

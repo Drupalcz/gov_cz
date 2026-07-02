@@ -3,7 +3,7 @@ name: Form input
 libraryOverrides:
   css:
     component:
-      ../../../assets/gov-design-system/gov-components/gov-form/input/gov-form-input.css: {}
+      ../../../assets/gov-design-system/gov-components/gov-form-input.css: {}
 props:
   type: object
   properties:

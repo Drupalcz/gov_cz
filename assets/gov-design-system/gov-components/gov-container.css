@@ -1,0 +1,1 @@
+gov-container,.gov-container{container-type:inline-size;display:block;width:100%;max-width:var(--container-width, 75rem);margin-right:auto;margin-left:auto;padding:var(--container-padding-top, var(--spacing-l)) var(--container-padding-horizontal, var(--spacing-l)) var(--container-padding-bottom, var(--spacing-8xl))}

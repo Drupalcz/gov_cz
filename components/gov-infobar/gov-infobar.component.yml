@@ -3,8 +3,8 @@ name: Infobar
 libraryOverrides:
   css:
     component:
-      ../../assets/gov-design-system/gov-components/gov-infobar/gov-infobar.css: {}
-      ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
+      ../../assets/gov-design-system/gov-components/gov-infobar.css: {}
+      ../../assets/gov-design-system/gov-components/gov-icon.css: {}
 props:
   type: object
   properties:

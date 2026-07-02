@@ -4,8 +4,8 @@ libraryOverrides:
   css:
     component:
       ../../assets/variables/pagination.css: {}
-      ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
-      ../../assets/gov-design-system/gov-components/gov-pagination/gov-pagination.css: {}
+      ../../assets/gov-design-system/gov-components/gov-icon.css: {}
+      ../../assets/gov-design-system/gov-components/gov-pagination.css: {}
 props:
   type: object
   properties:

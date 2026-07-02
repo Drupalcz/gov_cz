@@ -3,8 +3,8 @@ name: Message
 libraryOverrides:
   css:
     component:
-      ../../assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
-      ../../assets/gov-design-system/gov-components/gov-message/gov-message.css: {}
+      ../../assets/gov-design-system/gov-components/gov-icon.css: {}
+      ../../assets/gov-design-system/gov-components/gov-message.css: {}
 props:
   type: object
   properties:

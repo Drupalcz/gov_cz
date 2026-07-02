@@ -3,7 +3,7 @@ name: Stepper
 libraryOverrides:
   css:
     component:
-      ../../assets/gov-design-system/gov-components/gov-stepper/gov-stepper.css: {}
+      ../../assets/gov-design-system/gov-components/gov-stepper.css: {}
 props:
   type: object
   properties:

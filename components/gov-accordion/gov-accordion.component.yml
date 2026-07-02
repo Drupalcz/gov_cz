@@ -3,7 +3,7 @@ name: Accordion
 libraryOverrides:
   css:
     component:
-      ../../assets/gov-design-system/gov-components/gov-accordion/gov-accordion.css: {}
+      ../../assets/gov-design-system/gov-components/gov-accordion.css: {}
 props:
   type: object
   properties:

@@ -2,16 +2,30 @@ base:
   version: VERSION
   css:
     theme:
+      # tokens.css must load first - all DS 4.6+ CSS depends on its custom properties.
+      assets/gov-design-system/gov-styles/tokens.css: {}
+      assets/gov-design-system/gov-styles/animations.css: {}
       assets/gov-design-system/gov-styles/content.css: {}
       assets/gov-design-system/gov-styles/layout.css: {}
       assets/gov-design-system/gov-styles/print.css: {}
       assets/gov-design-system/gov-styles/styles.css: {}
+  dependencies:
+    - gov_cz/legacy-tokens
+
+# Old --gov-* design tokens (DS <= 4.0.x). DS 4.6+ renamed all tokens; keeping
+# the old definitions available preserves legacy components and site overrides.
+legacy-tokens:
+  css:
+    theme:
+      assets/variables/_colors.css: {}
+      assets/variables/_text.css: {}
+      assets/variables/_misc.css: {}
 
 throbber:
   css:
     component:
-      assets/gov-design-system/gov-components/gov-loading/loading/gov-loading.css: {}
-      assets/gov-design-system/gov-components/gov-backdrop/gov-backdrop.css: {}
+      assets/gov-design-system/gov-components/gov-loading.css: {}
+      assets/gov-design-system/gov-components/gov-backdrop.css: {}
   js:
     components/gov-loading/loading.js: {}
   dependencies:
@@ -21,33 +35,33 @@ throbber:
 gov-grid:
   css:
     theme:
-      assets/gov-design-system/gov-components/gov-grid/gov-grid.css: {}
+      assets/gov-design-system/gov-components/gov-grid.css: {}
 
 gov-grid-item:
   css:
     theme:
-      assets/gov-design-system/gov-components/gov-grid/gov-grid-item.css: {}
+      assets/gov-design-system/gov-components/gov-grid-item.css: {}
 
 gov-icon:
   css:
     theme:
-      assets/gov-design-system/gov-components/gov-icon/gov-icon.css: {}
+      assets/gov-design-system/gov-components/gov-icon.css: {}
 
 gov-stepper:
   css:
     theme:
-      assets/gov-design-system/gov-components/gov-stepper/gov-stepper-item.css: {}
+      assets/gov-design-system/gov-components/gov-stepper-item.css: {}
 
 # Gov.cz form libraries for manually crafted forms
 gov-form-input:
   css:
     theme:
-      assets/gov-design-system/gov-components/gov-form/input/gov-form-input.css: {}
+      assets/gov-design-system/gov-components/gov-form-input.css: {}
 
 gov-button:
   css:
     theme:
-      assets/gov-design-system/gov-components/gov-button/button/gov-button.css: {}
+      assets/gov-design-system/gov-components/gov-button.css: {}
 
 # Custom styles
 overrides:

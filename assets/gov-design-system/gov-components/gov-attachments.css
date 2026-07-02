@@ -1,0 +1,1 @@
+gov-attachments,.gov-attachments{position:relative;display:flex;width:100%;flex-direction:column;gap:var(--spacing-xs)}gov-attachments__label,.gov-attachments__label{color:var(--form-label-color, var(--text-primary));font-size:var(--font-size-body-s);line-height:150%;font-weight:400}gov-attachments__list>*:last-child,.gov-attachments__list>*:last-child{margin-bottom:0}

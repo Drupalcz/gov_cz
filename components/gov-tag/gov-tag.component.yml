@@ -4,7 +4,7 @@ libraryOverrides:
   css:
     component:
       ../../assets/variables/tag.css: {}
-      ../../assets/gov-design-system/gov-components/gov-tag/gov-tag.css: {}
+      ../../assets/gov-design-system/gov-components/gov-tag.css: {}
 props:
   type: object
   properties:

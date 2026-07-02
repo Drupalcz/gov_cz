@@ -4,7 +4,7 @@ libraryOverrides:
   css:
     component:
       ../../assets/variables/chip.css: {}
-      ../../assets/gov-design-system/gov-components/gov-chip/gov-chip.css: {}
+      ../../assets/gov-design-system/gov-components/gov-chip.css: {}
 props:
   type: object
   properties:

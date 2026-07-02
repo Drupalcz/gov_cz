@@ -3,7 +3,8 @@ name: Tiles
 libraryOverrides:
   css:
     component:
-      ../../assets/gov-design-system/gov-components/gov-tile/container/gov-tiles.css: {}
+      ../../assets/variables/_colors.css: {}
+      ../../assets/legacy/gov-components/gov-tiles.css: {}
 props:
   type: object
   properties:

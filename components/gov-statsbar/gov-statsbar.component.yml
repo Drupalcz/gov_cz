@@ -3,7 +3,10 @@ name: Statsbar
 libraryOverrides:
   css:
     component:
-      ../../assets/gov-design-system/gov-components/gov-statsbar/gov-statsbar.css: {}
+      ../../assets/variables/_colors.css: {}
+      ../../assets/variables/container.css: {}
+      ../../assets/variables/statsbar.css: {}
+      ../../assets/legacy/gov-components/gov-statsbar.css: {}
 props:
   type: object
   properties:

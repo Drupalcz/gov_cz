@@ -3,8 +3,8 @@ name: Card
 libraryOverrides:
   css:
     component:
-      ../../assets/gov-design-system/gov-components/gov-button/button/gov-button.css: {}
-      ../../assets/gov-design-system/gov-components/gov-card/gov-card.css: {}
+      ../../assets/gov-design-system/gov-components/gov-button.css: {}
+      ../../assets/gov-design-system/gov-components/gov-card.css: {}
 props:
   type: object
   properties:
