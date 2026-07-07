@@ -44,3 +44,18 @@ html {
 .gov-infobar[hidden] {
   display: none;
 }
+
+/* DS 4.6 paints a text-field frame on .gov-form-input and its .element.
+   Radios and checkboxes have their own DS components and must not get the
+   frame. The doubled [input-type] keeps the specificity above the DS size
+   rules. */
+.gov-form-input[input-type="radio"][input-type],
+.gov-form-input[input-type="checkbox"][input-type],
+.gov-form-input[input-type="radio"][input-type] > .element,
+.gov-form-input[input-type="checkbox"][input-type] > .element {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  min-height: 0;
+  padding: 0;
+}

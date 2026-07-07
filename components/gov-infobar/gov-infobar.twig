@@ -6,10 +6,12 @@
   # infobar_content – List of Accordion items.
 #}
 {{ attach_library('gov_cz/gov-infobar') }}
-<div variant="{{ infobar_variant }}" color="{{ infobar_variant == 'secondary' ? 'neutral' : infobar_variant }}" class="gov-infobar" data-infobar-id="{{ infobar_id }}">
+{# DS 4.6 applies colors only on the color+type attribute pair; bold matches
+   the solid DS 4.0 look. #}
+<div variant="{{ infobar_variant }}" color="{{ infobar_variant == 'secondary' ? 'neutral' : infobar_variant }}" {{ infobar_variant ? 'type="bold"' }} class="gov-infobar" data-infobar-id="{{ infobar_id }}">
   <section class="gov-infobar__section" {{ infobar_variant == "error" ? 'role="alert"' }}>
     {% if infobar_icon %}
-      <div class="gov-infobar__icon">
+      <div class="gov-infobar__icon" slot="icon">
         <div class="gov-icon" aria-hidden="true">
           <span class="gov-icon__holder">
             {{ source(infobar_icon, ignore_missing = true) }}
