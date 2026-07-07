@@ -8,3 +8,4 @@ libraryOverrides:
       ../../assets/gov-design-system/gov-components/gov-loading.css: {}
 props:
   type: object
+  properties: {}
