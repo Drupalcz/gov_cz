@@ -47,10 +47,14 @@ gov-icon:
     theme:
       assets/gov-design-system/gov-components/gov-icon.css: {}
 
+# Deprecated DS 4.0 stepper look (markup contract changed in DS 4.6; the
+# legacy CSS is dark mode capable via remapped semantic tokens).
 gov-stepper:
   css:
     theme:
-      assets/gov-design-system/gov-components/gov-stepper-item.css: {}
+      assets/variables/stepper.css: {}
+      assets/legacy/gov-components/gov-stepper.css: {}
+      assets/legacy/gov-components/gov-stepper-item.css: {}
 
 theme-switch:
   css:
@@ -93,7 +97,6 @@ gov-accordion-item:
   dependencies:
     - core/drupal
     - core/once
-    - gov_cz/toggle-section
 
 gov-infobar:
   header: true

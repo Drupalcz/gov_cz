@@ -1,10 +1,12 @@
+/* Defaults remapped to DS 4.6 semantic tokens (dark mode capable) so the
+   component matches theme wrappers reading the same tokens. */
 :root,
 :host {
 
-  --gov-statsbar-primary-bg-color: var(--gov-color-primary-200);
-  --gov-statsbar-primary-text-color: var(--gov-color-primary);
-  --gov-statsbar-primary-text-color-inverse: var(--gov-color-primary);
-  --gov-statsbar-secondary-bg-color: var(--gov-color-secondary);
-  --gov-statsbar-secondary-text-color: var(--gov-color-neutral-white);
-  --gov-statsbar-secondary-text-color-inverse: var(--gov-color-secondary);
+  --gov-statsbar-primary-bg-color: var(--background-primary-subtle);
+  --gov-statsbar-primary-text-color: var(--text-primary-color);
+  --gov-statsbar-primary-text-color-inverse: var(--text-primary-color);
+  --gov-statsbar-secondary-bg-color: var(--color-neutral-900);
+  --gov-statsbar-secondary-text-color: var(--text-white-fixed);
+  --gov-statsbar-secondary-text-color-inverse: var(--text-secondary);
 }

@@ -4,7 +4,9 @@ libraryOverrides:
   css:
     component:
       ../../assets/gov-design-system/gov-components/gov-icon.css: {}
-      ../../assets/gov-design-system/gov-components/gov-stepper-item.css: {}
+      ../../assets/variables/_text.css: {}
+      ../../assets/variables/stepper.css: {}
+      ../../assets/legacy/gov-components/gov-stepper-item.css: {}
 props:
   type: object
   properties:
