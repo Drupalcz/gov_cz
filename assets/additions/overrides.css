@@ -27,6 +27,20 @@ html {
   fill: currentColor;
 }
 
+/* DS 4.6 dropped the .gov-icon__holder rules, but the wrapper is the
+   established gov_cz markup pattern (~30 templates in gov_cz and
+   csgov_theme). Without the sizing the svg no longer fills the icon box
+   and icons shift wherever the DS positions them precisely. */
+.gov-icon__holder {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+}
+
+.gov-icon__holder + .gov-icon__holder {
+  display: none !important;
+}
+
 /* Adds bottom margin to block elements not in gov.cz style. */
 .gov-content ul,
 .gov-content ol,
