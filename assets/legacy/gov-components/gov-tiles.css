@@ -37,7 +37,7 @@
 }
 .gov-tiles > * {
   margin: 0 -0.0625rem -0.0625rem 0;
-  border: 0.0625rem solid var(--gov-tiles-border-color, var(--gov-color-secondary-500));
+  border: 0.0625rem solid var(--gov-tiles-border-color, var(--border-subtlest));
   border-width: 0 0 0.0625rem;
 }
 .gov-tiles > *:last-child {

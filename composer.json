@@ -1,0 +1,14 @@
+{
+    "name": "drupal/gov_cz",
+    "description": "Implementing Design system gov.cz using Single Directory Components.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/gov_cz",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/gov_cz",
+        "source": "https://git.drupalcode.org/project/gov_cz"
+    },
+    "require": {
+        "drupal/core": "^11.2"
+    }
+}

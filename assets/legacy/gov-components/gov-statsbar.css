@@ -54,20 +54,20 @@
   }
 }
 .gov-statsbar[variant=primary] {
-  background-color: var(--gov-statsbar-primary-bg-color, var(--gov-color-primary-200));
-  color: var(--gov-statsbar-primary-text-color, var(--gov-color-primary));
+  background-color: var(--gov-statsbar-primary-bg-color, var(--background-primary-subtle));
+  color: var(--gov-statsbar-primary-text-color, var(--text-primary-color));
 }
 .gov-statsbar[variant=primary][inverse=""], .gov-statsbar[variant=primary][inverse=true i], .gov-statsbar[variant=primary][inverse="1"] {
-  background: var(--gov-color-neutral-white);
-  color: var(--gov-statsbar-primary-text-color-inverse, var(--gov-color-primary));
+  background: var(--background-block-primary);
+  color: var(--gov-statsbar-primary-text-color-inverse, var(--text-primary-color));
 }
 .gov-statsbar[variant=secondary] {
-  background-color: var(--gov-statsbar-secondary-bg-color, var(--gov-color-secondary));
-  color: var(--gov-statsbar-secondary-text-color, var(--gov-color-neutral-white));
+  background-color: var(--gov-statsbar-secondary-bg-color, var(--color-neutral-900));
+  color: var(--gov-statsbar-secondary-text-color, var(--text-white-fixed));
 }
 .gov-statsbar[variant=secondary][inverse=""], .gov-statsbar[variant=secondary][inverse=true i], .gov-statsbar[variant=secondary][inverse="1"] {
-  background: var(--gov-color-neutral-white);
-  color: var(--gov-statsbar-secondary-text-color-inverse, var(--gov-color-secondary));
+  background: var(--background-block-primary);
+  color: var(--gov-statsbar-secondary-text-color-inverse, var(--text-secondary));
 }
 @media (min-width: 30em) {
   .gov-statsbar__section {

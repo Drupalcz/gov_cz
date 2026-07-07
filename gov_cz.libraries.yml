@@ -52,6 +52,11 @@ gov-stepper:
     theme:
       assets/gov-design-system/gov-components/gov-stepper-item.css: {}
 
+theme-switch:
+  css:
+    theme:
+      assets/gov-design-system/gov-components/gov-theme-switch.css: {}
+
 # Gov.cz form libraries for manually crafted forms
 gov-form-input:
   css:
