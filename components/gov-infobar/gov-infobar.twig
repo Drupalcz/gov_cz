@@ -6,7 +6,7 @@
   # infobar_content – List of Accordion items.
 #}
 {{ attach_library('gov_cz/gov-infobar') }}
-<div variant="{{ infobar_variant }}" class="gov-infobar" data-infobar-id="{{ infobar_id }}">
+<div variant="{{ infobar_variant }}" color="{{ infobar_variant == 'secondary' ? 'neutral' : infobar_variant }}" class="gov-infobar" data-infobar-id="{{ infobar_id }}">
   <section class="gov-infobar__section" {{ infobar_variant == "error" ? 'role="alert"' }}>
     {% if infobar_icon %}
       <div class="gov-infobar__icon">
@@ -30,7 +30,7 @@
       {% set inverse = TRUE %}
     {% endif %}
     <div class="gov-infobar__close" data-infobar-close-for="{{ infobar_closed_for }}">
-      <div hoverable="" size="s" variant="{{ infobar_variant }}" class="gov-button" type="base" {{ inverse ? 'inverse' }}>
+      <div hoverable="" size="s" variant="{{ infobar_variant }}" color="{{ infobar_variant == 'secondary' ? 'neutral' : infobar_variant }}" class="gov-button" type="base" {{ inverse ? 'inverse' }}>
         <button class="element" type="button" tabindex="0" title="{{ 'Close'|t ~ ' ' ~ infobar_closed_for_days|lower }}">
           <span class="gov-icon" aria-hidden="true">
             <span class="gov-icon__holder">

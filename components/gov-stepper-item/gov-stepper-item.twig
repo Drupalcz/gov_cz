@@ -9,7 +9,8 @@
   # stepper_item_annotation – Subtitle of the Stepper item.
   # stepper_item_content – Content of the Stepper item.
 #}
-<div class="gov-stepper-item gov-stepper-item--w-annot" variant="{{ stepper_item_variant|default('primary') }}" size="{{ stepper_item_size|default('m') }}">
+{% set stepper_item_variant = stepper_item_variant|default('primary') %}
+<div class="gov-stepper-item gov-stepper-item--w-annot" variant="{{ stepper_item_variant }}" color="{{ stepper_item_variant == 'secondary' ? 'neutral' : stepper_item_variant }}" size="{{ stepper_item_size|default('m') }}">
   <div id="{{ stepper_item_id }}" class="gov-stepper-item__header" role="listitem">
     <h3 class="gov-stepper-item__title">
       <span class="gov-stepper-item__prefix">

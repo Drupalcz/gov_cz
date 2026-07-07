@@ -9,7 +9,8 @@
   # chip_content – Chip string.
 #}
 
-<div variant="{{ chip_variant|default('primary') }}" size="{{ chip_size|default('m') }}" class="gov-chip" {{ chip_tag != 'span' ? 'hoverable=""' }} type="{{ chip_type|default('solid') }}" {{ chip_inverse ? 'inverse=""' }}>
+{% set chip_variant = chip_variant|default('primary') %}
+<div variant="{{ chip_variant }}" color="{{ chip_variant == 'secondary' ? 'neutral' : chip_variant }}" size="{{ chip_size|default('m') }}" class="gov-chip" {{ chip_tag != 'span' ? 'hoverable=""' }} type="{{ chip_type|default('solid') }}" {{ chip_inverse ? 'inverse=""' }}>
   {% if chip_url %}
     <a href="{{ chip_url }}" class="element" {{ chip_tag_aria_label ? 'aria-label="' ~ chip_tag_aria_label ~ '"'}}>
       {{ chip_content }}
