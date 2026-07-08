@@ -41,6 +41,14 @@ html {
   display: none !important;
 }
 
+/* DS ships a pre-hydration skeleton padding on the card root; gov_cz
+   renders static markup that never hydrates, so it would stack with the
+   real per-section paddings (header already has --spacing-l) and inset
+   the full-bleed image. The doubled class outweighs the DS rule. */
+.gov-card.gov-card:not([hydrated]) {
+  padding: 0;
+}
+
 /* Adds bottom margin to block elements not in gov.cz style. */
 .gov-content ul,
 .gov-content ol,
