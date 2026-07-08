@@ -1,43 +1,51 @@
 {# Tile
   ## Variables ##
   # tile_link – The link for the tile.
+  # tile_link_external – Renders the external link icon next to the title.
   # tile_icon – Icon for the item.
   # tile_title – Title of the tile.
-  # tile_content – Title of the tile.
+  # tile_content – Annotation text of the tile.
+
+  ## Notes ##
+  # DS 4.6 markup contract: the main icon is a direct [slot=icon] child,
+  # .gov-tile__icon belongs to the chevron in the title row and the link
+  # wraps only the title.
 #}
-<div class="gov-tile" {{ tile_link ? 'href' : '' }}>
-  {% if tile_link %}
-    <a href="{{ tile_link }}" class="gov-tile__link">
-    {% endif %}
-    {% if tile_icon %}
-      <span class="gov-tile__icon">
-        <div class="gov-icon" slot="icon" aria-hidden="true">
-          <span class="gov-icon__holder">
-            {{ source(tile_icon, ignore_missing = true) }}
-          </span>
-        </div>
+<div class="gov-tile" {{ tile_link ? 'clickable=""' }}>
+  {% if tile_icon %}
+    <div class="gov-icon" slot="icon" aria-hidden="true">
+      <span class="gov-icon__holder">
+        {{ source(tile_icon, ignore_missing = true) }}
       </span>
-    {% endif %}
-    <span class="gov-tile__title">
-      <h3 slot="title">{{ tile_title }}</h3>
-      {% if tile_link %}
-        <div class="gov-tile__arrow gov-icon">
-          <span class="gov-icon__holder">
-            {% if tile_link_external %}
-              {{ source('@gov_cz/assets/gov-design-system/gov-icons/components/box-arrow-up-right.svg') }}
-            {% else %}
-              {{ source('@gov_cz/assets/gov-design-system/gov-icons/components/chevron-right.svg') }}
-            {% endif %}
+    </div>
+  {% endif %}
+  <div class="gov-tile__content">
+    <div class="gov-tile__text">
+      <div class="gov-tile__title">
+        {% if tile_link %}
+          <a href="{{ tile_link }}" class="gov-tile__link">
+            <h3 slot="title">{{ tile_title }}</h3>
+          </a>
+          <span class="gov-tile__icon">
+            <span class="gov-icon" aria-hidden="true">
+              <span class="gov-icon__holder">
+                {% if tile_link_external %}
+                  {{ source('@gov_cz/assets/gov-design-system/gov-icons/components/box-arrow-up-right.svg') }}
+                {% else %}
+                  {{ source('@gov_cz/assets/gov-design-system/gov-icons/components/chevron-right.svg') }}
+                {% endif %}
+              </span>
+            </span>
           </span>
+        {% else %}
+          <h3 slot="title">{{ tile_title }}</h3>
+        {% endif %}
+      </div>
+      {% if tile_content %}
+        <div class="gov-tile__annotation{{ tile_link ? ' gov-tile__annotation--padding' }}">
+          {{ tile_content }}
         </div>
       {% endif %}
-    </span>
-    {% if tile_content %}
-      <div class="gov-tile__content">
-        {{ tile_content }}
-      </div>
-    {% endif %}
-    {% if tile_link %}
-    </a>
-  {% endif %}
+    </div>
+  </div>
 </div>
