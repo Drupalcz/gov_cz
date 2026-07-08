@@ -11,7 +11,7 @@
     {% endif %}
     {% if tile_icon %}
       <span class="gov-tile__icon">
-        <div class="gov-icon" aria-hidden="true">
+        <div class="gov-icon" slot="icon" aria-hidden="true">
           <span class="gov-icon__holder">
             {{ source(tile_icon, ignore_missing = true) }}
           </span>

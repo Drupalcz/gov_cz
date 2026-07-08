@@ -49,6 +49,18 @@ html {
   padding: 0;
 }
 
+/* DS sizes the tile title chevron via the gov-icon element selector;
+   the static markup carries the class on a div instead. */
+.gov-tile .gov-tile__title .gov-icon {
+  width: var(--chevron-size, var(--height-m));
+  height: var(--chevron-size, var(--height-m));
+}
+
+.gov-tile[size="s"] .gov-tile__title .gov-icon {
+  width: var(--chevron-size, var(--height-s-nudge));
+  height: var(--chevron-size, var(--height-s-nudge));
+}
+
 /* Adds bottom margin to block elements not in gov.cz style. */
 .gov-content ul,
 .gov-content ol,

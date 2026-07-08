@@ -9,7 +9,7 @@
 <div variant="{{ message_variant }}" color="{{ message_variant == 'secondary' ? 'neutral' : message_variant }}" class="gov-message" {{ message_variant == "error" ? 'role="alert"' }} {{ message_inverse ? 'inverse="true"' }}>
   {% if message__icon %}
     <span class="gov-message__icon">
-      <span class="gov-icon" aria-hidden="true">
+      <span class="gov-icon" slot="icon" aria-hidden="true">
         <span class="gov-icon__holder">
           {{ message__icon }}
         </span>
